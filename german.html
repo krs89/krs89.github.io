@@ -10,6 +10,30 @@ table, th, td {
   padding: 5px;
 }
 
+.collapsible + table {
+  display: none;
+}
+
+.aligner {
+  border: none;
+  padding: 0px;
+}
+
+.aligner th {
+  border: none;
+  padding: 0px;
+}
+
+.aligner td {
+  border: none;
+  padding: 0px;
+}
+
+th, td {
+  vertical-align: top;
+  text-align: left;
+}
+
 .finite {
   background-color: #ffb4aa;
 }
@@ -59,6 +83,14 @@ table, th, td {
 
 .aux-werden-ptc {
   background-color: #df9f64;
+}
+
+.mood-suffix {
+  background-color: PaleTurquoise;
+}
+
+.personal-suffix {
+  background-color: LightSteelBlue;
 }
 
 .er {
@@ -500,6 +532,153 @@ table, th, td {
     <p>
     <table>
       <tr>
+        <th style="width:10%"></th>
+        <th style="width:30%">der</th>
+        <th style="width:30%">das</th>
+        <th style="width:30%">die</th>
+      </tr>
+      <tr>
+        <th>&#8209;EN (W1)</th>
+        <td>
+          Mensch, Bär, Ungar, Herr, Bauer, Held, Graf, Prinz, Zar, Hirt
+          <button class=collapsible>More</button>
+          <table class=aligner>
+            <tr><th>&#8209;e:</th><td>Junge, Knabe, Neffe, Gatte, Erbe, Nachkomme, Kollege, Kunde, Zeuge</td></tr>
+            <tr><th>&#8209;e:</th><td>Affe, Löwe, Falke, Rabe, Hase</td></tr>
+            <tr><th>&#8209;e:</th><td>Bulgare, Franzose, Pole, Afghane, Apache, Brite, Chinese, Burmese, Däne, Este, Finne</td></tr>
+            <tr><th>&#8209;loge:</th><td>Biologe, Geologe, Pädagoge, Psychologe</td></tr>
+            <tr><th>&#8209;ale (m.):</th><td>Kannibale, Rivale, Wandale</td></tr>
+            <tr><th>&#8209;ade:</th><td>Nomade</td></tr>
+            <tr><th>&#8209;and:</th><td>Proband</td></tr>
+            <tr><th>&#8209;ant:</th><td>Demonstrant, Elefant, Gigant, Informant, Mandant, Musikant, Mutant, Passant, Protestant, Sextant, Trabant, Laborant, Emigrant</td></tr>
+            <tr><th>&#8209;arch:</th><td>Anarch, Monarch, Oligarch</td></tr>
+            <tr><th>&#8209;at:</th><td>Autokrat, Automat, Demokrat, Diplomat, Kastrat, Magnat, Pirat, Prälat, Adressat, Soldat</td></tr>
+            <tr><th>&#8209;aut:</th><td>Astronaut, Kosmonaut, Argonaut</td></tr>
+            <tr><th>&#8209;ent:</th><td>Student, Präsident, Dozent, Klient, Konkurrent</td></tr>
+            <tr><th>&#8209;et:</th><td>Exeget, Komet, Magnet, Planet, Prophet</td></tr>
+            <tr><th>&#8209;eut:</th><td>Therapeut, Pharmazeut</td></tr>
+            <tr><th>&#8209;graph/graf:</th><td>Biograph, Digraph, Geograph, Photograph/Fotograf</td></tr>
+            <tr><th>&#8209;ik:</th><td>Katholik</td></tr>
+            <tr><th>&#8209;isk:</th><td>Obelisk</td></tr>
+            <tr><th>&#8209;ist:</th><td>Jurist, Journalist, Anarchist, Artist, Buddhist, Christ</td></tr>
+            <tr><th>&#8209;it:</th><td>Alewit, Eremit, Jemenit, Schiit, Sunnit, Wahhabit</td></tr>
+            <tr><th>&#8209;nom:</th><td>Ökonom, Agronom</td></tr>
+            <tr><th>&#8209;one:</th><td>Mormone, Ottone</td></tr>
+            <tr><th>&#8209;ot:</th><td>Pilot, Chaot, Idiot</td></tr>
+            <tr><th>&#8209;soph:</th><td>Philosoph, Teosoph</td></tr>
+            <tr><th>&#8209;und:</th><td>Vagabund</td></tr>
+            <tr><th>&#8209;ut:</th><td>Rekrut</td></tr>
+          </table>
+        </td>
+        <td>---</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>&#8209;en (M2)</th>
+        <td>Name, Friede, Funke, Gedanek, Glaube, Haufe, Same, Wille, Buchstabe</td>
+        <td>Herz</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>&#8209;en (M1, W2)</th>
+        <td>
+          Staat, Muskel, See, Professor, Schmerz
+          <table class=aligner>
+            <tr><th>&#8209;tor:</th><td>Autor, Prospektor</td></tr>
+          </table>
+        </td>
+        <td>Auge, Ohr, Bett, Hemd, Verb</td>
+        <td>
+          Lampe, Regel(n), Frau, Uhr, Birne, Torte, Traube
+          <button class=collapsible>More</button>
+          <table class=aligner>
+            <tr><th>&#8209;ade:</th><td>Karbonade, Limonade, Marmelade, Maskerade, Parade, Rochade, Schokolade</td></tr>
+            <tr><th>&#8209;äne:</th><td>Fontäne, Moräne, Muräne</td></tr>
+            <tr><th>&#8209;ete:</th><td>Machete, Rakete</td></tr>
+            <tr><th>&#8209;ette:</th><td>Kassette, Klarinette, Manschette, Marionette, Pinzette, Pipette, Rosette, Silhouette</td></tr>
+            <tr><th>&#8209;euse:</th><td>Chauffeuse, Friseuse</td></tr>
+            <tr><th>&#8209;ie:</th><td>Allergie, Embolie</td></tr>
+            <tr><th>&#8209;in:</th><td>Ärztin(nen), Fürstin, Hündin, Journalistin, Lehrerin, Prinzessin, Schneiderin</td></tr>
+            <tr><th>&#8209;ine:</th><td>Doline, Gardine, Kantine, Kusine, Lawine, Maschine, Praline, Rosine, Saline, Slawine, Turbine</td></tr>
+            <tr><th>&#8209;ode:</th><td>Mode, Periode</td></tr>
+            <tr><th>&#8209;ole:</th><td>Konsole, Parole</td></tr>
+            <tr><th>&#8209;ose:</th><td>Diagnose, Neurose, Psychose, Thrombose, Tuberkulose, Zirrhose</td></tr>
+            <tr><th>&#8209;üre:</th><td>Allüre, Broschüre, Lektüre, Maniküre</td></tr>
+            <tr><th>&#8209;heit:</th><td></td></tr>
+            <tr><th>&#8209;keit:</th><td></td></tr>
+            <tr><th>&#8209;ion:</th><td></td></tr>
+            <tr><th>&#8209;ung:</th><td></td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>&#11802;er (S2)</th>
+        <td>Wald, Mann, Mund, Wurm, Leib</td>
+        <td>Buch, Amt, Blatt, Loch, Holz, Haus, Kind, Bild</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>&#8209;&empty; (S7)</th>
+        <td>
+          <table class=aligner>
+            <tr><th>&#8209;er:</th><td>Maler, Jäger, Meister, Bürger, Gegner, Bäcker, Afrikaner, Engländer</td></tr>
+            <tr><th>&#8209;el:</th><td>Artikel, Teufel, Sockel</td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><th>&#8209;er:</th><td>Zimmer, Opfer, Fenster, Feuer, Wasser</td></tr>
+            <tr><th>&#8209;el:</th><td>Rudel, Segel</td></tr>
+            <tr><th>&#8209;en:</th><td>Mädchen</td></tr>
+          </table>
+        </td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>&#11802;&empty; (S5, S6)</th>
+        <td>
+          <table class=aligner>
+            <tr><th>&#8209;er:</th><td>Vater, Bruder</td></tr>
+            <tr><th>&#8209;el:</th><td></td></tr>
+            <tr><th>&#8209;en:</th><td>Boden</td></tr>
+          </table>
+        </td>
+        <td>Kloster</td>
+        <td>Mutter, Tochter</td>
+      </tr>
+      <tr>
+        <th>&#8209;e (S4)</th>
+        <td>Tag, Bau</td>
+        <td>
+          Jahr, Schaf, Brot, Pferd
+          <table class=aligner>
+            <tr><th>&#8209;ment:</th><td>Pergament, Testament</td></tr>
+          </table>
+        </td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>&#11802;e (S1, S3)</th>
+        <td>Arzt, Baum, Bach, Napf, Zahn, Hof, Berg, Tisch, Fisch, Beruf</td>
+        <td>Floß</td>
+        <td>
+          Hand, Kenntnis(se), Kraft, Frucht, Kunft, Luft, Haut, Macht, Maus,
+          Nacht, Not, Nuss, Stadt, Wand, Wurst, Angst, Bank (=pad), Saal (Säle),
+          Kuh, Kunst
+        </td>
+      </tr>
+      <tr>
+        <th>&#8209;s (F1,F2)</th>
+        <td>Vati</td>
+        <td>Auto, Radio</td>
+        <td>Kamera, Cola</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
         <th></th>
         <th>Präsens/Perfekt</th>
         <th>Futur I/II</th>
@@ -509,16 +688,16 @@ table, th, td {
       <tr>
         <th>Ind. Impf.</th>
         <td>
-          <table>
-            <tr><td>ich</td><td class=finite>kaufe</td></tr>
-            <tr><td>du</td><td class=finite>kaufst</td></tr>
-            <tr><td>er</td><td class=finite>kauft</td></tr>
-            <tr><td>wir</td><td class=finite>kaufen</td></tr>
-            <tr><td>ihr</td><td class=finite>kauft</td></tr>
+          <table class=aligner>
+            <tr><td>ich</td><td class=finite>kauf<span class=personal-suffix>e</span></td></tr>
+            <tr><td>du</td><td class=finite>kauf<span class=personal-suffix>st</span></td></tr>
+            <tr><td>er</td><td class=finite>kauf<span class=personal-suffix>t</span></td></tr>
+            <tr><td>wir</td><td class=finite>kauf<span class=personal-suffix>en</span></td></tr>
+            <tr><td>ihr</td><td class=finite>kauf<span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
             <tr><td>du</td><td class=aux-werden-finite>wirst</td><td class=infinitive>kaufen</td></tr>
             <tr><td>er</td><td class=aux-werden-finite>wird</td><td class=infinitive>kaufen</td></tr>
@@ -527,16 +706,16 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
-            <tr><td>ich</td><td class=finite>kaufte</td></tr>
-            <tr><td>du</td><td class=finite>kauftest</td></tr>
-            <tr><td>er</td><td class=finite>kaufte</td></tr>
-            <tr><td>wir</td><td class=finite>kauften</td></tr>
-            <tr><td>ihr</td><td class=finite>kauftet</td></tr>
+          <table class=aligner>
+            <tr><td>ich</td><td class=finite>kauf<span class=mood-suffix>te</span></td></tr>
+            <tr><td>du</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td>er</td><td class=finite>kauf<span class=mood-suffix>te</span></td></tr>
+            <tr><td>wir</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+            <tr><td>ihr</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
@@ -548,7 +727,7 @@ table, th, td {
       <tr>
         <th>Ind. Pf.</th>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
             <tr><td>du</td><td class=aux-haben-finite>hast</td><td class=ptc>gekauft</td></tr>
             <tr><td>er</td><td class=aux-haben-finite>hat</td><td class=ptc>gekauft</td></tr>
@@ -557,7 +736,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
             <tr><td>du</td><td class=aux-werden-finite>wirst</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
             <tr><td>er</td><td class=aux-werden-finite>wird</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
@@ -566,7 +745,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich</td><td class=aux-haben-finite>hatte</td><td class=ptc>gekauft</td></tr>
             <tr><td>du</td><td class=aux-haben-finite>hattest</td><td class=ptc>gekauft</td></tr>
             <tr><td>er</td><td class=aux-haben-finite>hatte</td><td class=ptc>gekauft</td></tr>
@@ -575,7 +754,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
@@ -586,16 +765,16 @@ table, th, td {
         <tr>
           <th>Konj. Impf.</th>
           <td>
-            <table>
-              <tr><td>ich</td><td class=finite>kaufe</td></tr>
-              <tr><td>du</td><td class=finite>kaufest</td></tr>
-              <tr><td>er</td><td class=finite>kaufe</td></tr>
-              <tr><td>wir</td><td class=finite>kaufen</td></tr>
-              <tr><td>ihr</td><td class=finite>kaufet</td></tr>
+            <table class=aligner>
+              <tr><td>ich</td><td class=finite>kauf<span class=mood-suffix>e</span></td></tr>
+              <tr><td>du</td><td class=finite>kauf<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+              <tr><td>er</td><td class=finite>kauf<span class=mood-suffix>e</span></td></tr>
+              <tr><td>wir</td><td class=finite>kauf<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
+              <tr><td>ihr</td><td class=finite>kauf<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
             </table>
           </td>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
               <tr><td>du</td><td class=aux-werden-finite>werdest</td><td class=infinitive>kaufen</td></tr>
               <tr><td>er</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
@@ -604,16 +783,16 @@ table, th, td {
             </table>
           </td>
           <td>
-            <table>
-              <tr><td>ich</td><td class=finite>kaufte</td></tr>
-              <tr><td>du</td><td class=finite>kauftest</td></tr>
-              <tr><td>er</td><td class=finite>kaufte</td></tr>
-              <tr><td>wir</td><td class=finite>kauften</td></tr>
-              <tr><td>ihr</td><td class=finite>kauftet</td></tr>
+            <table class=aligner>
+              <tr><td>ich</td><td class=finite>kauf<span class=mood-suffix>te</span></td></tr>
+              <tr><td>du</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+              <tr><td>er</td><td class=finite>kauf<span class=mood-suffix>te</span></td></tr>
+              <tr><td>wir</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+              <tr><td>ihr</td><td class=finite>kauf<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
             </table>
           </td>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-werden-finite>würde</td><td class=infinitive>kaufen</td></tr>
               <tr><td>du</td><td class=aux-werden-finite>würdest</td><td class=infinitive>kaufen</td></tr>
               <tr><td>er</td><td class=aux-werden-finite>würde</td><td class=infinitive>kaufen</td></tr>
@@ -625,7 +804,7 @@ table, th, td {
         <tr>
           <th>Konj. Pf.</th>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
               <tr><td>du</td><td class=aux-haben-finite>habest</td><td class=ptc>gekauft</td></tr>
               <tr><td>er</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
@@ -634,7 +813,7 @@ table, th, td {
             </table>
           </td>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
               <tr><td>du</td><td class=aux-werden-finite>werdest</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
               <tr><td>er</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
@@ -643,7 +822,7 @@ table, th, td {
             </table>
           </td>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-haben-finite>hätte</td><td class=ptc>gekauft</td></tr>
               <tr><td>du</td><td class=aux-haben-finite>hättest</td><td class=ptc>gekauft</td></tr>
               <tr><td>er</td><td class=aux-haben-finite>hätte</td><td class=ptc>gekauft</td></tr>
@@ -652,7 +831,7 @@ table, th, td {
             </table>
           </td>
           <td>
-            <table>
+            <table class=aligner>
               <tr><td>ich</td><td class=aux-werden-finite>würde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
               <tr><td>du</td><td class=aux-werden-finite>würdest</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
               <tr><td>er</td><td class=aux-werden-finite>würde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
@@ -676,7 +855,7 @@ table, th, td {
       <tr>
         <th>Ind.</th>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich <span class="fin">kaufe</span></td></tr>
             <tr><td>du  <span class="fin">kaufst</span></td></tr>
             <tr><td>er  <span class="fin">kauft</span></td></tr>
@@ -685,7 +864,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich werde  <span class=inf>kaufen</span></td></tr>
             <tr><td>du  wirst   <span class=inf>kaufen</span></td></tr>
             <tr><td>er  wird   <span class=inf>kaufen</span></td></tr>
@@ -694,7 +873,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>ich <span class="fin">kaufte</span></td></tr>
             <tr><td>du  <span class="fin">kauftest</span></td></tr>
             <tr><td>er  <span class="fin">kaufte</span></td></tr>
@@ -703,7 +882,7 @@ table, th, td {
           </table>
         </td>
         <td>
-          <table>
+          <table class=aligner>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
             <tr><td>---</td></tr>
@@ -1221,5 +1400,24 @@ table, th, td {
       </tr>
     </table>
     </p>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        if (content.style.display === "table") {
+          this.innerText = "More";
+          content.style.display = "none";
+        } else {
+          this.innerText = "Less";
+          content.style.display = "table";
+        }
+      });
+    }
+  </script>
+
   </body>
 </html>
