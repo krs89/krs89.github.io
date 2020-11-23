@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.finite {
+  background-color: #ffb4aa;
+}
+
+.infinitive {
+  background-color: #aa4639;
+}
+
+.ptc {
+  background-color: #d4776a;
+}
+
+.aux-sein-finite {
+  background-color: #669999;
+}
+
+.aux-sein-inf {
+  background-color: #226666;
+}
+
+.aux-sein-ptc {
+  background-color: #407f7f;
+}
+
+.aux-haben-finite {
+  background-color: #ffd1aa;
+}
+
+.aux-haben-inf {
+  background-color: #ffd1aa;
+  /*background-color: #aa6c39;*/
+}
+
+.aux-haben-ptc {
+  background-color: #ffd1aa;
+  /*background-color: #d49a6a;*/
+}
+
+.aux-werden-finite {
+  background-color: #8fbc8f;
+  /*background-color: #7fbf90;*/
+}
+
+.aux-werden-inf {
+  background-color: #2a7f41;
+}
+
+.aux-werden-ptc {
+  background-color: #df9f64;
+}
+
+.er {
+  background-color: PaleGreen;
+}
+
+.ie {
+  background-color: LightPink;
+}
+
+.as {
+  background-color: LightSteelBlue;
+}
+
+.en {
+  background-color: LightSalmon;
+}
+
+.em {
+  background-color: PaleGoldenRod;
+}
+
+.es {
+  background-color: PaleTurquoise;
+}
+
+.no {
+  background-color: White;
+}
+
+.ppf {
+  background-color: LightPink;
+}
+
+.inf {
+  background-color: LightSalmon;
+}
+
+.fin {
+  background-color: Plum;
+}
+
+.infauxh {
+  background-color: PaleTurquoise;
+}
+
+.infauxs {
+  background-color: LightSkyBlue;
+}
+
+.infauxw {
+  background-color: LightSteelBlue;
+}
+
+.ppfauxh {
+  background-color: PowderBlue;
+}
+
+.ppfauxs {
+  background-color: LightGray;
+}
+
+.ppfauxw {
+  background-color: Lavender;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <p>
+    <table>
+      <tr>
+        <th>DET3</th>
+        <th>masculinum</th>
+        <th>neutrum</th>
+        <th>femininum</th>
+        <th>Pluralis</th>
+      </tr>
+      <tr>
+        <th>Nominativus</th>
+        <td class=er>der</td>
+        <td class=as rowspan=2>das</td>
+        <td class=ie colspan=2 rowspan=2>die</td>
+      </tr>
+      <tr>
+        <th>Accusativus</th>
+        <td class=en>den</td>
+      </tr>
+      <tr>
+        <th>Dativus</th>
+        <td class=em colspan=2>dem</td>
+        <td class=er>der</td>
+        <td class=en>den/den<span class=en>en</span></td>
+      </tr>
+      <tr>
+        <th>Genitivus</th>
+        <td class=es colspan=2>des/dess<span class=en>en</span></td>
+        <td class=er colspan=2>der/der<span class=en>en</span>/derer</td>
+      </tr>
+      <tr>
+        <td colspan=5>
+          dieser
+          jener
+          solcher
+          welcher
+          mancher
+          jeder
+          aller
+          derselbe
+          derjenige
+        </td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>masculinum</th>
+        <th>neutrum</th>
+        <th>femininum</th>
+        <th>Pluralis</th>
+      </tr>
+      <tr>
+        <th>Nominativus</th>
+        <td class=er>guter</td>
+        <td class=es rowspan=2>gutes</td>
+        <td class=ie colspan=2 rowspan=2>gute</td>
+      </tr>
+      <tr>
+        <th>Accusativus</th>
+        <td class=en>guten</td>
+      </tr>
+      <tr>
+        <th>Dativus</th>
+        <td class=em colspan=2>gutem</td>
+        <td class=er>guter</td>
+        <td class=en>guten</td>
+      </tr>
+      <tr>
+        <th>Genitivus</th>
+        <td class=en colspan=2>guten</td>
+        <td class=er colspan=2>guter</td>
+      </tr>
+    </table>
+
+    <p>
+    <table>
+      <tr>
+        <th>DET2</th>
+        <th>masculinum</th>
+        <th>neutrum</th>
+        <th>femininum</th>
+        <th>Pluralis</th>
+      </tr>
+      <tr>
+        <th>Nominativus</th>
+        <td class=no>ein</td>
+        <td class=no rowspan=2>ein</td>
+        <td class=ie colspan=2 rowspan=2>eine</td>
+      </tr>
+      <tr>
+        <th>Accusativus</th>
+        <td class=en>einen</td>
+      </tr>
+      <tr>
+        <th>Dativus</th>
+        <td class=em colspan=2>einem</td>
+        <td class=er>einer</td>
+        <td class=en>einen</td>
+      </tr>
+      <tr>
+        <th>Genitivus</th>
+        <td class=es colspan=2>eines</td>
+        <td class=er colspan=2>einer</td>
+      </tr>
+      <tr>
+        <td colspan=5>
+          mein
+          dein
+          sein
+          ihr
+          unser
+          euer
+        </td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>Sg. 3</th>
+        <th>masculinum</th>
+        <th>neutrum</th>
+        <th>femininum</th>
+        <th>Pluralis</th>
+      </tr>
+      <tr>
+        <th>Nominativus</th>
+        <td class=er>er</td>
+        <td class=es rowspan=2>es</td>
+        <td class=ie colspan=2 rowspan=2>sie</td>
+      </tr>
+      <tr>
+        <th>Accusativus</th>
+        <td class=en>ihn</td>
+      </tr>
+      <tr>
+        <th>Dativus</th>
+        <td class=em colspan=2>ihm</td>
+        <td class=er>ihr</td>
+        <td class=en>ihnen</td>
+      </tr>
+      <tr>
+        <th>Genitivus</th>
+        <td colspan=2>sein(er)</td>
+        <td class=er colspan=2>ihrer</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>Nom. Sg.</th>
+        <th>Gen. Sg.</th>
+        <th>Nom. Pl.</th>
+      </tr>
+      <tr>
+        <th>S7 (m/n)</th>
+        <td>
+          r Jäger<br/>
+          s Fahrer<br/>
+          r Lehrer
+        </td>
+        <td>
+          Jäger<span class=es>s</span><br/>
+          Fahrer<span class=es>s</span><br/>
+          Lehrer<span class=es>s</span>
+        </td>
+        <td>
+          Jäger<br/>
+          Fahrer<br/>
+          Lehrer
+        </td>
+      </tr>
+      <tr>
+        <th>S5 (m/n)</th>
+        <td>
+          r Boden
+        </td>
+        <td>
+          Boden<span class=es>s</span>
+        </td>
+        <td class=as>
+          Böden
+        </td>
+      </tr>
+      <tr>
+        <th class=ie>S6 (f)</th>
+        <td>
+          e Mutter<br/>
+          e Tochter
+        </td>
+        <td>
+          Mutter<br/>
+          Tochter
+        </td>
+        <td class=as>
+          Mütter<br/>
+          Töchter
+        </td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>S4 (m/n)</th>
+        <td>
+          s Schaf<br/>
+          s Brot
+        </td>
+        <td>
+          Schaf<span class=es>(e)s</span><br/>
+          Brot<span class=es>(e)s</span>
+        </td>
+        <td>
+          Schaf<span class=ie>e</span><br/>
+          Brot<span class=ie>e</span>
+        </td>
+      </tr>
+      <tr>
+        <th>S1 (m/n)</th>
+        <td>
+          r Berg<br/>
+          r Baum<br/>
+          r Tisch<br/>
+          r Sohn
+        </td>
+        <td>
+          Berg<span class=es>(e)s</span><br/>
+          Baum<span class=es>(e)s</span><br/>
+          Tisch<span class=es>(e)s</span><br/>
+          Sohn<span class=es>(e)s</span>
+        </td>
+        <td class=as>
+          Berg<span class=ie>e</span><br/>
+          Bäum<span class=ie>e</span><br/>
+          Tisch<span class=ie>e</span><br/>
+          Söhn<span class=ie>e</span>
+        </td>
+      </tr>
+      <tr>
+        <th class=ie>S3 (f)</th>
+        <td>
+          e Kraft<br/>
+          e Frucht
+        </td>
+        <td>
+          Kraft<br/>
+          Frucht
+        </td>
+        <td class=as>
+          Kräft<span class=ie>e</span><br/>
+          Frücht<span class=ie>e</span>
+        </td>
+      </tr>
+      <tr>
+        <th>S2 (m/n)</th>
+        <td>
+          s Bild<br/>
+          r Wald<br/>
+          s Kind<br/>
+          s Buch
+        </td>
+        <td>
+          Bild<span class=es>(e)s</span><br/>
+          Wald<span class=es>(e)s</span><br/>
+          Kind<span class=es>(e)s</span><br/>
+          Buch<span class=es>(e)s</span>
+        </td>
+        <td class=as>
+          Bild<span class=er>er</span><br/>
+          Wäld<span class=er>er</span><br/>
+          Kind<span class=er>er</span><br/>
+          Büch<span class=er>er</span>
+        </td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>W1 (m)</th>
+        <td>
+          r Bär<br/>
+          r Bauer<br/>
+          r Student
+        </td>
+        <td>
+          Bär<span class=en>en</span><br/>
+          Bauer<span class=en>n</span><br/>
+          Student<span class=en>en</span>
+        </td>
+        <td>
+          Bär<span class=en>en</span><br/>
+          Bauer<span class=en>n</span><br/>
+          Student<span class=en>en</span>
+        </td>
+      </tr>
+      <tr>
+        <th class=ie>W2 (f)</th>
+        <td>e Meinung</td>
+        <td>Meinung</td>
+        <td>Meinung<span class=en>en</span></td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>M1 (m/n)</th>
+        <td>
+          r Staat<br/>
+          s Auge
+        </td>
+        <td>
+          Staat<span class=es>(e)s</span><br/>
+          Auge<span class=es>s</span>
+        </td>
+        <td>
+          Staat<span class=en>en</span><br/>
+          Aug<span class=en>en</span>
+        </td>
+      </tr>
+      <tr>
+        <th>M2 (m/n)</th>
+        <td>
+          r Name<br/>
+          s Herz
+        </td>
+        <td>
+          Nam<span class=en>en</span><span class=es>s</span><br/>
+          Herz<span class=en>en</span><span class=es>s</span>
+        </td>
+        <td>
+          Nam<span class=en>en</span><br/>
+          Herz<span class=en>en</span>
+        </td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>F1 (m/n)</th>
+        <td>s Radio</td>
+        <td>Radio<span class=es>s</span></td>
+        <td>Radio<span class=es>s</span></td>
+      </tr>
+      <tr>
+        <th class=ie>F2 (f)</th>
+        <td>e Kamera</td>
+        <td>Kamera</td>
+        <td>Kamera<span class=es>s</span></td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>Präsens/Perfekt</th>
+        <th>Futur I/II</th>
+        <th>Präteritum/Plusquamperfekt</th>
+        <th>Konjunktiv III/Konditional </th>
+      </tr>
+      <tr>
+        <th>Ind. Impf.</th>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=finite>kaufe</td></tr>
+            <tr><td>du</td><td class=finite>kaufst</td></tr>
+            <tr><td>er</td><td class=finite>kauft</td></tr>
+            <tr><td>wir</td><td class=finite>kaufen</td></tr>
+            <tr><td>ihr</td><td class=finite>kauft</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
+            <tr><td>du</td><td class=aux-werden-finite>wirst</td><td class=infinitive>kaufen</td></tr>
+            <tr><td>er</td><td class=aux-werden-finite>wird</td><td class=infinitive>kaufen</td></tr>
+            <tr><td>wir</td><td class=aux-werden-finite>werden</td><td class=infinitive>kaufen</td></tr>
+            <tr><td>ihr</td><td class=aux-werden-finite>werdet</td><td class=infinitive>kaufen</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=finite>kaufte</td></tr>
+            <tr><td>du</td><td class=finite>kauftest</td></tr>
+            <tr><td>er</td><td class=finite>kaufte</td></tr>
+            <tr><td>wir</td><td class=finite>kauften</td></tr>
+            <tr><td>ihr</td><td class=finite>kauftet</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>Ind. Pf.</th>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
+            <tr><td>du</td><td class=aux-haben-finite>hast</td><td class=ptc>gekauft</td></tr>
+            <tr><td>er</td><td class=aux-haben-finite>hat</td><td class=ptc>gekauft</td></tr>
+            <tr><td>wir</td><td class=aux-haben-finite>haben</td><td class=ptc>gekauft</td></tr>
+            <tr><td>ihr</td><td class=aux-haben-finite>habt</td><td class=ptc>gekauft</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            <tr><td>du</td><td class=aux-werden-finite>wirst</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            <tr><td>er</td><td class=aux-werden-finite>wird</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            <tr><td>wir</td><td class=aux-werden-finite>werden</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            <tr><td>ihr</td><td class=aux-werden-finite>werdet</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich</td><td class=aux-haben-finite>hatte</td><td class=ptc>gekauft</td></tr>
+            <tr><td>du</td><td class=aux-haben-finite>hattest</td><td class=ptc>gekauft</td></tr>
+            <tr><td>er</td><td class=aux-haben-finite>hatte</td><td class=ptc>gekauft</td></tr>
+            <tr><td>wir</td><td class=aux-haben-finite>hatten</td><td class=ptc>gekauft</td></tr>
+            <tr><td>ihr</td><td class=aux-haben-finite>hattet</td><td class=ptc>gekauft</td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+          </table>
+        </td>
+        <tr>
+          <th>Konj. Impf.</th>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=finite>kaufe</td></tr>
+              <tr><td>du</td><td class=finite>kaufest</td></tr>
+              <tr><td>er</td><td class=finite>kaufe</td></tr>
+              <tr><td>wir</td><td class=finite>kaufen</td></tr>
+              <tr><td>ihr</td><td class=finite>kaufet</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>du</td><td class=aux-werden-finite>werdest</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>er</td><td class=aux-werden-finite>werde</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>wir</td><td class=aux-werden-finite>werden</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>ihr</td><td class=aux-werden-finite>werdet</td><td class=infinitive>kaufen</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=finite>kaufte</td></tr>
+              <tr><td>du</td><td class=finite>kauftest</td></tr>
+              <tr><td>er</td><td class=finite>kaufte</td></tr>
+              <tr><td>wir</td><td class=finite>kauften</td></tr>
+              <tr><td>ihr</td><td class=finite>kauftet</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-werden-finite>würde</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>du</td><td class=aux-werden-finite>würdest</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>er</td><td class=aux-werden-finite>würde</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>wir</td><td class=aux-werden-finite>würden</td><td class=infinitive>kaufen</td></tr>
+              <tr><td>ihr</td><td class=aux-werden-finite>würdet</td><td class=infinitive>kaufen</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Konj. Pf.</th>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
+              <tr><td>du</td><td class=aux-haben-finite>habest</td><td class=ptc>gekauft</td></tr>
+              <tr><td>er</td><td class=aux-haben-finite>habe</td><td class=ptc>gekauft</td></tr>
+              <tr><td>wir</td><td class=aux-haben-finite>haben</td><td class=ptc>gekauft</td></tr>
+              <tr><td>ihr</td><td class=aux-haben-finite>habet</td><td class=ptc>gekauft</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>du</td><td class=aux-werden-finite>werdest</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>er</td><td class=aux-werden-finite>werde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>wir</td><td class=aux-werden-finite>werden</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>ihr</td><td class=aux-werden-finite>werdet</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-haben-finite>hätte</td><td class=ptc>gekauft</td></tr>
+              <tr><td>du</td><td class=aux-haben-finite>hättest</td><td class=ptc>gekauft</td></tr>
+              <tr><td>er</td><td class=aux-haben-finite>hätte</td><td class=ptc>gekauft</td></tr>
+              <tr><td>wir</td><td class=aux-haben-finite>hätten</td><td class=ptc>gekauft</td></tr>
+              <tr><td>ihr</td><td class=aux-haben-finite>hättet</td><td class=ptc>gekauft</td></tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr><td>ich</td><td class=aux-werden-finite>würde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>du</td><td class=aux-werden-finite>würdest</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>er</td><td class=aux-werden-finite>würde</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>wir</td><td class=aux-werden-finite>würden</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+              <tr><td>ihr</td><td class=aux-werden-finite>würdet</td><td class=ptc>gekauft</td><td class=aux-haben-inf>haben</td></tr>
+            </table>
+          </td>
+        </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>Präsens/Perfekt</th>
+        <th>Futur I/II</th>
+        <th>Präteritum/Plusquamperfekt</th>
+        <th>Futur I/II</th>
+      </tr>
+      <tr>
+        <th>Ind.</th>
+        <td>
+          <table>
+            <tr><td>ich <span class="fin">kaufe</span></td></tr>
+            <tr><td>du  <span class="fin">kaufst</span></td></tr>
+            <tr><td>er  <span class="fin">kauft</span></td></tr>
+            <tr><td>wir  <span class="fin">kaufen</span></td></tr>
+            <tr><td>ihr <span class="fin">kauft</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich werde  <span class=inf>kaufen</span></td></tr>
+            <tr><td>du  wirst   <span class=inf>kaufen</span></td></tr>
+            <tr><td>er  wird   <span class=inf>kaufen</span></td></tr>
+            <tr><td>wir  werden   <span class=inf>kaufen</span></td></tr>
+            <tr><td>ihr werdet <span class=inf>kaufen</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>ich <span class="fin">kaufte</span></td></tr>
+            <tr><td>du  <span class="fin">kauftest</span></td></tr>
+            <tr><td>er  <span class="fin">kaufte</span></td></tr>
+            <tr><td>wir  <span class="fin">kauften</span></td></tr>
+            <tr><td>ihr <span class="fin">kauftet</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+            <tr><td>---</td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>Ind. Pf.</th>
+        <td>ich habe   <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>ich hatte  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  hast    <span class=ppf>gekauft</span></td>
+        <td>du  wirst   <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>du  hattest  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  hat    <span class=ppf>gekauft</span></td>
+        <td>er  wird   <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>er  hatte  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  haben    <span class=ppf>gekauft</span></td>
+        <td>wir  werden   <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>wir  hatten  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr habt   <span class=ppf>gekauft</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>ihr hattet <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>Konj.</th>
+        <td>ich <span class="fin">kaufe</span></td>
+        <td>ich werde  <span class=inf>kaufen</span></td>
+        <td>ich <span class="fin">kaufte</span></td>
+        <td>ich würde  <span class=inf>kaufen</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  <span class="fin">kaufest</span></td>
+        <td>du  werdest  <span class=inf>kaufen</span></td>
+        <td>du  <span class="fin">kauftest</span></td>
+        <td>du  würdest  <span class=inf>kaufen</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  <span class="fin">kaufe</span></td>
+        <td>er  werde  <span class=inf>kaufen</span></td>
+        <td>er  <span class="fin">kaufte</span></td>
+        <td>er  würde  <span class=inf>kaufen</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  <span class="fin">kaufen</span></td>
+        <td>wir  werden  <span class=inf>kaufen</span></td>
+        <td>wir  <span class="fin">kauften</span></td>
+        <td>wir  würden  <span class=inf>kaufen</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr <span class="fin">kaufet</span></td>
+        <td>ihr werdet <span class=inf>kaufen</span></td>
+        <td>ihr <span class="fin">kauftet</span></td>
+        <td>ihr würdet <span class=inf>kaufen</span></td>
+      </tr>
+      <tr>
+        <th>Konj. Pf.</th>
+        <td>ich habe   <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>ich hätte  <span class=ppf>gekauft</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  habest   <span class=ppf>gekauft</span></td>
+        <td>du  werdest  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        <td>du  hättest  <span class=ppf>gekauft</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+      </tr>
+      <tr>
+        <tr>
+          <th></th>
+          <td>er  habe   <span class=ppf>gekauft</span></td>
+          <td>er  werde  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+          <td>er  hätte  <span class=ppf>gekauft</span></td>
+          <td>er  würde  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>wir  haben   <span class=ppf>gekauft</span></td>
+          <td>wir  werden  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+          <td>wir  hätten  <span class=ppf>gekauft</span></td>
+          <td>wir  würden  <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>ihr habet  <span class=ppf>gekauft</span></td>
+          <td>ihr werdet <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+          <td>ihr hättet <span class=ppf>gekauft</span></td>
+          <td>ihr würdet <span class=ppf>gekauft</span> <span class=infauxh>haben</span></td>
+        </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>Präsens/Perfekt</th>
+        <th>Futur I/II</th>
+        <th>Präteritum/Plusquamperfekt</th>
+        <th>Futur I/II</th>
+      </tr>
+      <tr>
+        <th>Ind.</th>
+        <td>ich werde  <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>ich wurde  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  wirst   <span class=ppf>gekauft</span></td>
+        <td>du  wirst   <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>du  wurdest  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  wird   <span class=ppf>gekauft</span></td>
+        <td>er  wird   <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>er  wurde  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  werden   <span class=ppf>gekauft</span></td>
+        <td>wir  werden   <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>wir  wurden  <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr werdet <span class=ppf>gekauft</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>ihr wurdet <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>Ind. Pf.</th>
+        <td>ich bin    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>ich war    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  bist    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>du  wirst   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>du  warst    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  ist    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>er  wird   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>er  war    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  sind    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>wir  werden   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>wir  waren    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr seid   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>ihr wart   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>Konj.</th>
+        <td>ich werde  <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  werdest  <span class=ppf>gekauft</span></td>
+        <td>du  werdest  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  werde  <span class=ppf>gekauft</span></td>
+        <td>er  werde  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>er  würde  <span class=ppf>gekauft</span></td>
+        <td>er  würde  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  werden  <span class=ppf>gekauft</span></td>
+        <td>wir  werden  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>wir  würden  <span class=ppf>gekauft</span></td>
+        <td>wir  würden  <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr werdet <span class=ppf>gekauft</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+        <td>ihr würdet <span class=ppf>gekauft</span></td>
+        <td>ihr würdet <span class=ppf>gekauft</span> <span class="infauxw">werden</span></td>
+      </tr>
+      <tr>
+        <th>Konj. Pf.</th>
+        <td>ich sei    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>ich wäre   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  seist    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>du  werdest  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>du  wärest   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  sei    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>er  werde  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>er  wäre   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>er  würde  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  seien    <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>wir  werden  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>wir  wären   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>wir  würden  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr seiet  <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+        <td>ihr wäre   <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span></td>
+        <td>ihr würdet <span class=ppf>gekauft</span> <span class="ppfauxw">worden</span> <span class="infauxs">sein</span></td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>Präsens/Perfekt</th>
+        <th>Futur I/II</th>
+        <th>Präteritum/Plusquamperfekt</th>
+        <th>Futur I/II</th>
+      </tr>
+      <tr>
+        <th>Ind.</th>
+        <td>ich bin    <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>ich war    <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  bist    <span class=ppf>gekauft</span></td>
+        <td>du  wirst   <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>du  warst    <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  ist    <span class=ppf>gekauft</span></td>
+        <td>er  wird   <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>er  war    <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  sind    <span class=ppf>gekauft</span></td>
+        <td>wir  werden   <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>wir  waren    <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr seid   <span class=ppf>gekauft</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>ihr wart    <span class=ppf>gekauft</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>Ind. Pf.</th>
+        <td>ich bin    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>ich war    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  bist    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>du  wirst   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>du  warst    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  ist    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>er  wird   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>er  war    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  sind    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>wir  werden   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>wir  waren    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr seid   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>ihr wart    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <th>Konj.</th>
+        <td>ich werde  <span class=ppf>gekauft</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>ich wäre   <span class=ppf>gekauft</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  werdest  <span class=ppf>gekauft</span></td>
+        <td>du  werdest  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>du  wärest   <span class=ppf>gekauft</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  werde  <span class=ppf>gekauft</span></td>
+        <td>er  werde  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>er  wäre   <span class=ppf>gekauft</span></td>
+        <td>er  würde  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  werden  <span class=ppf>gekauft</span></td>
+        <td>wir  werden  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>wir  wären   <span class=ppf>gekauft</span></td>
+        <td>wir  würden  <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr werdet <span class=ppf>gekauft</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+        <td>ihr wäret   <span class=ppf>gekauft</span></td>
+        <td>ihr würdet <span class=ppf>gekauft</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th>Konj. Pf.</th>
+        <td>ich sei    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ich werde  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>ich wäre   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ich würde  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>du  seiest    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>du  werdest  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>du  wärest   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>du  würdest  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>er  sei    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>er  werde  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>er  wäre   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>er  würde  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>wir  seien    <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>wir  werden  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>wir  wären   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>wir  würden  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>ihr seiet  <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ihr werdet <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+        <td>ihr wäret   <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span></td>
+        <td>ihr würdet <span class=ppf>gekauft</span> <span class="ppfauxs">gewesen</span> <span class="infauxs">sein</span></td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th>Kasus</th>
+        <th>Präpositionen</th>
+      </tr>
+      <tr>
+        <td>Genitiv</td>
+        <td>
+          abzüglich
+          angesichts
+          (an)statt
+          außerhalb
+          bar
+          behufs
+          bezüglich
+          diesseits
+          einschließlich
+          entlang
+          infolge
+          innerhalb
+          inmitten
+          jenseits
+          kraft
+          längs
+          mittels
+          ob
+          oberhalb
+          seitens
+          trotz
+          unbeschadet
+          ungeachtet
+          unterhalb
+          unweit
+          während
+          wegen
+          zugunsten
+        </td>
+      </tr>
+      <tr>
+        <td>Genitiv oder Dativ</td>
+        <td>
+          dank
+          laut
+        </td>
+      </tr>
+      <tr>
+        <td>Dativ</td>
+        <td>
+          aus
+          außer
+          bei
+          entgegen
+          entsprechend
+          gegenüber
+          gemäß
+          mit
+          (mit)samt
+          nach
+          nächst
+          nahe
+          nebst
+          seit
+          von
+          zu
+        </td>
+      </tr>
+      <tr>
+        <td>Dativ oder Akkusativ</td>
+        <td>
+          an
+          auf
+          hinter
+          in
+          neben
+          über
+          unter
+          vor
+          zwischen
+        </td>
+      </tr>
+      <tr>
+        <td>Akkusativ</td>
+        <td>
+          bis
+          durch
+          für
+          gegen
+          je
+          ohne
+          um
+          wider
+        </td>
+      </tr>
+    </table>
+    </p>
+  </body>
+</html>
