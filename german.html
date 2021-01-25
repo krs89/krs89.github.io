@@ -1344,27 +1344,26 @@ section {
     <table>
       <tr>
         <th>Schwach</th>
-        <th colspan=2>KAUFEN (h)</th>
-        <th colspan=2>RUDERN (h/i)</th>
-        <th colspan=2>ANTWORTEN (h)</th>
-        <th colspan=2>REISEN (i)</th>
+        <th colspan=2>kaufen</th>
+        <th colspan=2>antworten</th>
+        <th colspan=2>reisen</th>
+        <th colspan=2><span class=anomaly>rudern</span></th>
       </tr>
       <tr>
         <th></th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
       </tr>
       <tr>
         <th>Präsens</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>kauf<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>kauf<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>kauf<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>kauf<span class=personal-suffix>t</span></td></tr>
@@ -1372,7 +1371,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>kauf<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>kauf<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>kauf<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>kauf<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1381,32 +1379,13 @@ section {
 
         <td>
           <table class=aligner>
-            <tr class=anomaly><td>sie</td><td><u>ruder<span class=personal-suffix>n</span></u></td></tr>
-            <tr><td> du</td><td>ruder<span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>ruder<span class=personal-suffix>t</span></td></tr>
-            <tr><td>ihr</td><td>ruder<span class=personal-suffix>t</span></td></tr>
+            <tr><td> du</td><td>antwort<span class=anomaly>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>antwort<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
+            <tr><td>ihr</td><td>antwort<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr class=anomaly><td>sie</td><td><u>ruder<span class=mood-suffix></span><span class=personal-suffix>n</span></u></td></tr>
-            <tr><td> du</td><td>ruder<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>ruder<span class=mood-suffix>e</span></td></tr>
-            <tr><td>ihr</td><td>ruder<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>antwort<span class=personal-suffix>en</span></td></tr>
-            <tr class=anomaly><td> du</td><td>antwort<span class=personal-suffix><u>e</u>st</span></td></tr>
-            <tr class=anomaly><td> er</td><td>antwort<span class=personal-suffix><u>e</u>t</span></td></tr>
-            <tr class=anomaly><td>ihr</td><td>antwort<span class=personal-suffix><u>e</u>t</span></td></tr>
-          </table>
-        </td>
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>antwort<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>antwort<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>antwort<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>antwort<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1415,7 +1394,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>reis<span class=personal-suffix>en</span></td></tr>
             <tr class=anomaly><td> du</td><td>reis<span class=personal-suffix>t</span></td></tr>
             <tr><td> er</td><td>reis<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>reis<span class=personal-suffix>t</span></td></tr>
@@ -1423,18 +1401,31 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>reis<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>reis<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>reis<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>reis<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>ruder<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>ruder<span class=personal-suffix>t</span></td></tr>
+            <tr><td>ihr</td><td>ruder<span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>ruder<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>ruder<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>ruder<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
       </tr>
       <tr>
         <th>Präteritum</th>
         <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>kauf<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+          <table class=aligner style="margin: auto">
             <tr><td> du</td><td>kauf<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>kauf<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>kauf<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1442,38 +1433,42 @@ section {
         </td>
 
         <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>ruder<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>ruder<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>ruder<span class=mood-suffix>te</span></td></tr>
-            <tr><td>ihr</td><td>ruder<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
+          <table class=aligner style="margin: auto">
+            <tr><td> du</td><td>antwort<span class=anomaly>e</span><span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>antwort<span class=anomaly>e</span><span class=mood-suffix>te</span></td></tr>
+            <tr><td>ihr</td><td>antwort<span class=anomaly>e</span><span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
 
         <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>antwort<span class=mood-suffix><span class=anomaly>e</span>te</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>antwort<span class=mood-suffix><span class=anomaly>e</span>te</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>antwort<span class=mood-suffix><span class=anomaly>e</span>te</span></td></tr>
-            <tr><td>ihr</td><td>antwort<span class=mood-suffix><span class=anomaly>e</span>te</span><span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-
-        <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>reis<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+          <table class=aligner style="margin: auto">
             <tr><td> du</td><td>reis<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>reis<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>reis<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
+
+        <td colspan=2>
+          <table class=aligner style="margin: auto">
+            <tr><td> du</td><td>ruder<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>ruder<span class=mood-suffix>te</span></td></tr>
+            <tr><td>ihr</td><td>ruder<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>Partizip</th>
+        <td colspan=2>hat gekauft</td>
+        <td colspan=2>hat geantwortet</td>
+        <td colspan=2>ist gereist</td>
+        <td colspan=2>hat/ist gerudert</td>
       </tr>
       <tr>
         <th></th>
         <td colspan=2></td>
+        <td colspan=2>ohne Umlaut/Brechung<br/>-[dt]en, -&lt;C[^lr]&gt;[mn]en:<br/>reden, rechnen, ordnen, atmen</td>
+        <td colspan=2>/s/, /z/: -(s)sen, -ßen, -xen, -(t)zen<br/>essen, heißen, mixen, heizen, sitzen</td>
         <td colspan=2>-ern, -eln</td>
-        <td colspan=2>nem tőhangváltós<br/>-den, -ten, -&lt;C&gt;nen, -&lt;C&gt;men:<br/>reden, rechnen, ordnen, atmen</td>
-        <td colspan=2>/s/, /z/<br/>-sen, -ßen, -xen, -zen:<br/>essen, heißen, mixen, heizen, sitzen</td>
       </tr>
     </table>
     </p>
@@ -1482,27 +1477,29 @@ section {
     <table>
       <tr>
         <th>Stark</th>
-        <th colspan=2>KOMMEN, KAM, i. GEKOMMEN</th>
-        <th colspan=2>SEHEN, (SIEHT), SAH, h. GESEHEN</th>
-        <th colspan=2>RATEN, (RÄT), RIET, h. GERATEN</th>
-        <th colspan=2>TUN, TAT, h. GETAN</th>
+        <th colspan=2>kommen</th>
+        <th colspan=2>sehen</th>
+        <th colspan=2>fangen</th>
+        <th colspan=2>raten</th>
+        <th colspan=2>laden</th>
       </tr>
       <tr>
         <th></th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
       </tr>
       <tr>
         <th>Präsens</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>komm<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>komm<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>komm<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>komm<span class=personal-suffix>t</span></td></tr>
@@ -1510,7 +1507,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>komm<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>komm<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>komm<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>komm<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1519,7 +1515,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>seh<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>s<b>ie</b>h<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>s<b>ie</b>h<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>seh<span class=personal-suffix>t</span></td></tr>
@@ -1527,7 +1522,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>seh<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>seh<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>seh<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>seh<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1536,15 +1530,28 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>rat<span class=personal-suffix>en</span></td></tr>
-            <tr class=anomaly><td> du</td><td>r<b>ä</b>t<span class=personal-suffix>st</span></td></tr>
-            <tr class=anomaly><td> er</td><td>r<b>ä</b>t</td></tr>
-            <tr class=anomaly><td>ihr</td><td>rat<span class=personal-suffix><u>e</u>t</span></td></tr>
+            <tr><td> du</td><td>f<b>ä</b>ng<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>f<b>ä</b>ng<span class=personal-suffix>t</span></td></tr>
+            <tr><td>ihr</td><td>fang<span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>rat<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
+            <tr><td> du</td><td>fang<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>fang<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>fang<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>r<b>ä</b>t<span class=personal-suffix>st</span></td></tr>
+            <tr class=anomaly><td> er</td><td>r<b>ä</b>t</td></tr>
+            <tr><td>ihr</td><td>rat<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
             <tr><td> du</td><td>rat<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>rat<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>rat<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1553,25 +1560,22 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td><u>tu<span class=personal-suffix>n</span></u></td></tr>
-            <tr><td> du</td><td>tu<span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>tu<span class=personal-suffix>t</span></td></tr>
-            <tr><td>ihr</td><td>tu<span class=personal-suffix>t</span></td></tr>
+            <tr><td> du</td><td>l<b>ä</b>d<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>l<b>ä</b>d<span class=personal-suffix>t</span></td></tr>
+            <tr><td>ihr</td><td>lad<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>tu<span class=mood-suffix>e</span></td></tr>
-            <tr><td>ihr</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+            <tr><td> du</td><td>lad<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>lad<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>lad<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
       <tr>
         <th>Präteritum</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>kam<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>kam<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>kam</td></tr>
             <tr><td>ihr</td><td>kam<span class=personal-suffix>t</span></td></tr>
@@ -1579,7 +1583,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>käm<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>käm<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>käm<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>käm<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1588,7 +1591,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>sah<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>sah<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>sah</td></tr>
             <tr><td>ihr</td><td>sah<span class=personal-suffix>t</span></td></tr>
@@ -1596,7 +1598,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>säh<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>säh<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>säh<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>säh<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1605,15 +1606,28 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>riet<span class=personal-suffix>en</span></td></tr>
-            <tr><td> du</td><td>riet<span class=personal-suffix>est</span></td></tr>
-            <tr><td> er</td><td>riet</td></tr>
-            <tr><td>ihr</td><td>riet<span class=personal-suffix>et</span></td></tr>
+            <tr><td> du</td><td>fing<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>fing</td></tr>
+            <tr><td>ihr</td><td>fing<span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>riet<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
+            <tr><td> du</td><td>fing<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>fing<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>fing<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>riet<span class=anomaly>(e)</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>riet</td></tr>
+            <tr><td>ihr</td><td>riet<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
             <tr><td> du</td><td>riet<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>riet<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>riet<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1622,27 +1636,34 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>tat<span class=personal-suffix>en</span></td></tr>
-            <tr><td> du</td><td>tat<span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>tat</td></tr>
-            <tr><td>ihr</td><td>tat<span class=personal-suffix>et</span></td></tr>
+            <tr><td> du</td><td>lud<span class=anomaly>(e)</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>lud</td></tr>
+            <tr><td>ihr</td><td>lud<span class=anomaly>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>tät<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>tät<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>tät<span class=mood-suffix>e</span></td></tr>
-            <tr><td>ihr</td><td>tät<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+            <tr><td> du</td><td>lüd<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>lüd<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>lüd<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
       </tr>
       <tr>
+        <th>Partizip</th>
+        <td colspan=2>ist gekommen</td>
+        <td colspan=2>hat gesehen</td>
+        <td colspan=2>hat gefangen</td>
+        <td colspan=2>hat geraten</td>
+        <td colspan=2>hat geladen</td>
+      </tr>
+      <tr>
         <th></th>
         <td colspan=2></td>
-        <td colspan=2></td>
-        <td colspan=2>tőhangváltós -ten: er rät, er tritt<br/>tőhangváltós -den: er lädt</td>
-        <td colspan=2></td>
+        <td colspan=2>Brechung</td>
+        <td colspan=2>Umlaut</td>
+        <td colspan=2>Umlaut/Brechung -ten:<br/>er rät, er tritt</td>
+        <td colspan=2>Umlaut/Brechung -den:<br/>er lädt</td>
       </tr>
     </table>
     </p>
@@ -1651,22 +1672,21 @@ section {
     <table>
       <tr>
         <th>Rückumlaut</th>
-        <th colspan=2>BRENNEN, BRANNTE, h. GEBRANNT</th>
-        <th colspan=2>BRINGEN, BRACHTE, h. GEBRACHT</th>
+        <th colspan=2>brennen</th>
+        <th colspan=2>bringen</th>
       </tr>
       <tr>
         <th></th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
       </tr>
       <tr>
         <th>Präsens</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>brenn<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>brenn<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>brenn<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>brenn<span class=personal-suffix>t</span></td></tr>
@@ -1674,7 +1694,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>brenn<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>brenn<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>brenn<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>brenn<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1683,7 +1702,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>bring<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>bring<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>bring<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>bring<span class=personal-suffix>t</span></td></tr>
@@ -1691,7 +1709,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>bring<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>bring<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>bring<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>bring<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1702,7 +1719,6 @@ section {
         <th>Präteritum</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>brann<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>brann<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>brann<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>brann<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1710,7 +1726,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>brenn<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>brenn<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>brenn<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>brenn<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1719,7 +1734,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>brach<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>brach<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>brach<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>brach<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1727,7 +1741,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>bräch<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>bräch<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>bräch<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>bräch<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1735,8 +1748,13 @@ section {
         </td>
       </tr>
       <tr>
+        <th>Partizip</th>
+        <td colspan=2>hat gebrannt</td>
+        <td colspan=2>hat gebracht</td>
+      </tr>
+      <tr>
         <th></th>
-        <td colspan=2>brennen, kennen, nennen, rennen, senden, wenden</td>
+        <td colspan=2>brennen, kennen, nennen,<br/>rennen, senden, wenden</td>
         <td colspan=2>bringen, denken</td>
       </tr>
     </table>
@@ -1745,43 +1763,42 @@ section {
     <p>
     <table>
       <tr>
-        <th>Präteritopräsentia</th>
-        <th colspan=2>SOLLEN, h.&nbsp;GESOLLT</th>
-        <th colspan=2>WOLLEN, h.&nbsp;GEWOLLT</th>
-        <th colspan=2>KÖNNEN, h.&nbsp;GEKONNT</th>
-        <th colspan=2> MÖGEN, h.&nbsp;GEMOCHT</th>
-        <th colspan=2>MÜSSEN, h.&nbsp;GEMUSST</th>
-        <th colspan=2>DÜRFEN, h.&nbsp;GEDURFT</th>
-        <th colspan=2>WISSEN, h.&nbsp;GEWUSST</th>
+        <th>Präterito-<br/>präsentia</th>
+        <th colspan=2>sollen</th>
+        <th colspan=2>wollen</th>
+        <th colspan=2>können</th>
+        <th colspan=2> mögen</th>
+        <th colspan=2>dürfen</th>
+        <th colspan=2>müssen</th>
+        <th colspan=2>wissen</th>
       </tr>
       <tr>
         <th></th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
 
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
       </tr>
       <tr>
         <th>Präsens</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>soll<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>soll<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>soll</td></tr>
             <tr><td>ihr</td><td>soll<span class=personal-suffix>t</span></td></tr>
@@ -1789,7 +1806,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>soll<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>soll<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>soll<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>soll<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1798,7 +1814,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>woll<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>w<b>i</b>ll<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>w<b>i</b>ll</td></tr>
             <tr><td>ihr</td><td>woll<span class=personal-suffix>t</span></td></tr>
@@ -1806,7 +1821,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>woll<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>woll<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>woll<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>woll<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1815,7 +1829,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>könn<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>k<b>a</b>nn<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>k<b>a</b>nn</td></tr>
             <tr><td>ihr</td><td>könn<span class=personal-suffix>t</span></td></tr>
@@ -1823,7 +1836,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>könn<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>könn<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>könn<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>könn<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1832,7 +1844,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>mög<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>m<b>a</b>g<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>m<b>a</b>g</td></tr>
             <tr><td>ihr</td><td>mög<span class=personal-suffix>t</span></td></tr>
@@ -1840,7 +1851,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>mög<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>mög<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>mög<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>mög<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1849,24 +1859,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>müss<span class=personal-suffix>en</span></td></tr>
-            <tr><td> du</td><td>m<b>u</b>ss<span class=personal-suffix>t</span></td></tr>
-            <tr><td> er</td><td>m<b>u</b>ss</td></tr>
-            <tr><td>ihr</td><td>müss<span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>müss<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>müss<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>müss<span class=mood-suffix>e</span></td></tr>
-            <tr><td>ihr</td><td>müss<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>dürf<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>d<b>a</b>rf<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>d<b>a</b>rf</td></tr>
             <tr><td>ihr</td><td>dürf<span class=personal-suffix>t</span></td></tr>
@@ -1874,7 +1866,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>dürf<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>dürf<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>dürf<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>dürf<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1883,7 +1874,21 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wiss<span class=personal-suffix>en</span></td></tr>
+            <tr><td> du</td><td>m<b>u</b>ss<span class=personal-suffix>t</span></td></tr>
+            <tr><td> er</td><td>m<b>u</b>ss</td></tr>
+            <tr><td>ihr</td><td>müss<span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>müss<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>müss<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>müss<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
             <tr><td> du</td><td>w<b>ei</b>ß<span class=personal-suffix>t</span></td></tr>
             <tr><td> er</td><td>w<b>ei</b>ß</td></tr>
             <tr><td>ihr</td><td>wiss<span class=personal-suffix>t</span></td></tr>
@@ -1891,7 +1896,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wiss<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>wiss<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>wiss<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>wiss<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -1901,8 +1905,7 @@ section {
       <tr>
         <th>Präteritum</th>
         <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>soll<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+          <table class=aligner style="margin: auto">
             <tr><td> du</td><td>soll<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>soll<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>soll<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1910,8 +1913,7 @@ section {
         </td>
 
         <td colspan=2>
-          <table class=aligner>
-            <tr><td>sie</td><td>woll<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+          <table class=aligner style="margin: auto">
             <tr><td> du</td><td>woll<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>woll<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>woll<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1920,7 +1922,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>konn<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>konn<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>konn<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>konn<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1928,7 +1929,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>könn<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>könn<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>könn<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>könn<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1937,7 +1937,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>moch<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>moch<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>moch<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>moch<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1945,7 +1944,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>möch<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>möch<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>möch<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>möch<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1954,24 +1952,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>muss<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>muss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>muss<span class=mood-suffix>te</span></td></tr>
-            <tr><td>ihr</td><td>muss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>müss<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
-            <tr><td> du</td><td>müss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
-            <tr><td> er</td><td>müss<span class=mood-suffix>te</span></td></tr>
-            <tr><td>ihr</td><td>müss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
-          </table>
-        </td>
-
-        <td>
-          <table class=aligner>
-            <tr><td>sie</td><td>durf<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>durf<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>durf<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>durf<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1979,7 +1959,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>dürft<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>dürft<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>dürft<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>dürft<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1988,7 +1967,21 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wuss<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
+            <tr><td> du</td><td>muss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>muss<span class=mood-suffix>te</span></td></tr>
+            <tr><td>ihr</td><td>muss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>müss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>müss<span class=mood-suffix>te</span></td></tr>
+            <tr><td>ihr</td><td>müss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
             <tr><td> du</td><td>wuss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>wuss<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>wuss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -1996,12 +1989,21 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wüss<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>wüss<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>wüss<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>wüss<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
+      </tr>
+      <tr>
+        <th>Partizip</th>
+        <td colspan=2>hat&nbsp;gesollt</td>
+        <td colspan=2>hat&nbsp;gewollt</td>
+        <td colspan=2>hat&nbsp;gekonnt</td>
+        <td colspan=2>hat&nbsp;gemocht</td>
+        <td colspan=2>hat&nbsp;gedurft</td>
+        <td colspan=2>hat&nbsp;gemusst</td>
+        <td colspan=2>hat&nbsp;gewusst</td>
       </tr>
     </table>
     </p>
@@ -2010,41 +2012,43 @@ section {
     <table>
       <tr>
         <th>Hilfsverben</th>
-        <th colspan=2>SEIN, WAR, i. GEWESEN</th>
-        <th colspan=2>HABEN (h)</th>
-        <th colspan=2>WERDEN, WURDE, i. GEWORDEN</th>
+        <th colspan=2>sein</th>
+        <th colspan=2>haben</th>
+        <th colspan=2>werden</th>
+        <th colspan=2>tun</th>
       </tr>
       <tr>
         <th></th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
-        <th>Indikativ</th>
-        <th>Konjunktiv</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
+        <th>Ind.</th>
+        <th>Konj.</th>
       </tr>
       <tr>
         <th>Präsens</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>sind</td></tr>
             <tr><td> du</td><td>bi<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>is<span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>seid</td></tr>
+            <tr><td>sie</td><td>sind</td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>sei<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>sei<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>sei</td></tr>
             <tr><td>ihr</td><td>sei<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+            <tr><td>sie</td><td>sei<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
           </table>
         </td>
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>hab<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>h<u>a</u><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>h<u>a</u><span class=personal-suffix>t</span></td></tr>
             <tr><td>ihr</td><td>hab<span class=personal-suffix>t</span></td></tr>
@@ -2052,7 +2056,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>hab<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>hab<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>hab<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>hab<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -2061,7 +2064,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>werd<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>w<b>i</b>r<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>w<b>i</b>r<span class=personal-suffix><u>d</u></span></td></tr>
             <tr><td>ihr</td><td>werd<span class=personal-suffix>et</span></td></tr>
@@ -2069,10 +2071,26 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>werd<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>werd<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>werd<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>werd<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>tu<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>tu<span class=personal-suffix>t</span></td></tr>
+            <tr><td>ihr</td><td>tu<span class=personal-suffix>t</span></td></tr>
+            <tr><td>sie</td><td>tu<span class=personal-suffix>n</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>tu<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+            <tr><td>sie</td><td>tu<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
           </table>
         </td>
       </tr>
@@ -2080,7 +2098,6 @@ section {
         <th>Präteritum</th>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>war<span class=personal-suffix>en</span></td></tr>
             <tr><td> du</td><td>war<span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>war</td></tr>
             <tr><td>ihr</td><td>war<span class=personal-suffix>t</span></td></tr>
@@ -2088,7 +2105,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wär<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>wär<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>wär<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>wär<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -2097,7 +2113,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>hat<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>hat<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>hat<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>hat<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -2105,7 +2120,6 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>hät<span class=mood-suffix>te</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>hät<span class=mood-suffix>te</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>hät<span class=mood-suffix>te</span></td></tr>
             <tr><td>ihr</td><td>hät<span class=mood-suffix>te</span><span class=personal-suffix>t</span></td></tr>
@@ -2114,7 +2128,6 @@ section {
 
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>wurd<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>wurd<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>wurd<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>wurd<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
@@ -2122,12 +2135,33 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><td>sie</td><td>würd<span class=mood-suffix>e</span><span class=personal-suffix>n</span></td></tr>
             <tr><td> du</td><td>würd<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
             <tr><td> er</td><td>würd<span class=mood-suffix>e</span></td></tr>
             <tr><td>ihr</td><td>würd<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
           </table>
         </td>
+
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>tat<span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>tat</td></tr>
+            <tr><td>ihr</td><td>tat<span class=personal-suffix>et</span></td></tr>
+          </table>
+        </td>
+        <td>
+          <table class=aligner>
+            <tr><td> du</td><td>tät<span class=mood-suffix>e</span><span class=personal-suffix>st</span></td></tr>
+            <tr><td> er</td><td>tät<span class=mood-suffix>e</span></td></tr>
+            <tr><td>ihr</td><td>tät<span class=mood-suffix>e</span><span class=personal-suffix>t</span></td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>Partizip</th>
+        <td colspan=2>ist gewesen</td>
+        <td colspan=2>hat gehabt</td>
+        <td colspan=2>ist geworden</td>
+        <td colspan=2>hat getan</td>
       </tr>
     </table>
     </p>
@@ -2615,7 +2649,7 @@ section {
           <td>der Trank, das Getränk</td>
         </tr>
         <tr class="s-i-i-u-u">
-          <td class="l-i"><b>schinden</b></td>
+          <td class="l-i">schinden</td>
           <td class="l-i">schindet</td>
           <td class="l-u">[schund]</td>
           <td class="l-u">hat geschunden</td>
@@ -2773,14 +2807,14 @@ section {
           <td>to swim (for exercise/sport) / to float</td>
         </tr>
         <tr class="s-i-i-o-o">
-          <td class="l-i"><b>klimmen</b></td>
+          <td class="l-i">klimmen</td>
           <td class="l-i">klimmt</td>
           <td class="l-o">klomm</td>
           <td class="l-o"><span class="ist">ist</span> geklommen</td>
           <td>to clamber, climb</td>
         </tr>
         <tr class="s-i-i-o-o">
-          <td class="l-i"><b>glimmen</b></td>
+          <td class="l-i">glimmen</td>
           <td class="l-i">glimmt</td>
           <td class="l-o">[glomm]</td>
           <td class="l-o">hat geglommen (geglimmt)</td>
@@ -2915,10 +2949,10 @@ section {
           <td class="l-o">hat verdrossen</td>
           <td>to irk, irritate, annoy</td>
         </tr>
-        <tr class="s-ie-ie-i-o">
+        <tr class="s-ie-ie-o-o">
           <td class="l-ie">kriechen</td>
           <td class="l-ie">kriecht</td>
-          <td class="l-i">krich</td>
+          <td class="l-o">kroch</td>
           <td class="l-o"><span class="ist">ist</span> gekrochen</td>
           <td>to crawl</td>
         </tr>
