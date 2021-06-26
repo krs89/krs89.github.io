@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <style>
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      /*
+         https://en.wikipedia.org/wiki/HSL_and_HSV
+
+           0 red:          #FF8080; #DF3838; #BF0000; | 180 cyan:         #80FFFF; #38DFDF; #00BFBF;
+          30 yellow-red:   #FFBF80; #DF8B38; #BF6000; | 210 blue-cyan:    #80BFFF; #388BDF; #0060BF;
+          60 yellow:       #FFFF80; #DFDF38; #BFBF00; | 240 blue:         #8080FF; #3838DF; #0000BF;
+          90 green-yellow: #BFFF80; #8BDF38; #60BF00; | 270 magenta-blue: #BF80FF; #8B38DF; #6000BF;
+         120 green:        #80FF80; #38DF38; #00BF00; | 300 magenta:      #FF80FF; #DF38DF; #BF00BF;
+         150 cyan-green:   #80FFBF; #38DF8B; #00BF60; | 330 red-magenta:  #FF80BF; #DF388B; #BF0060;
+
+           0 red:          #EFCFCF; #DF9F9F; #CF7070; | 180 cyan:         #CFEFEF; #9FDFDF; #80CFCF;
+          30 yellow-red:   #EFDFCF; #DFBF9F; #CF9F70; | 210 blue-cyan:    #CFDFEF; #9FBFDF; #709FCF;
+          60 yellow:       #EFEFCF; #DFDF9F; #CFCF70; | 240 blue:         #CFCFEF; #9F9FDF; #7070CF;
+          90 green-yellow: #DFEFCF; #BFDF9F; #9FCF70; | 270 magenta-blue: #DFCFEF; #BF9FDF; #9F70CF;
+         120 green:        #CFEFCF; #9FDF9F; #70CF70; | 300 magenta:      #EFCFEF; #DF9FDF; #CF70CF;
+         150 cyan-green:   #CFEFDF; #9FDFBF; #70CF9F; | 330 red-magenta:  #EFCFDF; #DF9FBF; #CF709F;
+      */
+
+      .fin { background-color: #FFFF80; }
+      .ptc { background-color: #80FFBF; }
+      .inf { background-color: #DF9FBF; }
+      .ipp { background-color: #CF709F; }
+
+      .voll-fin { background-color: #FF80BF; }
+      .voll-ptc { background-color: #DF388B; }
+      .voll-inf { background-color: #BF0060; }
+      .pass-fin { background-color: #80BFFF; }
+      .pass-ptc { background-color: #388BDF; }
+      .pass-inf { background-color: #0060BF; }
+      .obj-fin { background-color: #FFBF80; }
+      .obj-ipp { background-color: #DF8B38;  }
+      .obj-inf { background-color: #BF6000;  }
+      .pf-fin { background-color: #80FFBF; }
+      .pf-ptc { background-color: #38DF8B; }
+      .pf-inf { background-color: #00BF60; }
+      .subj-fin { background-color: #FFFF80; }
+      .subj-ptc { background-color: #DFDF38; }
+      .subj-inf { background-color: #BFBF00; }
+
+      .voll-fin { background-color: #DF388B; }
+      .voll-ptc { background-color: #DF9FBF; }
+      .voll-inf { background-color: #CF709F; }
+      .pass-fin { background-color: #388BDF; }
+      .pass-ptc { background-color: #9FBFDF; }
+      .pass-inf { background-color: #709FCF; }
+      .obj-fin { background-color: #DF8B38;  }
+      .obj-ipp { background-color: #CF9F70; }
+      .obj-inf { background-color: #DFBF9F; }
+      .pf-fin { background-color: #38DF8B; }
+      .pf-ptc { background-color: #9FDFBF; }
+      .pf-inf { background-color: #70CF9F; }
+      .subj-fin { background-color: #DFDF38; }
+      .subj-ptc { background-color: #DFDF9F; }
+      .subj-inf { background-color: #CFCF70; }
+
+      .fin { background-color: LightSteelBlue; }
+      .ptc { background-color: DarkSeaGreen; }
+      .inf { background-color: PaleVioletRed; }
+      .ipp { background-color: Coral; }
+
+    </style>
+  </head>
+  <body>
+    <p>
+    <table>
+      <tr>
+        <th colspan=5>Order:</th>
+      </tr>
+      <tr id="desiredOrder">
+        <td id="subj" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Vermutung</td>
+        <td id="pass" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Passiv</td>
+        <td id="obj"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Modal</td>
+        <td id="pf"   style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Perfekt</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <div id="verb-form-container"></div>
+    </p>
+
+    <p>
+    <ul>
+      <li><b>Passiv</b>: werden, sein, gehören, bekommen, erhalten, kriegen</li>
+      <li><b>Objektives Modalverb (Deontic?), Accusativus cum infinitivo</b>: dürfen, können, müssen, sollen, wollen, mögen; brauchen, heißen, lassen, sehen, hören, fühlen, helfen, lehren, machen</li>
+      <li><b>Perfekt</b>: haben, sein</li>
+      <li><b>Subjektives Modalverb? (Epistemic?)/Vermutung?/Futur?</b>: werden, sollen, wollen, muss &gt; müsste &gt; dürfte &gt; kann &gt; könnte &gt; mag, scheinen</li>
+    </ul>
+    </p>
+    <script>
+      var selected;
+
+      function dragStart(e) {
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", null);
+        selected = e.target;
+      }
+
+      function dragOver(e) {
+        var target = e.target;
+        //while (target.parentNode.tagName != 'tr') {
+            //target = target.parentNode;
+        //}
+
+        if (isBefore(selected, target))
+          target.parentNode.insertBefore(selected, target);
+        else
+          target.parentNode.insertBefore(selected, target.nextSibling);
+      }
+
+      function dragEnd(e) {
+        selected = null
+        var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
+        redrawTable(verbFormData.sort(compareBy(actualOrder)));
+      }
+
+      function isBefore(a, b) {
+        if (b.parentNode === a.parentNode)
+          for (var cur = a.previousSibling; cur && cur.nodeType !== Node.DOCUMENT_NODE; cur = cur.previousSibling)
+            if (cur === b)
+              return true;
+        return false;
+      }
+
+
+      var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
+      var operators = [
+        {"id": "voll", "name": "Vollverb" },
+        {"id": "pass", "name": "Passiv" },
+        {"id": "obj", "name": "Modal" },
+        {"id": "pf", "name": "Perfekt" },
+        {"id": "subj", "name": "Vermutung" },
+      ];
+
+      var verbFormData = [
+        { "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[wäscht/wusch/wasche/wäsche]", "mittelfeld": "den Apfel.", "rklammer": "" }},
+        { "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "waschen." }},
+        { "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "den Apfel", "rklammer": "gewaschen." }},
+        { "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "gewaschen haben." }},
+        { "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[kann/konnte/könne/könnte]",   "mittelfeld": "den Apfel", "rklammer": "waschen." }},
+        { "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "waschen können." }},
+        { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "den Apfel", "rklammer": "waschen können." }},
+        { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "haben waschen können." }},
+        { "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[wird/wurde/werde/würde]",     "mittelfeld": "",          "rklammer": "gewaschen." }},
+        { "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen werden." }},
+        { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "",          "rklammer": "gewaschen worden." }},
+        { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen worden sein." }},
+        { "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[kann/konnte/könne/könnte]",   "mittelfeld": "",          "rklammer": "gewaschen werden." }},
+        { "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen werden können." }},
+        { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "",          "rklammer": "gewaschen werden können." }},
+        { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "haben gewaschen werden können." }},
+      ];
+
+      function compareBy(order) {
+        return (a, b) => {
+          for (let verb of order) {
+            if (b[verb] && !a[verb]) {
+              return -1
+            } else if (a[verb] && !b[verb]) {
+              return 1
+            }
+          }
+          return 0
+        }
+      }
+
+      var verbForms = verbFormData.sort(compareBy(actualOrder));
+
+      function addVerbFormToRow(verbForm, row) {
+        operators.forEach( operator => {
+          var cell = document.createElement('td');
+          cell.innerText = "";
+          if (verbForm[operator.id]) {
+            cell.innerText = verbForm[operator.id];
+            //cell.setAttribute("class", operator.id + "-" + verbForm[operator.id]);
+            cell.setAttribute("class", verbForm[operator.id]);
+          }
+          row.appendChild(cell);
+        })
+
+        for (var feld of ['vorfeld', 'lklammer', 'mittelfeld', 'rklammer']) {
+          var cell = document.createElement('td');
+          cell.innerText = verbForm.ex[feld];
+          row.appendChild(cell);
+        }
+      }
+
+      function redrawTable(verbForms) {
+        var verbFormContainer = document.getElementById("verb-form-container");
+
+        var numberOfColumns = verbForms.length < 4 ? 1 : 2;
+        var numberOfColumns = verbForms.length < 44 ? 1 : 2;
+        var table = document.createElement('table');
+
+        // add header
+        var row = document.createElement('tr');
+        for (var i = 0; i < numberOfColumns; i++) {
+          operators.forEach( operator => {
+            var cell = document.createElement('th');
+            cell.innerText = operator.name;
+            row.appendChild(cell);
+          })
+        }
+        table.appendChild(row);
+
+        // add rows
+        for (var i = 0; i < verbForms.length / numberOfColumns; i++) {
+          var row = document.createElement('tr');
+          if (numberOfColumns < 2) {
+            addVerbFormToRow(verbForms[i], row)
+          } else {
+            for (var rowIndex of [i, i + verbForms.length / numberOfColumns]) {
+              addVerbFormToRow(verbForms[rowIndex], row)
+            }
+          }
+          table.appendChild(row);
+        }
+
+        verbFormContainer.innerHTML = table.outerHTML;
+      }
+
+      redrawTable(verbForms);
+
+    </script>
+  </body>
+</html>
+
+
