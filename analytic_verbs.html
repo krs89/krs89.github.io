@@ -79,13 +79,13 @@
     <p>
     <table>
       <tr>
-        <th colspan=5>Order:</th>
+        <th colspan=5>Reihenfolge:</th>
       </tr>
       <tr id="desiredOrder">
-        <td id="subj" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Vermutung</td>
-        <td id="pass" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Passiv</td>
         <td id="obj"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Modal</td>
         <td id="pf"   style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Perfekt</td>
+        <td id="subj" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Vermutung</td>
+        <td id="pass" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Passiv</td>
       </tr>
     </table>
     </p>
@@ -101,6 +101,49 @@
       <li><b>Perfekt</b>: haben, sein</li>
       <li><b>Subjektives Modalverb? (Epistemic?)/Vermutung?/Futur?</b>: werden, sollen, wollen, muss &gt; müsste &gt; dürfte &gt; kann &gt; könnte &gt; mag, scheinen</li>
     </ul>
+    </p>
+    <p>
+        <table><tbody>
+            <tr><th>Vollverb</th><th>Passiv</th><th>Modal</th><th>Perfekt</th><th>Vermutung</th></tr>
+            <!-- 0000 --><tr><td class="fin">fin</td><td></td><td></td><td></td><td></td><td>Der Koch</td><td>wäscht</td><td>wasche</td><td>wusch</td><td>wüsche</td><td>den Apfel.</td><td></td></tr>
+            <!-- 1000 --><tr><td class="ptc">ptc</td><td class="fin">fin</td><td></td><td></td><td></td><td>Der Apfel</td><td>wird/ist</td><td>werde/sei</td><td>wurde/war</td><td>würde/wäre</td><td></td><td>gewaschen.</td></tr>
+            <!-- 0010 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat (ist)</td><td>habe (sei)</td><td>hatte (war)</td><td>hätte (wäre)</td><td>den Apfel</td><td>gewaschen.</td></tr>
+            <!-- 0011 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>gewaschen haben (sein).</td></tr>
+            <!-- 1100 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="fin">fin</td><td></td><td></td><td>Der Apfel</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td></td><td>gewaschen werden/sein.</td></tr>
+            <!-- 1001 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td></td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein.</td></tr>
+            <!-- 1110 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>hat</td><td>habe</td><td>hatte</td><td>hätte</td><td></td><td>gewaschen werden/sein können.</td></tr>
+            <!-- 1101 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein können.</td></tr>
+            <!-- 1111 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>haben gewaschen werden/sein können.</td></tr>
+            <!-- 1010 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>ist</td><td>sei</td><td>war</td><td>wäre</td><td></td><td>gewaschen worden/gewesen.</td></tr>
+            <!-- 1011 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen worden/gewesen sein.</td></tr>
+            <!-- 0100 --><tr><td class="inf">inf</td><td></td><td class="fin">fin</td><td></td><td></td><td>Der Koch</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td>den Apfel</td><td>waschen.</td></tr>
+            <!-- 0001 --><tr><td class="inf">inf</td><td></td><td></td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen.</td></tr>
+            <!-- 0110 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat</td> <td>habe</td> <td>hatte</td> <td>hätte</td> <td>den Apfel</td><td>waschen können.</td></tr>
+            <!-- 0101 --><tr><td class="inf">inf</td><td></td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen können.</td></tr>
+            <!-- 0111 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>haben waschen können.</td></tr>
+        </tbody></table>
+    </p>
+
+    <p>
+        <table><tbody>
+            <tr><th>Vollverb</th><th>Passiv</th><th>Modal</th><th>Perfekt</th><th>Vermutung</th></tr>
+            <!-- 0000 --><tr><td class="fin">fin</td><td></td><td></td><td></td><td></td><td>Der Koch</td><td>wäscht</td><td>wasche</td><td>wusch</td><td>wüsche</td><td>den Apfel.</td><td></td></tr>
+            <!-- 0110 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat</td> <td>habe</td> <td>hatte</td> <td>hätte</td> <td>den Apfel</td><td>waschen können.</td></tr>
+            <!-- 1110 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>hat</td><td>habe</td><td>hatte</td><td>hätte</td><td></td><td>gewaschen werden/sein können.</td></tr>
+            <!-- 0010 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat (ist)</td><td>habe (sei)</td><td>hatte (war)</td><td>hätte (wäre)</td><td>den Apfel</td><td>gewaschen.</td></tr>
+            <!-- 1010 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>ist</td><td>sei</td><td>war</td><td>wäre</td><td></td><td>gewaschen worden/gewesen.</td></tr>
+            <!-- 1000 --><tr><td class="ptc">ptc</td><td class="fin">fin</td><td></td><td></td><td></td><td>Der Apfel</td><td>wird/ist</td><td>werde/sei</td><td>wurde/war</td><td>würde/wäre</td><td></td><td>gewaschen.</td></tr>
+            <!-- 0001 --><tr><td class="inf">inf</td><td></td><td></td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen.</td></tr>
+            <!-- 1001 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td></td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein.</td></tr>
+            <!-- 0101 --><tr><td class="inf">inf</td><td></td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen können.</td></tr>
+            <!-- 1101 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein können.</td></tr>
+            <!-- 0111 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>haben waschen können.</td></tr>
+            <!-- 1111 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>haben gewaschen werden/sein können.</td></tr>
+            <!-- 0011 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>gewaschen haben (sein).</td></tr>
+            <!-- 1011 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen worden/gewesen sein.</td></tr>
+            <!-- 0100 --><tr><td class="inf">inf</td><td></td><td class="fin">fin</td><td></td><td></td><td>Der Koch</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td>den Apfel</td><td>waschen.</td></tr>
+            <!-- 1100 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="fin">fin</td><td></td><td></td><td>Der Apfel</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td></td><td>gewaschen werden/sein.</td></tr>
+        </tbody></table>
     </p>
     <script>
       var selected;
@@ -148,22 +191,22 @@
       ];
 
       var verbFormData = [
-        { "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[wäscht/wusch/wasche/wäsche]", "mittelfeld": "den Apfel.", "rklammer": "" }},
-        { "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "waschen." }},
-        { "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "den Apfel", "rklammer": "gewaschen." }},
-        { "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "gewaschen haben." }},
-        { "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[kann/konnte/könne/könnte]",   "mittelfeld": "den Apfel", "rklammer": "waschen." }},
-        { "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "waschen können." }},
-        { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "den Apfel", "rklammer": "waschen können." }},
-        { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "den Apfel", "rklammer": "haben waschen können." }},
-        { "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[wird/wurde/werde/würde]",     "mittelfeld": "",          "rklammer": "gewaschen." }},
-        { "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen werden." }},
-        { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "",          "rklammer": "gewaschen worden." }},
-        { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen worden sein." }},
-        { "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[kann/konnte/könne/könnte]",   "mittelfeld": "",          "rklammer": "gewaschen werden." }},
-        { "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "gewaschen werden können." }},
-        { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "lklammer": "[hat/hatte/habe/hätte]",       "mittelfeld": "",          "rklammer": "gewaschen werden können." }},
-        { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "lklammer": "[muss/musste/müsse/müsste]",   "mittelfeld": "",          "rklammer": "haben gewaschen werden können." }},
+        /* 0000 */ { "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "wäscht",     "p2": "wusch",      "k1": "wasche",     "k2": "wüsche",      "mittelfeld": "den Apfel.", "rklammer": "" }},
+        /* 0001 */ { "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "waschen." }},
+        /* 0010 */ { "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "hat (ist)",  "p2": "hatte (war)","k1": "habe (sei)", "k2": "hätte (wäre)","mittelfeld": "den Apfel",  "rklammer": "gewaschen." }},
+        /* 0011 */ { "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." }},
+        /* 0100 */ { "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "kann",       "p2": "konnte",     "k1": "könne",      "k2": "könnte",      "mittelfeld": "den Apfel",  "rklammer": "waschen." }},
+        /* 0101 */ { "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "waschen können." }},
+        /* 0110 */ { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "hat",        "p2": "hatte",      "k1": "habe",       "k2": "hätte",       "mittelfeld": "den Apfel",  "rklammer": "waschen können." }},
+        /* 0111 */ { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." }},
+        /* 1000 */ { "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "wird/ist",   "p2": "wurde/war",  "k1": "werde/sei",  "k2": "würde/wäre",  "mittelfeld": "",           "rklammer": "gewaschen." }},
+        /* 1001 */ { "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein." }},
+        /* 1010 */ { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "ist",        "p2": "war",        "k1": "sei",        "k2": "wäre",        "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." }},
+        /* 1011 */ { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." }},
+        /* 1100 */ { "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "kann",       "p2": "konnte",     "k1": "könne",      "k2": "könnte",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein." }},
+        /* 1101 */ { "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." }},
+        /* 1110 */ { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "hat",        "p2": "hatte",      "k1": "habe",       "k2": "hätte",       "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." }},
+        /* 1111 */ { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." }},
       ];
 
       function compareBy(order) {
@@ -193,7 +236,7 @@
           row.appendChild(cell);
         })
 
-        for (var feld of ['vorfeld', 'lklammer', 'mittelfeld', 'rklammer']) {
+        for (var feld of ['vorfeld', 'p1', 'k1', 'p2', 'k2', 'mittelfeld', 'rklammer']) {
           var cell = document.createElement('td');
           cell.innerText = verbForm.ex[feld];
           row.appendChild(cell);
