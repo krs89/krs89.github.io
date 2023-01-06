@@ -185,6 +185,11 @@ caption {
   background-color: DimGrey;
 }
 
+.few {
+  background-color: LightGrey;
+  background-color: DarkGrey;
+}
+
 
 /*
       0: RED
@@ -368,7 +373,6 @@ section {
         <th rowspan=1>AN</th>
         <td>Wasser</td>
         <td>ans Meer, an den Strand, an die Küste</td>
-        <th rowspan=7>VON</th>
       </tr>
       <tr>
         <th rowspan=3>AUF</th>
@@ -404,7 +408,6 @@ section {
       <tr>
         <td>Länder/Städte ohne Artikel</td>
         <td>nach Köln, nach China</td>
-        <th rowspan=4>AUS</th>
       </tr>
       <tr>
         <th rowspan=3>IN</th>
@@ -438,7 +441,7 @@ section {
       </tr>
       <tr>
         <th>Nom.</th>
-        <td>
+        <td class="er">
           <table class=aligner>
             <tr><td class="er">der</td><td class="ie">gute</td></tr>
             <tr><td class="no">ihr</td><td class="er">guter</td></tr>
@@ -446,7 +449,7 @@ section {
             <tr><td class="er" colspan=2 style="text-align: center">er</td></tr>
           </table>
         </td>
-        <td rowspan=2>
+        <td class="es" rowspan=2>
           <table class=aligner>
             <tr><td class="as">das</td><td class="ie">gute</td></tr>
             <tr><td class="no">ihr</td><td class="es">gutes</td></tr>
@@ -462,7 +465,7 @@ section {
             <tr><td class="ie" colspan=2 style="text-align: center">sie</td></tr>
           </table>
         </td>
-        <td rowspan=2>
+        <td class="ie" rowspan=2>
           <table class=aligner>
             <tr><td class="ie">die</td><td class="en">guten</td></tr>
             <tr><td class="ie">ihre</td><td class="en">guten</td></tr>
@@ -484,7 +487,7 @@ section {
       </tr>
       <tr>
         <th>Dat.</th>
-        <td colspan=2>
+        <td class="em" colspan=2>
           <table class=aligner style="margin: auto">
             <tr><td class="em">dem</td><td class="en">guten</td></tr>
             <tr><td class="em">ihrem</td><td class="en">guten</td></tr>
@@ -492,7 +495,7 @@ section {
             <tr><td class="em" colspan=2 style="text-align: center">ihm</td></tr>
           </table>
         </td>
-        <td>
+        <td class="er">
           <table class=aligner>
             <tr><td class="er">der</td><td class="en">guten</td></tr>
             <tr><td class="er">ihrer</td><td class="en">guten</td></tr>
@@ -511,7 +514,7 @@ section {
       </tr>
       <tr>
         <th>Gen.</th>
-        <td colspan=2>
+        <td class="es" colspan=2>
           <table class=aligner style="margin: auto">
             <tr><td class="es">des</td><td class="en">guten</td></tr>
             <tr><td class="es">ihres</td><td class="en">guten</td></tr>
@@ -519,7 +522,7 @@ section {
             <tr><td class="er" colspan=2 style="text-align: center">seiner</td></tr>
           </table>
         </td>
-        <td colspan=2>
+        <td class="er" colspan=2>
           <table class=aligner style="margin: auto">
             <tr><td class="er">der</td><td class="en">guten</td></tr>
             <tr><td class="er">ihrer</td><td class="en">guten</td></tr>
@@ -532,6 +535,9 @@ section {
     </p>
 
     <h2>Determinativa</h2>
+    <p>
+        A <em>főnév előtt</em> áll, egy névszói csoportban van vele. "der mit einem scharfen Messer geschälte Apfel"
+    </p>
     <table>
       <tr>
         <th></th>
@@ -632,7 +638,7 @@ section {
       <li><b>Demonstrativum</b> (Attributives Demonstrativpronomen) [was für (ein)?]: solcher<sup>S</sup> (ein solcher<sup>2,M</sup>, jeder solche<sup>3,W</sup>), solch ein<sup>1,2</sup>, so ein<sup>1,2</sup>, derartig (ein derartiger<sup>2,M</sup>), dergleichen<sup>1</sup>, derlei<sup>1</sup></li>
       <li><b>Indefinitivum</b> (Attributives Indefinitpronomen): irgendein<sup>1,2</sup>, irgendwelcher<sup>1,3</sup>, jeder<sup>3</sup> (ein jeder<sup>2,M</sup>), jeglicher<sup>3</sup>, mancher<sup>3</sup>, etwas<sup>1</sup>, ein wenig<sup>1</sup>, ein bisschen<sup>1</sup></li>
       <li><b>Interrogativum</b> (Fragedeterminativum, Attributives Fragepronomen, Interrogativpronomen): wessen<sup>1</sup>, welcher<sup></sup>, was für (ein)<sup>1(,2)</sup>, wieviel<sup>1/S</sup></li>
-      <li><b>Quantifikatives</b> Determinativum: ein (der/dieser eine<sup>3,W</sup>), beide (die/meine beiden<sup>3,W/2,M</sup>), einiger<sup>3</sup> (+Adj.<sup>S</sup>), etlicher<sup>3</sup> (+Adj.<sup>S</sup>), mehrere<sup>3</sup> (+Adj.<sup>S</sup>), aller<sup>3</sup> (all/alle die<sup>1,3</sup>), sämtlicher<sup>3</sup> (mein sämtlicher<sup>2,M</sup>, der sämtliche<sup>3,W</sup>)</li>
+      <li><b>Quantifikatives</b> Determinativum (jelzői/egyeztetett számnév): ein (der/dieser eine<sup>3,W</sup>), beide (die/meine beiden<sup>3,W/2,M</sup>), einiger<sup>3</sup> (+Adj.<sup>S</sup>), etlicher<sup>3</sup> (+Adj.<sup>S</sup>), mehrere<sup>3</sup> (+Adj.<sup>S</sup>), aller<sup>3</sup> (all/alle die<sup>1,3</sup>), sämtlicher<sup>3</sup> (mein sämtlicher<sup>2,M</sup>, der sämtliche<sup>3,W</sup>)</li>
     </ul>
     <p>
     <table>
@@ -651,10 +657,10 @@ section {
       </tr>
       <tr>
         <th>Nom.</th>
-        <td class=er>der</td>
-        <td class=as rowspan=2>das</td>
-        <td class=ie rowspan=2>die</td>
-        <td class=ie rowspan=2>die</td>
+        <td class=er>dieser</td>
+        <td class=es rowspan=2>dies(es)</td>
+        <td class=ie rowspan=2>diese</td>
+        <td class=ie rowspan=2>diese</td>
         <!-- -->
         <th>Nom.</th>
         <td class="ie noborderright"></td>
@@ -663,24 +669,24 @@ section {
       </tr>
       <tr>
         <th>Acc.</th>
-        <td class=en>den</td>
+        <td class=en>diesen</td>
         <!-- -->
         <th>Acc.</th>
         <td class="en noborderbottom"></td>
       </tr>
       <tr>
         <th>Dat.</th>
-        <td class=em colspan=2>dem</td>
-        <td class=er>der</td>
-        <td class=en>den (den<span class=en>en</span>)</td>
+        <td class=em colspan=2>diesem</td>
+        <td class=er>dieser</td>
+        <td class=en>diesen</td>
         <!-- -->
         <th>Dat.</th>
         <td class="en nobordertop" colspan=4 rowspan=2>guten</td>
       </tr>
       <tr>
         <th>Gen.</th>
-        <td class=es colspan=2>des (dess<span class=en>en</span>)</td>
-        <td class=er colspan=2>der (&larr;der<span class=en>en</span> (derer&rarr;))*</td>
+        <td class=es colspan=2>dieses</td>
+        <td class=er colspan=2>dieser</td>
         <!-- -->
         <th>Gen.</th>
       </tr>
@@ -697,9 +703,6 @@ section {
         </td>
       </tr>
     </table>
-    *Demonstrative attributive: der<br/>
-    Demonstrative independent: derer (főmondat: <u>azok&rarr;,</u> akik itt vannak)/deren (mellékmondat: ők, és <u>&larr;azok</u> barátai)<br/>
-    Relative: deren (akik)
     </p>
 
     <p>
@@ -812,7 +815,7 @@ section {
           all,
           etwas,
           ein wenig,
-          ein bisschen,
+          ein bisschen,</br>
           wessen<sup>Gen.</sup>,
           dessen<sup>Gen.</sup> (=sein),
           deren<sup>Gen.</sup> (=ihr),
@@ -822,7 +825,7 @@ section {
           mancher,
           welcher,
           aller,
-          derartiger,
+          derartiger,</br>
           meiner,
           deiner,
           seiner,
@@ -832,19 +835,65 @@ section {
         </td>
       </tr>
     </table>
+    <p>
+        <b>Demonstrativ</b></br>
+        Peter traf Wolfgang un seinen/dessen Bruder. (annak a, neki a)
+        Petra traf Eva un ihren/deren Bruder.</br>
+        dessen, deren - az utolsóként említett birtokosra utal, a seinen/ihren többértelmű</br>
+        <b>Relativ</b></br>
+        Ein Kind, dessen Eltern nicht mehr leben, nennt man "Waise". (akinek a)</br>
+        Elfriede Jelinek, deren Bücher sehr provokant sind, erhield 2004 den Nobelpreis für Literatur.
+    </p>
     </p>
 
     <h2>Substantivisches Pronomen</h2>
+    <p>
+        A <em>főnév helyett</em> áll, nincs egy névszói csoportban az antecedensével, amire utal, egyeztetve sincs vele feltétlenül.
+        "Hier sind zwei Stühle frei, und an dem Tisch da drüben sehe ich noch einen."
+    </p>
     <ul>
       <li>Personalpronomen</li>
-      <li>Possessivpronomen: meiner<sup>3/S</sup> (der meine<sup>3,W</sup>), etc.</li>
+      <li>Possessivpronomen: meiner<sup>3/S</sup> (der meine<sup>3,W</sup>, der meinige<sup>3,W</sup>), etc.</li>
       <li>Demonstrativpronomen: der<sup>3</sup>, dieser<sup>3</sup>, jener<sup>3</sup>, derjenige<sup>3,W</sup>, derselbe<sup>3,W</sup>, der gleiche<sup>3,W</sup>, solcher, dergleichen, so (et)was</li>
-      <li>Reflexivpronomen</li>
+      <li>Reflexivpronomen: sich, mich</li>
       <li>Relativpronomen: der<sup>3</sup>, welcher<sup>3</sup>, was, </li>
-      <li>Indefinitpronomen: (irgend)einer<sup>3</sup>, welcher<sup>3</sup>, was</li>
+      <li>Indefinitpronomen: (irgend)einer<sup>3</sup>, welcher<sup>3</sup>, was, etwas<sup>1</sup>, man, einige</li>
       <li>Interrogativpronomen/Fragepronomen: wer, was</li>
       <li>Negativpronomen: nichts, niemand, keiner<sup>3</sup></li>
     </ul>
+    <p>
+    <table>
+      <tr>
+        <th></th>
+        <th>masculinum</th>
+        <th>neutrum</th>
+        <th>femininum</th>
+        <th>Pluralis</th>
+      </tr>
+      <tr>
+        <th>Nom.</th>
+        <td class=er>der</td>
+        <td class=as rowspan=2>das</td>
+        <td class=ie rowspan=2>die</td>
+        <td class=ie rowspan=2>die</td>
+      </tr>
+      <tr>
+        <th>Acc.</th>
+        <td class=en>den</td>
+      </tr>
+      <tr>
+        <th>Dat.</th>
+        <td class=em colspan=2>dem</td>
+        <td class=er>der</td>
+        <td class=en><u>den<span class=en>en</span></u></td>
+      </tr>
+      <tr>
+        <th>Gen.</th>
+        <td class=es colspan=2><u>dess<span class=en>en</span></u></td>
+        <td class=er colspan=2><u>der<span class=en>en</span></u> (derer&rarr;)</td>
+      </tr>
+    </table>
+
     <p>
     <table>
       <tr>
@@ -904,6 +953,15 @@ section {
       </tr>
     </table>
     </p>
+    <p>
+        <h3>der<sup>3</sup>:</h3>
+        <ul>
+            <li>határozott névelő (definiter Artikel)</li>
+            <li>jelzői mutató névmás (Demonstrativum, attributives Demonstrativpronomen)</li>
+            <li>mutató névmás (Demonstrativpronomen)</li>
+            <li>vonatkozó névmás (Relativpronomen)</li>
+        </ul>
+    </p>
     </section>
 
     <section id="plurals">
@@ -936,8 +994,8 @@ section {
       <tr class=no>
         <th>&#11802;&empty;</th>
         <td>Vater</td>
-        <td class=em>Kloster</td>
-        <td class=em>Mutter</td>
+        <td class=few>Kloster</td>
+        <td class=few>Mutter</td>
       </tr>
       <tr class=ie>
         <th>&#8209;e</th>
@@ -948,7 +1006,7 @@ section {
       <tr class=ie>
         <th>&#11802;e</th>
         <td>Baum, Biss</td>
-        <td class=em>Floß</td>
+        <td class=few>Floß</td>
         <td>Frucht</td>
       </tr>
       <tr class=en>
@@ -963,17 +1021,17 @@ section {
         <td>Radio</td>
         <td>Kamera</td>
       </tr>
+      <tr class=em>
+        <th>Adj.</th>
+        <td>Deutsche(r)</td>
+        <td>Deutsche(s)</td>
+        <td>Deutsche</td>
+      </tr>
       <tr>
         <th>Orig.</th>
         <td>Tempus</td>
         <td>Maximum</td>
-        <td>Firma</td>
-      </tr>
-      <tr>
-        <th>Adj.</th>
-        <td>Deutscher</td>
-        <td>Deutsches</td>
-        <td>Deutsche</td>
+        <td></td>
       </tr>
     </table>
     </p>
@@ -1067,7 +1125,7 @@ section {
         </td>
         <td>
           <table class=aligner>
-            <tr><th>&#8209;er:</th><td>Zimmer, Opfer, Fenster, Feuer, Wasser, Messer, Ruder, Geschwister</td></tr>
+            <tr><th>&#8209;er:</th><td>Zimmer, Lager, Opfer, Fenster, Feuer, Wasser, Messer, Ruder, Geschwister</td></tr>
             <tr><th>&#8209;el:</th><td>Rudel, Segel</td></tr>
             <tr><th>&#8209;en:</th><td>(<u>aus Infinitiv</u>:) Leben, Essen, Trinken, Lesen, Schwimmen, Laufen, Lernen</td></tr>
             <tr><th>&#8209;chen:</th><td>Mädchen&nbsp;&#9819;, Bäumchen, Häusschen</td></tr>
@@ -1085,12 +1143,12 @@ section {
         <td>
           <table class=aligner>
             <tr><th>&#8209;er:</th><td>Vater, Bruder, Acker, Hammer</td></tr>
-            <tr><th>&#8209;el:</th><td>Apfel, Mantel, Mangel, Nagel, Sattel, Schnabel, Vogel</td></tr>
+            <tr><th>&#8209;el:</th><td>Apfel, Mantel, Mangel, Nagel, Sattel, Schnabel, Vogel&nbsp;&#9822</td></tr>
             <tr><th>&#8209;en:</th><td>Garten, Boden, Faden, Graben, Hafen, Kasten, Laden, Ofen, Schaden</td></tr>
           </table>
         </td>
-        <td class=em>Kloster, Wasser (vízfajták), ...?</td>
-        <td class=em>Mutter&nbsp;&#9819;, Tochter&nbsp;&#9819;.</td>
+        <td class=few>Kloster, Wasser (vízfajták), ...?</td>
+        <td class=few>Mutter&nbsp;&#9819;, Tochter&nbsp;&#9819;.</td>
       </tr>
       <tr class=ie>
         <th>&#8209;e</th>
@@ -1131,7 +1189,7 @@ section {
       <tr class=ie>
         <th>&#11802;e</th>
         <td>
-          Gast, Sohn, Arzt, Bach, Napf, Zahn, Hof, Tisch, Stuhl, Platz, Saft, Wolf&nbsp;&#9822;, Hahn&nbsp;&#9822;
+          Gast, Sohn, Arzt, Bach, Napf, Zahn, Hof, Tisch, Stuhl, Platz, Saft, Fuchs&nbsp;&#9822;, Wolf&nbsp;&#9822;, Hahn&nbsp;&#9822;
           <table class=aligner>
             <tr><th>&#8209;m:</th><td>Sturm, Strom, Film, Baum (der Wurm-Würmer)</td></tr>
             <tr><th></th><td>(<u>Infinitiv Stamm</u>:) Lauf, Kauf, Koch, Sinn, Sitz</td></tr>
@@ -1139,7 +1197,7 @@ section {
             <tr><th></th><td>(<u>Ablaut</u>:) Flug</td></tr>
           </table>
         </td>
-        <td class=em>Floß.</td>
+        <td class=few>Floß.</td>
         <td>
           Hand, Wand, Stadt, Kraft, Macht, Nacht, Haut,
           Braut&nbsp;&#9819;, Maus&nbsp;&#9822;, Laus&nbsp;&#9822;, Faust,
@@ -1163,18 +1221,18 @@ section {
             <tr><th>&#8209;or:</th><td>Professor (der Major(e), Meteor(e), Tenor-Tenöre)</td></tr>
             <tr><th>(&exist;&nbsp;&#8209;el:</th><td>Muskel, Pantoffel, Stachel)</td></tr>
             <tr><th>&#8209;us:</th><td>Zyklus (Zyklen), Kaktus (Kakteen), Globus</td></tr>
-            <tr><th>&#8209;ismus:</th><td>Organismus (Organismen), Anachronismus, Alkoholismus, Atheismus, Tourismus, Rassismus</td></tr>
+            <tr><th>&#8209;ismus:</th><td>Organismus (Organismen), Anachronismus, Alkoholismus, Atheismus, Tourismus, Rassismus, Mechanismus</td></tr>
           </table>
         </td>
         <td>
           <table class=aligner>
-            Bett, Hemd, Ohr, Verb, Drama (Dramen), Privileg (Privilegien)
+            Bett, Hemd, Ohr, Verb, Drama (Dramen), Epos (Epen), Privileg (Privilegien)
             <tr><th>(&exist;&nbsp;&#8209;e:</th><td>Auge, Ende, Interesse)</td></tr>
             <tr><th>&#8209;um:</th><td>Datum (Data), Museum (Museen), Zentrum, Gymnasium, Datum, Publikum, Universum, Album</td></tr>
           </table>
         </td>
         <td>
-          Frau, Uhr, Bahn, Milch, Person, Burg, Antwort, Nachricht, Praxis (Praxen), Firma (Firmen), Arbeit, Art, See (tenger), Bank ($), Tat, Zutat, Schrift
+          Frau, Uhr, Bahn, Milch, Person, Burg, Antwort, Nachricht, Firma (Firmen), Arbeit, Art, See (tenger), Bank ($), Tat, Zutat, Schrift
           <table class=aligner>
             <tr><th>&#8209;e:</th><td>Lampe, Straße, Birne, Traube, Blume, Torte, Größe, Gitarre</td></tr>
             <tr><th>&#8209;ei:</th><td>Datei, Bäckerei, Polizei, Slowakei, Türkei</td></tr>
@@ -1184,7 +1242,7 @@ section {
             <tr><th>&#8209;schaft:</th><td>Freundschaft, Gesellschaft, Mannschaft</td></tr>
             <tr><th>&#8209;in:&nbsp;&#9819;</th><td>Ärztin(nen), Fürstin, Hündin, Journalistin, Lehrerin, Prinzessin, Schneiderin, Studentin, Türkin, Amerikanerin</td></tr>
             <tr><th>&#8209;er:</th><td>Nummer(n), Kammer, Faser, Trauer, Butter, Kiefer (erdeifenyő), Feder, Schwerter</td></tr>
-            <tr><th>(&#8209;el:</th><td>Tafel(n), Kartoffel, Gabel, Regel, Achsel, Schachtel, Klingel, Semmel</td></tr>
+            <tr><th>&#8209;el:</th><td>Tafel(n), Kartoffel, Gabel, Regel, Achsel, Schachtel, Klingel, Semmel</td></tr>
             <tr><th>(&exist;&nbsp;ge&#8209;:</th><td>Geduld, Geburt, Geschwindigkeit)</td></tr>
           </table>
           <button class=collapsible>Mehr</button>
@@ -1213,7 +1271,7 @@ section {
             <tr><th>&#8209;ode:</th><td>Mode, Periode</td></tr>
             <tr><th>&#8209;ole:</th><td>Konsole, Parole</td></tr>
             <tr><th>&#8209;ose:</th><td>Diagnose, Neurose, Psychose, Thrombose, Tuberkulose, Zirrhose</td></tr>
-            <tr><th>&#8209;sis:</th><td>Basis, Dosis</td></tr>
+            <tr><th>&#8209;sis:</th><td>Basis (Basen), Praxis (Praxen), Dosis</td></tr>
             <tr><th>&#8209;tät:</th><td>Universität, Fakultät, Identität, Nervosität, Relativität, Seriosität, Solidarität, Stabilität, Aktivität</td></tr>
             <tr><th>&#8209;ur:</th><td>Agentur, Natur, Tastatur, Zensur, Garnitur</td></tr>
             <tr><th>&#8209;üre:</th><td>Allüre, Broschüre, Lektüre, Maniküre</td></tr>
@@ -1364,28 +1422,37 @@ section {
         </td>
         <td>
           <table class=aligner width=100%>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix></span></td></tr>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix>st</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix></span></td></tr>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix>(e)n</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix>t</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(te)</td><td><span class=personal-suffix>(e)n</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix></span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix>st</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix></span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix>(e)n</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix>t</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>te)</td><td><span class=personal-suffix>(e)n</span></td></tr>
           </table>
         </td>
         <td>
           <table class=aligner width=100%>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix></span></td></tr>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>st</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix></span></td></tr>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>n</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>t</span></td></tr>
-            <tr><td><span class=anomaly>e</span>(t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>n</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix></span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>st</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix></span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>n</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>t</span></td></tr>
+            <tr><td>(<span class=anomaly>e</span>t)<span class=mood-suffix>e</span></td><td><span class=personal-suffix>n</span></td></tr>
           </table>
         </td>
       </tr>
     </table>
     </p>
 
+    <p>
+      <ul>
+        <li>a/ä - fahren</li>
+        <li>au/äu - laufen</li>
+        <li>o/ö - stoßen</li>
+        <li>e/i - geben</li>
+        <li>e/ie - sehen</li>
+      </ul>
+    </p>
     <p>
     <table>
       <tr>
@@ -1723,7 +1790,7 @@ section {
         <td colspan=2></td>
         <td colspan=2>Brechung</td>
         <td colspan=2>Umlaut</td>
-        <td colspan=2>Umlaut/Brechung -ten:<br/>er rät, er tritt</td>
+        <td colspan=2>Umlaut/Brechung -ten:<br/>er rät, er tritt (raten, braten, halten)</td>
         <td colspan=2>Umlaut/Brechung -den:<br/>er lädt</td>
       </tr>
     </table>
@@ -1815,7 +1882,7 @@ section {
       </tr>
       <tr>
         <th></th>
-        <td colspan=2>brennen, kennen, nennen,<br/>rennen, senden, wenden</td>
+        <td colspan=2>brennen, kennen, nennen, rennen,<br/>senden (sendete), wenden (wendete)</td>
         <td colspan=2>bringen, denken</td>
       </tr>
     </table>
@@ -3767,6 +3834,7 @@ section {
           <td class="l-i">schiss</td>
           <td class="l-i">hat geschissen</td>
           <td>to shit, crap</td>
+          <td>die Scheiße</td>
         </tr>
         <tr class="s-ai-ai-i-i">
           <td class="l-ai">schmeißen</td>

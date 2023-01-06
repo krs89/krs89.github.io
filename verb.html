@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <style>
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+
+      .fin { background-color: #FFFF80; }
+      .ptc { background-color: #80FFBF; }
+      .inf { background-color: #DF9FBF; }
+      .ipp { background-color: #CF709F; }
+
+      .fin { background-color: LightSteelBlue; }
+      .ptc { background-color: DarkSeaGreen; }
+      .inf { background-color: PaleVioletRed; }
+      .ipp { background-color: Coral; }
+
+      .praes { background-color: PaleTurquoise; }
+      .praet { background-color: LightSteelBlue; }
+      .fut   { background-color: LightCyan; }
+
+//      .verm   { background-color: #bfd8bd; }
+//      .vermp  { background-color: #98c9a3; }
+
+      .fut    { background-color: #9bf6ff; }
+      .futp   { background-color: #a0c4ff; }
+      .praes  { background-color: #fdffb6; }
+      .praesp { background-color: #CF9F70; }
+      .praet  { background-color: #ffc6ff; }
+      .praetp { background-color: #bdb2ff; }
+
+      .p { background-color: #ffc6ff; }
+      .k { background-color: #9bf6ff; }
+
+      .fut    { background-color: #ff8686; }
+      .futp   { background-color: #c5dcf6; }
+      .praes  { background-color: #ff6363; }
+      .praesp { background-color: #accdf2; }
+      .praet  { background-color: #aeacf2; }
+      .praetp { background-color: #a7bef5; }
+
+      .fut    { background-color: #ffd6a5; }
+      .futp   { background-color: #a0c4ff; }
+      .praes  { background-color: #fdffb6; }
+      .praesp { background-color: #9bf6ff; }
+      .praet  { background-color: #ffc6ff; }
+      .praetp { background-color: #bdb2ff; }
+    </style>
+  </head>
+  <body>
+    <p>
+    <table>
+      <tr>
+        <td class=praes >Präsens (KI)</td>
+        <td class=praet >Präteritum (KII Präsens )</td>
+        <td class=praesp >Perfekt (KI)</td>
+        <td class=praetp >Plusquamperfekt (KII Perfekt)</td>
+      </tr>
+      <tr>
+        <td class=fut colspan=2>Futur I (KI, KII würde-Form)</td>
+        <td class=futp colspan=2>Futur II</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <table>
+      <tr>
+        <th colspan=7>Reihenfolge:</th>
+      </tr>
+      <tr id="desiredOrder">
+        <td id="pass"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Passiv</td>
+        <td id="obj"   style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Modal</td>
+        <td id="subj"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Vermutung</td>
+        <td id="konj"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Konjunktiv</td>
+        <td id="praet" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Präteritum</td>
+        <td id="pf"    style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Perfekt</td>
+      </tr>
+    </table>
+    </p>
+
+    <p>
+    <div id="verb-form-container"></div>
+    </p>
+
+    <script>
+      var selected;
+
+      function dragStart(e) {
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", null);
+        selected = e.target;
+      }
+
+      function dragOver(e) {
+        var target = e.target;
+        //while (target.parentNode.tagName != 'tr') {
+            //target = target.parentNode;
+        //}
+
+        if (isBefore(selected, target))
+          target.parentNode.insertBefore(selected, target);
+        else
+          target.parentNode.insertBefore(selected, target.nextSibling);
+      }
+
+      function dragEnd(e) {
+        selected = null
+        var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
+        redrawTable(verbFormData.sort(compareBy(actualOrder)));
+      }
+
+      function isBefore(a, b) {
+        if (b.parentNode === a.parentNode)
+          for (var cur = a.previousSibling; cur && cur.nodeType !== Node.DOCUMENT_NODE; cur = cur.previousSibling)
+            if (cur === b)
+              return true;
+        return false;
+      }
+
+
+      var operators = [
+        {"id": "voll",  "name": "Vollverb" },
+        {"id": "pass",  "name": "Passiv" },
+        {"id": "obj",   "name": "Modal" },
+        {"id": "pf",    "name": "Perfekt" },
+        {"id": "subj",  "name": "Vermutung" },
+        {"id": "praet", "name": "Prät." },
+        {"id": "konj",  "name": "Konj." },
+      ];
+
+     var names = {
+      "praes" : "Präsens",
+      "praesp": "Perfekt",
+      "praet" : "Präteritum",
+      "praetp": "Plusquamperfekt",
+      "fut"   : "Präsens Vermutung/Futur I",
+      "futp"  : "Perfekt Vermutung/Futur II",
+      "no"    : "",
+      "noex"  : "",
+     }
+
+              var verbFormData = [
+        { "id": "000000", "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "praet": null, "konj": null, "mean": "praes",  "use": "",   },
+        { "id": "000100", "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "praet": null, "konj": null, "mean": "fut",    "use": "",   },
+        { "id": "001000", "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "praet": null, "konj": null, "mean": "praesp", "use": "",   },
+        { "id": "001100", "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "praet": null, "konj": null, "mean": "futp",   "use": "",   },
+        { "id": "010000", "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "praet": null, "konj": null, "mean": "praes",  "use": "",   },
+        { "id": "010100", "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "praet": null, "konj": null, "mean": "fut",    "use": "",   },
+        { "id": "011000", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "praet": null, "konj": null, "mean": "praesp", "use": "",   },
+        { "id": "011100", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "praet": null, "konj": null, "mean": "futp",   "use": "",   },
+        { "id": "100000", "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "praet": null, "konj": null, "mean": "praes",  "use": "",   },
+        { "id": "100100", "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "praet": null, "konj": null, "mean": "fut",    "use": "",   },
+        { "id": "101000", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "praet": null, "konj": null, "mean": "praesp", "use": "",   },
+        { "id": "101100", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "praet": null, "konj": null, "mean": "futp",   "use": "?",  },
+        { "id": "110000", "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "praet": null, "konj": null, "mean": "praes",  "use": "",   },
+        { "id": "110100", "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "praet": null, "konj": null, "mean": "fut",    "use": "?",  },
+        { "id": "111000", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "praet": null, "konj": null, "mean": "praesp", "use": "",   },
+        { "id": "111100", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "praet": null, "konj": null, "mean": "futp",   "use": "?",  },
+        { "id": "000010", "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "praet": "p",  "konj": null, "mean": "praet",  "use": "",   },
+        { "id": "000110", "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "001010", "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "praet": "p",  "konj": null, "mean": "praetp", "use": "",   },
+        { "id": "001110", "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "010010", "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "praet": "p",  "konj": null, "mean": "praet",  "use": "",   },
+        { "id": "010110", "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "011010", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "praet": "p",  "konj": null, "mean": "praetp", "use": "",   },
+        { "id": "011110", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "100010", "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "praet": "p",  "konj": null, "mean": "praet",  "use": "",   },
+        { "id": "100110", "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "101010", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "praet": "p",  "konj": null, "mean": "praetp", "use": "",   },
+        { "id": "101110", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "110010", "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "praet": "p",  "konj": null, "mean": "praet",  "use": "",   },
+        { "id": "110110", "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "111010", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "praet": "p",  "konj": null, "mean": "praetp", "use": "",   },
+        { "id": "111110", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "praet": "p",  "konj": null, "mean": "no",     "use": "*",  },
+        { "id": "000001", "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "praet": null, "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "000101", "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "praet": null, "konj": "k",  "mean": "fut",    "use": "",   },
+        { "id": "001001", "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "praet": null, "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "001101", "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "praet": null, "konj": "k",  "mean": "futp",   "use": "?",  },
+        { "id": "010001", "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "praet": null, "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "010101", "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "praet": null, "konj": "k",  "mean": "fut",    "use": "",   },
+        { "id": "011001", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "praet": null, "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "011101", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "praet": null, "konj": "k",  "mean": "futp",   "use": "?",  },
+        { "id": "100001", "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "praet": null, "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "100101", "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "praet": null, "konj": "k",  "mean": "fut",    "use": "",   },
+        { "id": "101001", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "praet": null, "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "101101", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "praet": null, "konj": "k",  "mean": "futp",   "use": "?",  },
+        { "id": "110001", "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "praet": null, "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "110101", "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "praet": null, "konj": "k",  "mean": "fut",    "use": "?",  },
+        { "id": "111001", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "praet": null, "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "111101", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "praet": null, "konj": "k",  "mean": "futp",   "use": "?",  },
+        { "id": "000011", "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "000111", "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "001011", "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "praet": "p",  "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "001111", "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praesp", "use": "??", },
+        { "id": "010011", "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "010111", "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "011011", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "praet": "p",  "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "011111", "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praesp", "use": "??", },
+        { "id": "100011", "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "100111", "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "101011", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "praet": "p",  "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "101111", "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praesp", "use": "??", },
+        { "id": "110011", "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "praet": "p",  "konj": "k",  "mean": "praes",  "use": "",   },
+        { "id": "110111", "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praes" , "use": "?",  },
+        { "id": "111011", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "praet": "p",  "konj": "k",  "mean": "praesp", "use": "",   },
+        { "id": "111111", "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "praet": "p",  "konj": "k",  "mean": "praesp", "use": "??", },
+      ];
+
+      var verbFormExamples = {
+        "000000": { "vorfeld": "Der Koch",  "verb": "wäscht",       "mittelfeld": "den Apfel.", "rklammer": "" },
+        "000100": { "vorfeld": "Der Koch",  "verb": "wird/muss",    "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "001000": { "vorfeld": "Der Koch",  "verb": "hat (ist)",    "mittelfeld": "den Apfel",  "rklammer": "gewaschen." },
+        "001100": { "vorfeld": "Der Koch",  "verb": "wird/muss",    "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." },
+        "010000": { "vorfeld": "Der Koch",  "verb": "kann",         "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "010100": { "vorfeld": "Der Koch",  "verb": "wird/muss",    "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011000": { "vorfeld": "Der Koch",  "verb": "hat",          "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011100": { "vorfeld": "Der Koch",  "verb": "wird/muss",    "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." },
+        "100000": { "vorfeld": "Der Apfel", "verb": "wird/ist",     "mittelfeld": "",           "rklammer": "gewaschen." },
+        "100100": { "vorfeld": "Der Apfel", "verb": "wird/muss",    "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "101000": { "vorfeld": "Der Apfel", "verb": "ist",          "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." },
+        "101100": { "vorfeld": "Der Apfel", "verb": "wird/muss",    "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." },
+        "110000": { "vorfeld": "Der Apfel", "verb": "kann",         "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "110100": { "vorfeld": "Der Apfel", "verb": "wird/muss",    "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111000": { "vorfeld": "Der Apfel", "verb": "hat",          "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111100": { "vorfeld": "Der Apfel", "verb": "wird/muss",    "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." },
+        "000010": { "vorfeld": "Der Koch",  "verb": "wusch",        "mittelfeld": "den Apfel.", "rklammer": "" },
+        "000110": { "vorfeld": "Der Koch",  "verb": "wurde/musste", "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "001010": { "vorfeld": "Der Koch",  "verb": "hatte (war)",  "mittelfeld": "den Apfel",  "rklammer": "gewaschen." },
+        "001110": { "vorfeld": "Der Koch",  "verb": "wurde/musste", "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." },
+        "010010": { "vorfeld": "Der Koch",  "verb": "konnte",       "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "010110": { "vorfeld": "Der Koch",  "verb": "wurde/musste", "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011010": { "vorfeld": "Der Koch",  "verb": "hatte",        "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011110": { "vorfeld": "Der Koch",  "verb": "wurde/musste", "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." },
+        "100010": { "vorfeld": "Der Apfel", "verb": "wurde/war",    "mittelfeld": "",           "rklammer": "gewaschen." },
+        "100110": { "vorfeld": "Der Apfel", "verb": "wurde/musste", "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "101010": { "vorfeld": "Der Apfel", "verb": "war",          "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." },
+        "101110": { "vorfeld": "Der Apfel", "verb": "wurde/musste", "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." },
+        "110010": { "vorfeld": "Der Apfel", "verb": "konnte",       "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "110110": { "vorfeld": "Der Apfel", "verb": "wurde/musste", "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111010": { "vorfeld": "Der Apfel", "verb": "hatte",        "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111110": { "vorfeld": "Der Apfel", "verb": "wurde/musste", "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." },
+        "000001": { "vorfeld": "Der Koch",  "verb": "wasche",       "mittelfeld": "den Apfel.", "rklammer": "" },
+        "000101": { "vorfeld": "Der Koch",  "verb": "werde/müsse",  "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "001001": { "vorfeld": "Der Koch",  "verb": "habe (sei)",   "mittelfeld": "den Apfel",  "rklammer": "gewaschen." },
+        "001101": { "vorfeld": "Der Koch",  "verb": "werde/müsse",  "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." },
+        "010001": { "vorfeld": "Der Koch",  "verb": "könne",        "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "010101": { "vorfeld": "Der Koch",  "verb": "werde/müsse",  "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011001": { "vorfeld": "Der Koch",  "verb": "habe",         "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011101": { "vorfeld": "Der Koch",  "verb": "werde/müsse",  "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." },
+        "100001": { "vorfeld": "Der Apfel", "verb": "werde/sei",    "mittelfeld": "",           "rklammer": "gewaschen." },
+        "100101": { "vorfeld": "Der Apfel", "verb": "werde/müsse",  "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "101001": { "vorfeld": "Der Apfel", "verb": "sei",          "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." },
+        "101101": { "vorfeld": "Der Apfel", "verb": "werde/müsse",  "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." },
+        "110001": { "vorfeld": "Der Apfel", "verb": "könne",        "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "110101": { "vorfeld": "Der Apfel", "verb": "werde/müsse",  "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111001": { "vorfeld": "Der Apfel", "verb": "habe",         "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111101": { "vorfeld": "Der Apfel", "verb": "werde/müsse",  "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." },
+        "000011": { "vorfeld": "Der Koch",  "verb": "wüsche",       "mittelfeld": "den Apfel.", "rklammer": "" },
+        "000111": { "vorfeld": "Der Koch",  "verb": "würde/müsste", "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "001011": { "vorfeld": "Der Koch",  "verb": "hätte (wäre)", "mittelfeld": "den Apfel",  "rklammer": "gewaschen." },
+        "001111": { "vorfeld": "Der Koch",  "verb": "würde/müsste", "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." },
+        "010011": { "vorfeld": "Der Koch",  "verb": "könnte",       "mittelfeld": "den Apfel",  "rklammer": "waschen." },
+        "010111": { "vorfeld": "Der Koch",  "verb": "würde/müsste", "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011011": { "vorfeld": "Der Koch",  "verb": "hätte",        "mittelfeld": "den Apfel",  "rklammer": "waschen können." },
+        "011111": { "vorfeld": "Der Koch",  "verb": "würde/müsste", "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." },
+        "100011": { "vorfeld": "Der Apfel", "verb": "würde/wäre",   "mittelfeld": "",           "rklammer": "gewaschen." },
+        "100111": { "vorfeld": "Der Apfel", "verb": "würde/müsste", "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "101011": { "vorfeld": "Der Apfel", "verb": "wäre",         "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." },
+        "101111": { "vorfeld": "Der Apfel", "verb": "würde/müsste", "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." },
+        "110011": { "vorfeld": "Der Apfel", "verb": "könnte",       "mittelfeld": "",           "rklammer": "gewaschen werden/sein." },
+        "110111": { "vorfeld": "Der Apfel", "verb": "würde/müsste", "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111011": { "vorfeld": "Der Apfel", "verb": "hätte",        "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." },
+        "111111": { "vorfeld": "Der Apfel", "verb": "würde/müsste", "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." },
+      };
+
+      var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
+      redrawTable(verbFormData.sort(compareBy(actualOrder)));
+
+      function compareBy(order) {
+        return (a, b) => {
+          for (let operator of order) {
+            if (b[operator] && !a[operator]) {
+              return -1
+            } else if (a[operator] && !b[operator]) {
+              return 1
+            }
+          }
+          return 0
+        }
+      }
+
+      function addVerbFormToRow(verbForm, row) {
+        operators.forEach( operator => {
+          var cell = document.createElement('td');
+          cell.innerText = "";
+          if (verbForm[operator.id]) {
+            cell.innerText = verbForm[operator.id];
+            //cell.setAttribute("class", operator.id + "-" + verbForm[operator.id]);
+            cell.setAttribute("class", verbForm[operator.id]);
+          }
+          row.appendChild(cell);
+        })
+
+        for (var feld of ['vorfeld', 'verb', 'mittelfeld', 'rklammer']) {
+          var cell = document.createElement('td');
+          var ex = verbFormExamples[verbForm.id];
+          cell.innerText = "";
+          if (feld == 'verb') {
+            cell.setAttribute("class", verbForm.mean);
+            cell.innerText += verbForm.use;
+          }
+          cell.innerText += ex[feld];
+          row.appendChild(cell);
+        }
+
+        var cell = document.createElement('td');
+        cell.innerText = names[verbForm.mean];
+
+        if (verbForm.use) {
+          cell.innerText = "";
+        }
+
+        if (cell.innerText) {
+          if (verbForm.konj) {
+            cell.innerText += " (Konjunktiv I";
+            if (verbForm.praet) {
+              cell.innerText += "I";
+              if (verbForm.subj) {
+                cell.innerText += " würde-Form";
+              }
+            }
+            cell.innerText += ")";
+          }
+        }
+
+        cell.setAttribute("class", verbForm.mean);
+        row.appendChild(cell);
+      }
+
+      function redrawTable(verbForms) {
+        //verbForms = verbForms.filter(row => row.pass === null);
+        //verbForms = verbForms.filter(row => row.obj === null);
+        //verbForms = verbForms.filter(row => row.obj);
+        var verbFormContainer = document.getElementById("verb-form-container");
+
+        var table = document.createElement('table');
+
+        // add header
+        var row = document.createElement('tr');
+        operators.forEach( operator => {
+          var cell = document.createElement('th');
+          cell.innerText = operator.name;
+          row.appendChild(cell);
+        })
+        table.appendChild(row);
+
+        // add rows
+        for (var i = 0; i < verbForms.length; i++) {
+          var row = document.createElement('tr');
+          addVerbFormToRow(verbForms[i], row)
+          table.appendChild(row);
+        }
+
+        verbFormContainer.innerHTML = table.outerHTML;
+      }
+
+    </script>
+  </body>
+</html>

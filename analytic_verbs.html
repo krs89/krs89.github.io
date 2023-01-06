@@ -1,151 +1,811 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
+    <link rel="icon" type="image/png" sizes="32x32" href=
+    "favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href=
+    "favicon-16x16.png">
     <style>
+     /* The Modal (background) */
+     .modal {
+         display: none; /* Hidden by default */
+         position: fixed; /* Stay in place */
+         z-index: 1; /* Sit on top */
+         padding-top: 100px; /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+         background-color: rgb(0,0,0); /* Fallback color */
+         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+     }
 
-      table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 5px;
+     /* Modal Content */
+     .modal-content {
+         background-color: #fefefe;
+         margin: auto;
+         padding: 20px;
+         border: 1px solid #888;
+         width: 80%;
+     }
+
+     /* The Close Button */
+     .close {
+         color: #aaaaaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+     }
+
+     .close:hover,
+     .close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+     }
+
+     table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+         padding: 5px;
+     }
+
+     .oberfeld         { background-color: LightGrey; }
+     .oberfeldOptional { background-color: LightCyan; }
+
+     .fin { background-color: LightSteelBlue; }
+     .ptc { background-color: DarkSeaGreen; }
+     .inf { background-color: PaleVioletRed; }
+     .ipp { background-color: Coral; }
+
+     .praes  { background-color: #ffd6a5; }
+     .praesp { background-color: #a0c4ff; }
+     .fut    { background-color: #fdffb6; }
+     .futp   { background-color: #9bf6ff; }
+     .praet  { background-color: #ffc6ff; }
+     .praetp { background-color: #bdb2ff; }
+
+     .same1  { background-color: #ffd6a5; }
+     .same2  { background-color: #9bf6ff; }
+     .same3  { background-color: #ffc6ff; }
+    </style>
+    <title></title>
+</head>
+<body>
+    <p></p>
+    <table>
+        <tr>
+            <th colspan="3" class="praes">Gegenwart</th>
+            <th colspan="5" class="praesp">Vergangenheit</th>
+        </tr>
+        <tr>
+            <th colspan="4">Non-Perfekt</th>
+            <th colspan="4">Perfekt</th>
+        </tr>
+        <tr>
+            <th colspan="2">Präsens Stamm (I)</th>
+            <th colspan="2">Präteritum Stamm (II)</th>
+            <th colspan="2">Präsens Stamm (I)</th>
+            <th colspan="2">Präteritum Stamm (II)</th>
+        </tr>
+        <tr>
+            <th colspan="1">Indikativ I</th>
+            <th colspan="1">Konjunktiv I</th>
+            <th colspan="1">Konjunktiv II</th>
+            <th colspan="1">Indikativ II</th>
+            <th colspan="1">Indikativ I</th>
+            <th colspan="1">Konjunktiv I</th>
+            <th colspan="1">Konjunktiv II</th>
+            <th colspan="1">Indikativ II</th>
+        </tr>
+        <tr>
+            <td class="praes"><b>Präsens</b></td>
+            <td class="praes"><b>KI Präsens</b></td>
+            <td class="praes"><b>KII Präsens</b></td>
+            <td class="praet"><b>Präteritum</b></td>
+            <td class="praesp"><b>Perfekt</b></td>
+            <td class="praesp"><b>KI Perfekt</b></td>
+            <td class="praesp"><b>KII Perfekt</b></td>
+            <td class="praetp"><b>Plusquamperfekt</b></td>
+        </tr>
+        <tr>
+            <td class="fut"><b>Präsens Vermutung/<br>
+            Futur I</b></td>
+            <td class="fut"><b>KI Präsens Vermutung/<br>
+            KI Futur I</b></td>
+            <td class="praes"><b>KII Präsens<br>
+            (würde-Form)</b></td>
+            <td></td>
+            <td class="futp"><b>Perfekt Vermutung/<br>
+            Futur II</b></td>
+            <td class="futp"><b>KI Perfekt Vermutung/<br>
+            KI Futur II</b></td>
+            <td class="praesp"><b>KII Perfekt<br>
+            (würde-Form)</b></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+
+    <p></p>
+    <p></p>
+    <table>
+        <tr>
+          <th rowspan=3></th>
+          <th colspan=7>Finit</th>
+          <th colspan=2 rowspan=2>Infinit</th>
+        </tr>
+        <tr>
+          <th colspan=1>Realis</th>
+          <th colspan=6>Irrealis (Prospektiv/Potentialis/Konditionalis/Optativ/Jussiv/Kontrafaktualis)</th>
+        </tr>
+        <tr>
+          <th colspan=2>Indikativ</th>
+          <th colspan=2>Konjunktiv I</th>
+          <th colspan=2>Konjunktiv II</th>
+          <th>Imperativ</th>
+          <th>Partizip</th>
+          <th>Infinitiv</th>
+        </tr>
+        <tr>
+          <th rowspan=2></th>
+            <td class="praes"><b>Präsens</b></td>
+            <td class="fut"><b>Präsens Potential/<br>Futur I</b></td>
+            <td class="praes"><b>KI Präsens</b></td>
+            <td class="fut"><b>KI Präsens Potential/<br>KI Futur I</b></td>
+            <td class="praes"><b>KII Präsens</b></td>
+            <td class="fut"><b>KII Präsens Ersatz/<br>KII Futur I</b></td>
+            <td rowspan=2><b>Imperativ</b></td>
+            <td class="praes"><b>Partizip I<br>(Gerundiv)</b></td>
+            <td rowspan=2><b>Infinitiv<br>(zu-Infinitiv)</b></td>
+        </tr>
+        <tr>
+            <td class="praesp"><b>Perfekt</b></td>
+            <td class="futp"><b>Perfekt Potential/<br>Futur II</b></td>
+            <td class="praesp" rowspan=2><b>KI Perfekt</b></td>
+            <td class="futp"><b>KI Perfekt Potential/<br>KI Futur II</b></td>
+            <td class="praesp" rowspan=2><b>KII Perfekt</b></td>
+            <td class="futp"><b>KII Perfekt Ersatz/<br>KII Futur II</b></td>
+            <td class="praesp"><b>Partizip II</b></td>
+        </tr>
+        <tr>
+          <th rowspan=2>Distanz/<br>Vergangenheit</th>
+            <td class="praet"><b>Präteritum</b></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+        </tr>
+        <tr>
+            <td class="praetp"><b>Plusquamperfekt</b></td>
+            <td class="oberfeld"></td>
+            <td><b>(Doppelperfekt)</b></td>
+            <td class="oberfeld"></td>
+            <td><b>(Doppelperfekt)</b></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+            <td class="oberfeld"></td>
+        </tr>
+    </table>
+
+
+
+    <p></p>
+    <p></p>
+    <table>
+        <tr>
+            <th colspan="5">Reihenfolge:</th>
+        </tr>
+        <tr id="desiredOrder">
+            <td id="pass" style="border-style: dashed" draggable=
+            "true" ondragstart="dragStart(event)" ondragover=
+            "dragOver(event)" ondragend="dragEnd(event)">
+            Passiv</td>
+            <td id="obj" style="border-style: dashed" draggable=
+            "true" ondragstart="dragStart(event)" ondragover=
+            "dragOver(event)" ondragend="dragEnd(event)">Modal</td>
+            <td id="subj" style="border-style: dashed" draggable=
+            "true" ondragstart="dragStart(event)" ondragover=
+            "dragOver(event)" ondragend="dragEnd(event)">
+            Vermutung</td>
+            <td id="pf" style="border-style: dashed" draggable=
+            "true" ondragstart="dragStart(event)" ondragover=
+            "dragOver(event)" ondragend="dragEnd(event)">
+            Perfekt</td>
+        </tr>
+    </table>
+    <p></p>
+    <p></p>
+    <div id="verb-form-container"></div>
+    <p></p>
+    <p></p>
+    <ul>
+        <li><b>Passiv</b>: werden, sein, gehören; Rezipienten/Adressatenpassiv:
+          bekommen, erhalten, kriegen, haben</br>
+          Der Arzt bandagiert dem Patienten den Arm. (Aktiv) -- Der Patient bekommt den Arm (vom Arzt) bandagiert. (Vorgang) -- Der Patient hat den Arm bandagiert. (Zustand)</br>
+          Pauls Eltern verbinden ihm die Augen. -- Er bekommt die Augen (von seinen Eltern) verbunden. -- Er hat die Augen verbunden.</li>
+        <li><b>Objektives Modalverb (<a href=
+        "https://de.wikipedia.org/wiki/Modalit%C3%A4t_(Sprachwissenschaft)#Zirkumstanzielle_Modalit%C3%A4t"
+        target="_blank">zirkumstanzielle Modalität</a>),
+        (dynamische/deontische (Pflicht)/buletische
+        (Wille)/alethische (Wahrheit) Modalität) Accusativus cum
+        infinitivo, Kausativ, Wahrnehmung (perception)</b>: dürfen, können,
+        müssen, sollen, wollen, mögen; lassen; brauchen, heißen,
+        sehen, hören, fühlen, helfen, lehren, machen</li>
+        <li><b>Perfekt</b>: haben, sein</li>
+        <li><b>Subjektives Modalverb? (<a href=
+        "https://de.wikipedia.org/wiki/Modalit%C3%A4t_(Sprachwissenschaft)#Epistemische_Modalit%C3%A4t"
+        target="_blank">epistemische Modalität</a>)
+        /Vermutung?/Evidentialität?/Futur?</b>: werden, muss &gt;
+        müsste &gt; dürfte &gt; kann &gt; könnte &gt; mag,
+        scheinen</li>
+        <li><b>Fremde Behauptung</b>: sollen (állítólag), wollen
+        (kétkedés)</li>
+        <li>Ich kann mir einen Anzug machen lassen. Ich habe/werde
+        mir einen Anzug machen lassen können.</li>
+    </ul>
+    <p></p>
+    <b>KI: </b>függő beszéd, (irreális) hasonlító mellékmondat (Er tut so, als sei er taub - mintha süket lenne, als habe er nichts gehört),
+    felszólító mondat<br>
+    <b>KII: </b>függő beszéd, (irreális) hasonlító mellékmondat (Er tut so, als wäre er taub - mintha süket volna, als hätte er nichts gehört),
+    óhajtó mondat (wenn, doch, nur) (Hätte er nur nichts gehört!),
+    (irreális) feltételes mondat (wenn) (Wenn ich stehengeblieben wäre, hätte ich den Zug verpasst.)
+    (irreális) megengedő mellékmondat (wenn, und, selbst, auch) (Wenn ich auch schneller gelaufen wäre, ich hätte den Zug sowieso verpasst.)<br>
+    <p></p>
+    <p><b>Perfekt</b><br>
+    haben: tárgyas, sich-es, személytelen, módbeliek, tartós
+    helyzet, állapot<br>
+    sein: állapotváltozás, helyváltoztatás, sein, werden,
+    bleiben<br></p>
+    <p>A: aktív, VP: eseményt jelölő passzív (event), ZP: állapotot
+    jelölő passzív (state)<br>
+    <b>A:</b> kommen, bekommen, gefallen<br>
+    <b>A+VP:</b> loben, arbeiten, tanzen<br>
+    <b>A+VP+ZP:</b> impfen, öffnen, zerbrechen<br></p>
+    <p></p>
+    <ol>
+        <li>tartós-huzamos (imperfektiv, durativ)
+            <ol>
+                <li>folyamatos (kontinuativ): lachen blühen,
+                liegen</li>
+                <li>gyakorító (iterativ, frequentativ): sticheln,
+                strecheln</li>
+            </ol>
+        </li>
+        <li>befejezett (perfektiv, terminativ)
+            <ol>
+                <li>kezdő (inchoativ, ingressiv): losfahren,
+                erblühen, sich hinlegen
+                    <ul>
+                        <li>állapotváltozást jelentő kezdő
+                        (mutativ, transformativ): erblassen,
+                        erkranken, sterben</li>
+                    </ul>
+                </li>
+                <li>lezáró (resultativ, egressiv): verbrennen,
+                verblühen, verblassen, aufessen</li>
+                <li>mozzanatos (punktuell, momentan): auffangen,
+                explodieren, klicken</li>
+            </ol>
+        </li>
+    </ol>
+    <p></p>
+    <b>Mehrere Modalen: </b>Sie müssen uns sehen können. -- ?? Wir müssen gesehen werden können. ?? <br>
+    ich musste einen Arzt rufen lassen (ich habe einen Arzt rufen lassen müssen)<br>
+    ?? házat épít/építtet -- a ház megépül/megépíttetik ?? er lässt ein neues Haus bauen
+    <p></p>
+    <p></p>
+    <h3>Passiv</h3>
+    <dl>
+        <dt>normales Passiv (Acc. obj. -&gt; Subj.)</dt>
+        <dd>Er kocht das Essen. Das Essen wird gekocht.</dd>
+        <dd>Viele Leute lesen Kafka. Kafka wird viel gelesen.</dd>
+        <dd>Das Publikum liebt den Star. Der Star wird
+        geliebt.</dd>
+    </dl>
+    <dl>
+        <dt>Dativpassiv (Dat. obj. -&gt; Dat. obj.)</dt>
+        <dd>Ich helfe dir. Dir wird geholfen.</dd>
+        <dd>Die Leute glauben der Zeugin. Der Zeugin wird
+        geglaubt.</dd>
+        <dd></dd>
+    </dl>
+    <dl>
+        <dt>normales Passiv (Dat. obj. + Acc. obj. -&gt; Dat. obj.
+        + Subj.)</dt>
+        <dd>Ich schenke dir ein Buch. Dir wird ein Buch
+        geschenkt.</dd>
+        <dd>Die Firma sendet Ihnen den Artikel. Der Artikel wird
+        Ihnen gesendet.</dd>
+        <dd>Die Polizei nimmt dem Mann den Führerschein weg. Dem
+        Mann wird der Führerschein weggenommen (entzogen).</dd>
+    </dl>
+    <dl>
+        <dt>Adressatenpassiv (Dat. obj. + Acc. obj. -&gt; Subj. +
+        Acc. obj.)</dt>
+        <dd>Ich schenke dir ein Buch. Du bekommst ein Buch
+        geschenkt.</dd>
+        <dd>Die Firma sendet Ihnen den Artikel. Sie kriegen den
+        Artikel gesendet.</dd>
+        <dd>Die Polizei nimmt dem Mann den Führerschein weg. *Der
+        Mann bekommnt den Führerschein entzogen. -&gt; funktioniert
+        nicht, negativer Rezipient, nicht bekommt etw. sondern
+        verliert etw.</dd>
+        <dd></dd>
+    </dl>
+    <p></p>
+    <p></p>
+    <table>
+        <tr>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+        </tr>
+        <tr>
+            <td>sie/Sie/wir</td>
+            <td class="same1">sagen</td>
+            <td class="same1">sagen</td>
+            <td class="same2">sagten</td>
+            <td class="same2">sagten</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">rudern</td>
+            <td class="same1">rudern</td>
+            <td class="same2">ruderten</td>
+            <td class="same2">ruderten</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">reisen</td>
+            <td class="same1">reisen</td>
+            <td class="same2">reisten</td>
+            <td class="same2">reisten</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">warten</td>
+            <td class="same1">warten</td>
+            <td class="same2">warteten</td>
+            <td class="same2">warteten</td>
+        </tr>
+        <tr>
+            <td>ich</td>
+            <td class="same1">sage</td>
+            <td class="same1">sage</td>
+            <td class="same2">sagte</td>
+            <td class="same2">sagte</td>
+            <td>ich</td>
+            <td class="same1">rud(e)re</td>
+            <td class="same1">rud(e)re</td>
+            <td class="same2">ruderte</td>
+            <td class="same2">ruderte</td>
+            <td>ich</td>
+            <td class="same1">reise</td>
+            <td class="same1">reise</td>
+            <td class="same2">reiste</td>
+            <td class="same2">reiste</td>
+            <td>ich</td>
+            <td class="same1">warte</td>
+            <td class="same1">warte</td>
+            <td class="same2">wartete</td>
+            <td class="same2">wartete</td>
+        </tr>
+        <tr>
+            <td>sie/er/es</td>
+            <td>sagt</td>
+            <td>sage</td>
+            <td class="same2">sagte</td>
+            <td class="same2">sagte</td>
+            <td>sie/er/es</td>
+            <td>rudert</td>
+            <td>rud(e)re</td>
+            <td class="same2">ruderte</td>
+            <td class="same2">ruderte</td>
+            <td>sie/er/es</td>
+            <td>reist</td>
+            <td>reise</td>
+            <td class="same2">reiste</td>
+            <td class="same2">reiste</td>
+            <td>sie/er/es</td>
+            <td>wartet</td>
+            <td>warte</td>
+            <td class="same2">wartete</td>
+            <td class="same2">wartete</td>
+        </tr>
+        <tr>
+            <td>du</td>
+            <td>sagst</td>
+            <td>sagest</td>
+            <td class="same2">sagtest</td>
+            <td class="same2">sagtest</td>
+            <td>du</td>
+            <td>ruderst</td>
+            <td>ruderest</td>
+            <td class="same2">rudertest</td>
+            <td class="same2">rudertest</td>
+            <td>du</td>
+            <td>reist</td>
+            <td>reisest</td>
+            <td class="same2">reistest</td>
+            <td class="same2">reistest</td>
+            <td>du</td>
+            <td class="same1">wartest</td>
+            <td class="same1">wartest</td>
+            <td class="same2">wartetest</td>
+            <td class="same2">wartetest</td>
+        </tr>
+        <tr>
+            <td>ihr</td>
+            <td>sagt</td>
+            <td>saget</td>
+            <td class="same2">sagtet</td>
+            <td class="same2">sagtet</td>
+            <td>ihr</td>
+            <td>rudert</td>
+            <td>ruderet</td>
+            <td class="same2">rudertet</td>
+            <td class="same2">rudertet</td>
+            <td>ihr</td>
+            <td>reist</td>
+            <td>reiset</td>
+            <td class="same2">reistet</td>
+            <td class="same2">reistet</td>
+            <td>ihr</td>
+            <td class="same1">wartet</td>
+            <td class="same1">wartet</td>
+            <td class="same2">wartetet</td>
+            <td class="same2">wartetet</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+        </tr>
+        <tr>
+            <td>sie/Sie/wir</td>
+            <td class="same1">tragen</td>
+            <td class="same1">tragen</td>
+            <td>trügen</td>
+            <td>trugen</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">haben</td>
+            <td class="same1">haben</td>
+            <td>hätten</td>
+            <td>hatten</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">steigen</td>
+            <td class="same1">steigen</td>
+            <td class="same2">stiegen</td>
+            <td class="same2">stiegen</td>
+            <td>sie/Sie/wir</td>
+            <td class="same3">geben</td>
+            <td class="same3">geben</td>
+            <td class="same3">gäben</td>
+            <td>gaben</td>
+        </tr>
+        <tr>
+            <td>ich</td>
+            <td class="same1">trage</td>
+            <td class="same1">trage</td>
+            <td>trüge</td>
+            <td>trug</td>
+            <td>ich</td>
+            <td class="same1">habe</td>
+            <td class="same1">habe</td>
+            <td>hätte</td>
+            <td>hatte</td>
+            <td>ich</td>
+            <td class="same1">steige</td>
+            <td class="same1">steige</td>
+            <td>stiege</td>
+            <td>stieg</td>
+            <td>ich</td>
+            <td class="same3">gebe</td>
+            <td class="same3">gebe</td>
+            <td class="same3">gäbe</td>
+            <td>gab</td>
+        </tr>
+        <tr>
+            <td>sie/er/es</td>
+            <td>trägt</td>
+            <td>trage</td>
+            <td>trüge</td>
+            <td>trug</td>
+            <td>sie/er/es</td>
+            <td>hat</td>
+            <td>habe</td>
+            <td>hätte</td>
+            <td>hatte</td>
+            <td>sie/er/es</td>
+            <td>steigt</td>
+            <td>steige</td>
+            <td>stiege</td>
+            <td>stieg</td>
+            <td>sie/er/es</td>
+            <td>gibt</td>
+            <td class="same3">gebe</td>
+            <td class="same3">gäbe</td>
+            <td>gab</td>
+        </tr>
+        <tr>
+            <td>du</td>
+            <td>trägst</td>
+            <td>tragest</td>
+            <td>trügest</td>
+            <td>trugst</td>
+            <td>du</td>
+            <td>hast</td>
+            <td>habest</td>
+            <td>hättest</td>
+            <td>hattest</td>
+            <td>du</td>
+            <td>steigst</td>
+            <td>steigest</td>
+            <td>stiegest</td>
+            <td>stiegst</td>
+            <td>du</td>
+            <td>gibst</td>
+            <td class="same3">gebest</td>
+            <td class="same3">gäbest</td>
+            <td>gabst</td>
+        </tr>
+        <tr>
+            <td>ihr</td>
+            <td>tragt</td>
+            <td>traget</td>
+            <td>trüget</td>
+            <td>trugt</td>
+            <td>ihr</td>
+            <td>habt</td>
+            <td>habet</td>
+            <td>hättet</td>
+            <td>hattet</td>
+            <td>ihr</td>
+            <td>steigt</td>
+            <td>steiget</td>
+            <td>stieget</td>
+            <td>stiegt</td>
+            <td>ihr</td>
+            <td>gebt</td>
+            <td class="same3">gebet</td>
+            <td class="same3">gäbet</td>
+            <td>gabt</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+            <th></th>
+            <th>S1</th>
+            <th>S1 K</th>
+            <th>S2 K</th>
+            <th>S2</th>
+        </tr>
+        <tr>
+            <td>sie/Sie/wir</td>
+            <td>sind</td>
+            <td>seien</td>
+            <td>wären</td>
+            <td>waren</td>
+            <td>sie/Sie/wir</td>
+            <td>tun</td>
+            <td>tuen</td>
+            <td>täten</td>
+            <td>taten</td>
+            <td>sie/Sie/wir</td>
+            <td class="same1">werden</td>
+            <td class="same1">werden</td>
+            <td>würden</td>
+            <td>wurden</td>
+            <td>sie/Sie/wir</td>
+            <td class="same3">treten</td>
+            <td class="same3">treten</td>
+            <td class="same3">träten</td>
+            <td>traten</td>
+        </tr>
+        <tr>
+            <td>ich</td>
+            <td>bin</td>
+            <td>sei</td>
+            <td>wäre</td>
+            <td>war</td>
+            <td>ich</td>
+            <td class="same1">tue</td>
+            <td class="same1">tue</td>
+            <td>täte</td>
+            <td>tat</td>
+            <td>ich</td>
+            <td class="same1">werde</td>
+            <td class="same1">werde</td>
+            <td>würde</td>
+            <td>wurde</td>
+            <td>ich</td>
+            <td class="same3">trete</td>
+            <td class="same3">trete</td>
+            <td class="same3">träte</td>
+            <td>trat</td>
+        </tr>
+        <tr>
+            <td>sie/er/es</td>
+            <td>ist</td>
+            <td>sei</td>
+            <td>wäre</td>
+            <td>war</td>
+            <td>sie/er/es</td>
+            <td>tut</td>
+            <td>tue</td>
+            <td>täte</td>
+            <td>tat</td>
+            <td>sie/er/es</td>
+            <td>wird</td>
+            <td>werde</td>
+            <td>würde</td>
+            <td>wurde</td>
+            <td>sie/er/es</td>
+            <td>tritt</td>
+            <td class="same3">trete</td>
+            <td class="same3">träte</td>
+            <td>trat</td>
+        </tr>
+        <tr>
+            <td>du</td>
+            <td>bist</td>
+            <td>sei(e)st</td>
+            <td>wär(e)st</td>
+            <td>warst</td>
+            <td>du</td>
+            <td>tust</td>
+            <td>tuest</td>
+            <td>tätest</td>
+            <td>tat(e)st</td>
+            <td>du</td>
+            <td>wirst</td>
+            <td>werdest</td>
+            <td>würdest</td>
+            <td>wurdest</td>
+            <td>du</td>
+            <td>trittst</td>
+            <td class="same3">tretest</td>
+            <td class="same3">trätest</td>
+            <td>trat(e)st</td>
+        </tr>
+        <tr>
+            <td>ihr</td>
+            <td>seid</td>
+            <td>seiet</td>
+            <td>wär(e)t</td>
+            <td>wart</td>
+            <td>ihr</td>
+            <td>tut</td>
+            <td>tuet</td>
+            <td>tätet</td>
+            <td>tatet</td>
+            <td>ihr</td>
+            <td class="same1">werdet</td>
+            <td class="same1">werdet</td>
+            <td>würdet</td>
+            <td>wurdet</td>
+            <td>ihr</td>
+            <td class="same3">tretet</td>
+            <td class="same3">tretet</td>
+            <td class="same3">trätet</td>
+            <td>tratet</td>
+        </tr>
+    </table>
+    <p></p>
+    <p><b>Tense:</b> position in time: past, present, future
+    (absolute/deictic tense?) - (locates reference time)<br>
+    <b>Aspect:</b> extension in time: perfective (point),
+    imperfective (stretch) (relative tense?) - (locates event to
+    reference time)<br>
+    <b>Mood/Modality:</b> reality: realis (actual), irrealis
+    (possible, necessary)<br></p>
+    <p>Reichenbach(1947)<br>
+    <b>Speech time:</b> utterance time, usually present (praesens
+    historicum)<br>
+    <b>Reference time:</b> the time which is talked about (located
+    in relation to speech time) - past, present, future<br>
+    <b>Event time:</b> the time of the main verb (located in
+    relation to reference time) - vorzeitig, gleichzeitig,
+    nachzeitig<br></p>
+    <ul>
+        <li>E=R=S: present</li>
+        <li>E=R&lt;S: past</li>
+        <li>S&lt;E=R: future</li>
+        <li>E&lt;R=S: present perfect</li>
+        <li>E&lt;R&lt;S: past perfect</li>
+        <li>S&lt;E&lt;R: future perfect</li>
+        <li>E&lt;S&lt;R: future perfect</li>
+    </ul>
+    <p></p><!-- The Modal -->
+    <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <div id="modal-content">
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
+    <script>
+      var modal = document.getElementById("modal");
+      var modalContent = document.getElementById("modal-content");
+
+
+      function openModal(verbId, verbForm) {
+        var verb = desc[verbForm][verbId];
+        modalContent.innerHTML = '<h2>' + verb.title + '</h2><p>';
+          verb.ex.forEach(sentence => {
+              modalContent.innerHTML += sentence + '</br>';
+          });
+        modal.style.display = "block";
       }
 
-      /*
-         https://en.wikipedia.org/wiki/HSL_and_HSV
+      function closeModal() {
+        modal.style.display = "none";
+      }
 
-           0 red:          #FF8080; #DF3838; #BF0000; | 180 cyan:         #80FFFF; #38DFDF; #00BFBF;
-          30 yellow-red:   #FFBF80; #DF8B38; #BF6000; | 210 blue-cyan:    #80BFFF; #388BDF; #0060BF;
-          60 yellow:       #FFFF80; #DFDF38; #BFBF00; | 240 blue:         #8080FF; #3838DF; #0000BF;
-          90 green-yellow: #BFFF80; #8BDF38; #60BF00; | 270 magenta-blue: #BF80FF; #8B38DF; #6000BF;
-         120 green:        #80FF80; #38DF38; #00BF00; | 300 magenta:      #FF80FF; #DF38DF; #BF00BF;
-         150 cyan-green:   #80FFBF; #38DF8B; #00BF60; | 330 red-magenta:  #FF80BF; #DF388B; #BF0060;
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+          event.target.style.display = "none";
+        }
+      }
 
-           0 red:          #EFCFCF; #DF9F9F; #CF7070; | 180 cyan:         #CFEFEF; #9FDFDF; #80CFCF;
-          30 yellow-red:   #EFDFCF; #DFBF9F; #CF9F70; | 210 blue-cyan:    #CFDFEF; #9FBFDF; #709FCF;
-          60 yellow:       #EFEFCF; #DFDF9F; #CFCF70; | 240 blue:         #CFCFEF; #9F9FDF; #7070CF;
-          90 green-yellow: #DFEFCF; #BFDF9F; #9FCF70; | 270 magenta-blue: #DFCFEF; #BF9FDF; #9F70CF;
-         120 green:        #CFEFCF; #9FDF9F; #70CF70; | 300 magenta:      #EFCFEF; #DF9FDF; #CF70CF;
-         150 cyan-green:   #CFEFDF; #9FDFBF; #70CF9F; | 330 red-magenta:  #EFCFDF; #DF9FBF; #CF709F;
-      */
+     window.addEventListener('keydown', function (event) {
+         if (event.key === 'Escape') {
+             closeModal();
+         }
+     });
 
-      .fin { background-color: #FFFF80; }
-      .ptc { background-color: #80FFBF; }
-      .inf { background-color: #DF9FBF; }
-      .ipp { background-color: #CF709F; }
-
-      .voll-fin { background-color: #FF80BF; }
-      .voll-ptc { background-color: #DF388B; }
-      .voll-inf { background-color: #BF0060; }
-      .pass-fin { background-color: #80BFFF; }
-      .pass-ptc { background-color: #388BDF; }
-      .pass-inf { background-color: #0060BF; }
-      .obj-fin { background-color: #FFBF80; }
-      .obj-ipp { background-color: #DF8B38;  }
-      .obj-inf { background-color: #BF6000;  }
-      .pf-fin { background-color: #80FFBF; }
-      .pf-ptc { background-color: #38DF8B; }
-      .pf-inf { background-color: #00BF60; }
-      .subj-fin { background-color: #FFFF80; }
-      .subj-ptc { background-color: #DFDF38; }
-      .subj-inf { background-color: #BFBF00; }
-
-      .voll-fin { background-color: #DF388B; }
-      .voll-ptc { background-color: #DF9FBF; }
-      .voll-inf { background-color: #CF709F; }
-      .pass-fin { background-color: #388BDF; }
-      .pass-ptc { background-color: #9FBFDF; }
-      .pass-inf { background-color: #709FCF; }
-      .obj-fin { background-color: #DF8B38;  }
-      .obj-ipp { background-color: #CF9F70; }
-      .obj-inf { background-color: #DFBF9F; }
-      .pf-fin { background-color: #38DF8B; }
-      .pf-ptc { background-color: #9FDFBF; }
-      .pf-inf { background-color: #70CF9F; }
-      .subj-fin { background-color: #DFDF38; }
-      .subj-ptc { background-color: #DFDF9F; }
-      .subj-inf { background-color: #CFCF70; }
-
-      .fin { background-color: LightSteelBlue; }
-      .ptc { background-color: DarkSeaGreen; }
-      .inf { background-color: PaleVioletRed; }
-      .ipp { background-color: Coral; }
-
-    </style>
-  </head>
-  <body>
-    <p>
-    <table>
-      <tr>
-        <th colspan=5>Reihenfolge:</th>
-      </tr>
-      <tr id="desiredOrder">
-        <td id="obj"  style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Modal</td>
-        <td id="pf"   style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Perfekt</td>
-        <td id="subj" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Vermutung</td>
-        <td id="pass" style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Passiv</td>
-      </tr>
-    </table>
-    </p>
-
-    <p>
-    <div id="verb-form-container"></div>
-    </p>
-
-    <p>
-    <ul>
-      <li><b>Passiv</b>: werden, sein, gehören, bekommen, erhalten, kriegen</li>
-      <li><b>Objektives Modalverb (Deontic?), Accusativus cum infinitivo</b>: dürfen, können, müssen, sollen, wollen, mögen; brauchen, heißen, lassen, sehen, hören, fühlen, helfen, lehren, machen</li>
-      <li><b>Perfekt</b>: haben, sein</li>
-      <li><b>Subjektives Modalverb? (Epistemic?)/Vermutung?/Futur?</b>: werden, sollen, wollen, muss &gt; müsste &gt; dürfte &gt; kann &gt; könnte &gt; mag, scheinen</li>
-    </ul>
-    </p>
-    <p>
-        <table><tbody>
-            <tr><th>Vollverb</th><th>Passiv</th><th>Modal</th><th>Perfekt</th><th>Vermutung</th></tr>
-            <!-- 0000 --><tr><td class="fin">fin</td><td></td><td></td><td></td><td></td><td>Der Koch</td><td>wäscht</td><td>wasche</td><td>wusch</td><td>wüsche</td><td>den Apfel.</td><td></td></tr>
-            <!-- 1000 --><tr><td class="ptc">ptc</td><td class="fin">fin</td><td></td><td></td><td></td><td>Der Apfel</td><td>wird/ist</td><td>werde/sei</td><td>wurde/war</td><td>würde/wäre</td><td></td><td>gewaschen.</td></tr>
-            <!-- 0010 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat (ist)</td><td>habe (sei)</td><td>hatte (war)</td><td>hätte (wäre)</td><td>den Apfel</td><td>gewaschen.</td></tr>
-            <!-- 0011 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>gewaschen haben (sein).</td></tr>
-            <!-- 1100 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="fin">fin</td><td></td><td></td><td>Der Apfel</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td></td><td>gewaschen werden/sein.</td></tr>
-            <!-- 1001 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td></td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein.</td></tr>
-            <!-- 1110 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>hat</td><td>habe</td><td>hatte</td><td>hätte</td><td></td><td>gewaschen werden/sein können.</td></tr>
-            <!-- 1101 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein können.</td></tr>
-            <!-- 1111 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>haben gewaschen werden/sein können.</td></tr>
-            <!-- 1010 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>ist</td><td>sei</td><td>war</td><td>wäre</td><td></td><td>gewaschen worden/gewesen.</td></tr>
-            <!-- 1011 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen worden/gewesen sein.</td></tr>
-            <!-- 0100 --><tr><td class="inf">inf</td><td></td><td class="fin">fin</td><td></td><td></td><td>Der Koch</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td>den Apfel</td><td>waschen.</td></tr>
-            <!-- 0001 --><tr><td class="inf">inf</td><td></td><td></td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen.</td></tr>
-            <!-- 0110 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat</td> <td>habe</td> <td>hatte</td> <td>hätte</td> <td>den Apfel</td><td>waschen können.</td></tr>
-            <!-- 0101 --><tr><td class="inf">inf</td><td></td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen können.</td></tr>
-            <!-- 0111 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>haben waschen können.</td></tr>
-        </tbody></table>
-    </p>
-
-    <p>
-        <table><tbody>
-            <tr><th>Vollverb</th><th>Passiv</th><th>Modal</th><th>Perfekt</th><th>Vermutung</th></tr>
-            <!-- 0000 --><tr><td class="fin">fin</td><td></td><td></td><td></td><td></td><td>Der Koch</td><td>wäscht</td><td>wasche</td><td>wusch</td><td>wüsche</td><td>den Apfel.</td><td></td></tr>
-            <!-- 0110 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat</td> <td>habe</td> <td>hatte</td> <td>hätte</td> <td>den Apfel</td><td>waschen können.</td></tr>
-            <!-- 1110 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>hat</td><td>habe</td><td>hatte</td><td>hätte</td><td></td><td>gewaschen werden/sein können.</td></tr>
-            <!-- 0010 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="fin">fin</td><td></td><td>Der Koch</td><td>hat (ist)</td><td>habe (sei)</td><td>hatte (war)</td><td>hätte (wäre)</td><td>den Apfel</td><td>gewaschen.</td></tr>
-            <!-- 1010 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="fin">fin</td><td></td><td>Der Apfel</td><td>ist</td><td>sei</td><td>war</td><td>wäre</td><td></td><td>gewaschen worden/gewesen.</td></tr>
-            <!-- 1000 --><tr><td class="ptc">ptc</td><td class="fin">fin</td><td></td><td></td><td></td><td>Der Apfel</td><td>wird/ist</td><td>werde/sei</td><td>wurde/war</td><td>würde/wäre</td><td></td><td>gewaschen.</td></tr>
-            <!-- 0001 --><tr><td class="inf">inf</td><td></td><td></td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen.</td></tr>
-            <!-- 1001 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td></td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein.</td></tr>
-            <!-- 0101 --><tr><td class="inf">inf</td><td></td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>waschen können.</td></tr>
-            <!-- 1101 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="inf">inf</td><td></td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen werden/sein können.</td></tr>
-            <!-- 0111 --><tr><td class="inf">inf</td><td></td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>haben waschen können.</td></tr>
-            <!-- 1111 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="ipp">ipp</td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>haben gewaschen werden/sein können.</td></tr>
-            <!-- 0011 --><tr><td class="ptc">ptc</td><td></td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Koch</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td>den Apfel</td><td>gewaschen haben (sein).</td></tr>
-            <!-- 1011 --><tr><td class="ptc">ptc</td><td class="ptc">ptc</td><td></td><td class="inf">inf</td><td class="fin">fin</td><td>Der Apfel</td><td>muss</td><td>müsse</td><td>musste</td><td>müsste</td><td></td><td>gewaschen worden/gewesen sein.</td></tr>
-            <!-- 0100 --><tr><td class="inf">inf</td><td></td><td class="fin">fin</td><td></td><td></td><td>Der Koch</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td>den Apfel</td><td>waschen.</td></tr>
-            <!-- 1100 --><tr><td class="ptc">ptc</td><td class="inf">inf</td><td class="fin">fin</td><td></td><td></td><td>Der Apfel</td><td>kann</td><td>könne</td><td>konnte</td><td>könnte</td><td></td><td>gewaschen werden/sein.</td></tr>
-        </tbody></table>
-    </p>
-    <script>
       var selected;
 
       function dragStart(e) {
@@ -169,7 +829,8 @@
       function dragEnd(e) {
         selected = null
         var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
-        redrawTable(verbFormData.sort(compareBy(actualOrder)));
+        var container = document.getElementById("verb-form-container");
+        redrawTable(container, actualOrder);
       }
 
       function isBefore(a, b) {
@@ -180,107 +841,579 @@
         return false;
       }
 
+     var desc = {
+         "p1": {
+             "0000": {"title": "Präsens ind.", "ex": [
+                 "<b>jelen vagy jövő</b>",
+                 "Morgen besuche ich meinen Freund im Krankenhaus.",
+             ],},
+             "0001": {"title": "Futur I ind.", "ex": [
+                 "<b>jövő, nyomtékos felszólítás, feltételezés jelenben</b>",
+                 "Ich werede meinen Freund im Krankenhaus besuchen.",
+                 "Du wirst jetzt deine Hausaufgabe schreiben! (Most megírod a házi feladatodat!)",
+                 "Karl wird jetzt schon zu Hause sein.",
+                 "(Sie hat einen komischen Akzent.) Sie mag Französin sein. (vielleicht)",
+                 "(Michael ist nicht zuhause.) Er kann/könnte noch arbeiten. (vielleicht)",
+                 "Es kann/könnte besser sein, heute zuhause zu bleiben. (vielleicht)",
+                 "Er will der jüngste seiner Klasse sein. (Ich bin der jüngste meiner Klasse.)",
+                 "Der Mensch soll ursprünglich aus Afrika stammen. (fremde Behauptung)",
+             ],},
+             "0010": {"title": "Perfekt ind.", "ex": [
+                 "Der Gärtner ist zuhause geblieben.",
+                 "<b>múlt: jelenre való kihatás</b>",
+                 "<b>jövőben befejeződő:</b>",
+                 "Ich antworte sofort, wenn ich deinen Brief bekommen habe. Azonnal válaszolok, ha megkaptam a leveledet.",
+                 "Dass habe ich nich gewollt. Azt nem akartam.",
+             ],},
+             "0011": {"title": "Futur II ind.", "ex": [
+                 "<b>jövőben várható befejezés:</b>",
+                 "Bis Mittwoch wird er alles vorbereitet haben.",
+                 "Morgen wird er die Arbeit beendet haben. Holnapra befejezi a munkát.",
+                 "<b>valószínűsítés a múltban:</b>",
+                 "Der Gärtner muss zuhause geblieben sein. (epistemisch)",
+                 "Bis Mittwoch wird er alles vorbereitet haben.",
+                 "Martin wird viel gelernt haben. Martin bizonyára sokat tanult.",
+                 "(Er war nicht da.) Er mag krank gewesen sein. (Er war vielleicht krank.)",
+                 "Er mag viele Wörter vergessen haben, (aber hat den Test trotzdem bestanden). (vielleicht)",
+                 "Sie wollen glücklich verheiratet gewesen sein. (Wir waren glücklich verheiratet.)",
+                 "(Ich habe meinem Freund letzte Woche einen Brief geschrieben.) Er wird ihn sicher schon bekommen haben.",
+             ],},
+             "0100": {"title": "", "ex": [
+                 "Impfmuffel sind Menschen, die sich nicht impfen lassen wollen.",
+                 "",
+             ],},
+             "0101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0110": {"title": "", "ex": [
+                 "Ich habe ins Theater gehen wollen, aber ich habe keine Karte bekommen können.",
+             ],},
+             "0111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1000": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1001": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1010": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1011": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1110": {"title": "", "ex": [
+                 "Er hat nicht gesehen werden wollen.",
+                 "",
+             ],},
+             "1111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+         },
+         "k1": {
+             "0000": {"title": "Konjunktiv (I) Präsens", "ex": [
+                 "<b>főmondtaban: felhívás, óhaj, kívánság, teljesíthető kérés:</b>",
+                 "Es lebe das Vaterland! Gehen wir weiter! Kommen Sie, bitte!",
+                 "<b>pl. receptekben man alannyal:</b>",
+                 "Man nehme einen kelinen Löffel Neskaffe, gebe ihn in die Tasse, gieße heißes Wasser nach und rühre gut um.",
+                 "<b>mellékmondatban: egyidejű függő beszéd - közéls, vélekedés, bizonytalanság - elhatárolódás</b>",
+                 "Inge sagte, sie sei müde, sie habe schon Hunger, sie gehe nach Hause.",
+                 "Er meint, dass er kein Geld habe. Azt hiszi, hogy nincs pénze.",
+             ],},
+             "0001": {"title": "Konjunktiv (I) Futur I", "ex": [
+                 "<b>függő beszédben utóidejűség</b>",
+                 "Der Kranke sagte zum Arzt, er werde nie mehr rauchen.",
+             ],},
+             "0010": {"title": "Konjunktiv (I) Perfekt", "ex": [
+                 "<b>függő beszédben előidejűség</b>",
+                 "Helmut erzählte, Jutta sei nach Hamburg gefahren. Sie habe dort auch den Hafen besichtigt.",
+             ],},
+             "0011": {"title": "Konjunktiv (I) Futur II", "ex": [
+                 "<b>függő beszédben utóidejűség</b>",
+                 "Der Ingenieur erklärte, er werde die Arbeit übermorgen geendet haben.",
+             ],},
+             "0100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0110": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1000": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1001": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1010": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1011": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1110": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+         },
+         "k2": {
+             "0000": {"title": "Konjunktiv (II) Präteritum", "ex": [
+                 "<b>feltételes mód, jelen idő</b>",
+                 "Er wäre glücklich. Er hätte Zeit. Er würde gesund.",
+                 "<b>Konjunktiv (I) Präsens helyett az elhatárolódás hangsúlyozására</b>",
+                 "Man sagt, er wäre sehr begabt. Azt mondják, nagyon tehetséges.",
+                 "<b>jelen idejű irreális feltétel, óhajtás, irreális hasonlítás, udvarias kérés</b>",
+                 "<b>függő beszédben Konjunktiv (I) Präsens helyett (Sg.1, Pl.1,3)</b>",
+                 "Wenn wir Zeit hätten, gingen wir ins Kino.",
+                 "Wenn er doch bald käme! Bárcsak hamarosan jönne!",
+                 "Er tut als ob er taub wäre. Úgy tesz, mintha süket lenne.",
+                 "Könnten Sie mir bitte helfen?",
+                 "Er meint, dass ich kein Geld hätte. Azt hiszi, hogy nincs pénzem.",
+             ],},
+             "0001": {"title": "würde-Form I", "ex": [
+                 "<b>feltételes mód, jelen idő</b>",
+                 "<b>főleg önálló és főmondatokban</b>",
+                 "Ich würde gern später auch Englisch lernen.",
+                 "<b>még el nem kezdődött jövő idejű cselekvés</b>",
+                 "<b>függő beszédben Konjunktiv (I) Futur I helyett (Sg.1, Pl.1,2,3)</b>",
+                 "Ich habe gesagt, ich würde ihn am Freitag besuchen. Azt mondtam, hogy pénteken meg fogom látogatni.",
+                 "Wenn sie so weitermachen, dürfte das Krieg bedeuten. (wahrscheinlich)",
+                 "Du hast Fieber, du dürftest die Grippe haben. (wahrscheinlich)",
+                 "(Der Himmel ist grau.) Es müsste bald regnen. (Es regnet wahrscheinlich bald.)",
+                 "Was sie sagt, müsste stimmen. (stimmt sehr wahrscheinlich)",
+                 "Wenn wir Zeit hätten, würden wir ins Kino gehen.",
+                 "Würde er doch bald kommen! Bárcsak hamarosan jönne!",
+             ],},
+             "0010": {"title": "Konjunktiv (II) Plusquamperfekt", "ex": [
+                 "<b>feltételes mód, múlt idő</b>",
+                 "<b>múlt idejű irreális feltétel, múltra vontakozó óhajtás, előidejű irreális hasonlítás</b>",
+                 "<b>függő beszédben Konjunktiv (I) Perfekt haben helyett (Sg.1, Pl.1,3)</b>",
+                 "Ich hätte mir dieses Kleid gekauft, wenn ich mehr Geld gehabt hätte. Megvettem volna ezt a ruhát, ha több pénzem lett volna.",
+                 "Wenn er doch früher gekommen wäre! Bárcsak korábban jött volna!",
+                 "Er ging vorbei, als ob er uns nich gesehen hätte. Elment mellettünk, mintha nem vett volna minket észre.",
+                 "Er meinte, dass ich nicht gelernt hätte. Azt gondolta, hogy nem tanultam.",
+                 "...wie es vielleicht zu erwarten gewesen wäre",
+             ],},
+             "0011": {"title": "würde-Form II", "ex": [
+                 "<b>feltételes mód, múlt idő</b>",
+                 "Also das Kelid würde ich mir gern gekauft haben. Hát ezt a ruhát szívesen megvettem volna.",
+                 "Der Mörder dürfte Handschuhe getragen haben. (Der Mörder hat wahrscheinlich Handschuhe getragen.)",
+             ],},
+             "0100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0110": {"title": "", "ex": [
+                 "Hättest du nicht lieber ins Kino gehen wollen? Nem akartál volna inkább moziba menni?",
+                 "",
+             ],},
+             "0111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1000": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1001": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1010": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1011": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1101": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1110": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1111": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+         },
+         "p2": {
+             "0000": {"title": "Präteritum/Imperfekt ind.", "ex": [
+                 "<b>múlt: elbeszélés, eseménysor, folyamatosság</b>",
+             ],},
+             "0001": {"title": "", "ex": [
+                 "X",
+             ],},
+             "0010": {"title": "Plusquamperfekt ind.", "ex": [
+                 "<b>régmúlt, múlthoz képesti előidejűség</b>",
+                 "Nachdem ich den Brief geschrieben hatte, ging ich auf die Post.",
+                 "Er ging an die Universität Bonn. Vorher hatte er vier Semester in Berlin studiert.",
+                 "Vor Jahren hatte auch sein Vater viel Fußball gespielt.",
+             ],},
+             "0011": {"title": "", "ex": [
+                 "X",
+                 "Später dachte ich, der Lehrer mochte am Vortag zu viel getrunken haben.",
+                 "Sie sah sich den Neuen genauer an. Sie musste ihn schon einmal gesehen haben.",
+             ],},
+             "0100": {"title": "", "ex": [
+                 "Der Gärtner musste zuhause bleiben. (deontisch)",
+                 "",
+             ],},
+             "0101": {"title": "", "ex": [
+                 "X",
+             ],},
+             "0110": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "0111": {"title": "", "ex": [
+                 "X",
+             ],},
+             "1000": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1001": {"title": "", "ex": [
+                 "X",
+             ],},
+             "1010": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1011": {"title": "", "ex": [
+                 "X",
+             ],},
+             "1100": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1101": {"title": "", "ex": [
+                 "X",
+             ],},
+             "1110": {"title": "", "ex": [
+                 "",
+                 "",
+             ],},
+             "1111": {"title": "", "ex": [
+                 "X",
+             ],},
+         },
+     };
 
       var actualOrder = [].map.call(document.getElementById('desiredOrder').children, e => e.id ).reverse();
-      var operators = [
-        {"id": "voll", "name": "Vollverb" },
-        {"id": "pass", "name": "Passiv" },
-        {"id": "obj", "name": "Modal" },
-        {"id": "pf", "name": "Perfekt" },
-        {"id": "subj", "name": "Vermutung" },
-      ];
+      var container = document.getElementById("verb-form-container");
+      redrawTable(container, actualOrder);
 
-      var verbFormData = [
-        /* 0000 */ { "voll": "fin", "pass":  null, "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "wäscht",     "p2": "wusch",      "k1": "wasche",     "k2": "wüsche",      "mittelfeld": "den Apfel.", "rklammer": "" }},
-        /* 0001 */ { "voll": "inf", "pass":  null, "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "waschen." }},
-        /* 0010 */ { "voll": "ptc", "pass":  null, "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "hat (ist)",  "p2": "hatte (war)","k1": "habe (sei)", "k2": "hätte (wäre)","mittelfeld": "den Apfel",  "rklammer": "gewaschen." }},
-        /* 0011 */ { "voll": "ptc", "pass":  null, "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "gewaschen haben (sein)." }},
-        /* 0100 */ { "voll": "inf", "pass":  null, "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "kann",       "p2": "konnte",     "k1": "könne",      "k2": "könnte",      "mittelfeld": "den Apfel",  "rklammer": "waschen." }},
-        /* 0101 */ { "voll": "inf", "pass":  null, "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "waschen können." }},
-        /* 0110 */ { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Koch",  "p1": "hat",        "p2": "hatte",      "k1": "habe",       "k2": "hätte",       "mittelfeld": "den Apfel",  "rklammer": "waschen können." }},
-        /* 0111 */ { "voll": "inf", "pass":  null, "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Koch",  "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "den Apfel",  "rklammer": "haben waschen können." }},
-        /* 1000 */ { "voll": "ptc", "pass": "fin", "obj":  null, "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "wird/ist",   "p2": "wurde/war",  "k1": "werde/sei",  "k2": "würde/wäre",  "mittelfeld": "",           "rklammer": "gewaschen." }},
-        /* 1001 */ { "voll": "ptc", "pass": "inf", "obj":  null, "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein." }},
-        /* 1010 */ { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "ist",        "p2": "war",        "k1": "sei",        "k2": "wäre",        "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen." }},
-        /* 1011 */ { "voll": "ptc", "pass": "ptc", "obj":  null, "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen worden/gewesen sein." }},
-        /* 1100 */ { "voll": "ptc", "pass": "inf", "obj": "fin", "pf":  null, "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "kann",       "p2": "konnte",     "k1": "könne",      "k2": "könnte",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein." }},
-        /* 1101 */ { "voll": "ptc", "pass": "inf", "obj": "inf", "pf":  null, "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." }},
-        /* 1110 */ { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "fin", "subj":  null, "ex": { "vorfeld": "Der Apfel", "p1": "hat",        "p2": "hatte",      "k1": "habe",       "k2": "hätte",       "mittelfeld": "",           "rklammer": "gewaschen werden/sein können." }},
-        /* 1111 */ { "voll": "ptc", "pass": "inf", "obj": "ipp", "pf": "inf", "subj": "fin", "ex": { "vorfeld": "Der Apfel", "p1": "muss",       "p2": "musste",     "k1": "müsse",      "k2": "müsste",      "mittelfeld": "",           "rklammer": "haben gewaschen werden/sein können." }},
-      ];
+     function redrawTable(container, order) {
+         // order is a 4 element array ["pass", "obj", "pf", "subj"]
 
-      function compareBy(order) {
-        return (a, b) => {
-          for (let verb of order) {
-            if (b[verb] && !a[verb]) {
-              return -1
-            } else if (a[verb] && !b[verb]) {
-              return 1
-            }
-          }
-          return 0
-        }
-      }
+         var verbs = {
+             "sein":    { "inf": "sein",    "p1": "ist",    "k1": "sei",    "k2": "wäre",   "p2": "war",    "ptc": "gewesen" },
+             "haben":   { "inf": "haben",   "p1": "hat",    "k1": "habe",   "k2": "hätte",  "p2": "hatte",  "ptc": "gehabt" },
+             "werden":  { "inf": "werden",  "p1": "wird",   "k1": "werde",  "k2": "würde",  "p2": "wurde",  "ptc": "worden" },
+             "koennen": { "inf": "können",  "p1": "kann",   "k1": "könne",  "k2": "könnte", "p2": "konnte", "ptc": "gekonnt" },
+             "muessen": { "inf": "müssen",  "p1": "muss",   "k1": "müsse",  "k2": "müsste", "p2": "musste", "ptc": "gemusst" },
+             "waschen": { "inf": "waschen", "p1": "wäscht", "k1": "wasche", "k2": "wüsche", "p2": "wusch",  "ptc": "gewaschen" },
+         }
 
-      var verbForms = verbFormData.sort(compareBy(actualOrder));
+         var subjekt = {
+             "aktiv": "Johannes",
+             "passiv": "Das Auto",
+         }
 
-      function addVerbFormToRow(verbForm, row) {
-        operators.forEach( operator => {
-          var cell = document.createElement('td');
-          cell.innerText = "";
-          if (verbForm[operator.id]) {
-            cell.innerText = verbForm[operator.id];
-            //cell.setAttribute("class", operator.id + "-" + verbForm[operator.id]);
-            cell.setAttribute("class", verbForm[operator.id]);
-          }
-          row.appendChild(cell);
-        })
+         var objekt = {
+             "aktiv": "Das Auto",
+             "passiv": "",
+         }
 
-        for (var feld of ['vorfeld', 'p1', 'k1', 'p2', 'k2', 'mittelfeld', 'rklammer']) {
-          var cell = document.createElement('td');
-          cell.innerText = verbForm.ex[feld];
-          row.appendChild(cell);
-        }
-      }
+         var verbFormClasses = [];
+         [false, true].forEach( p => {
+            [false, true].forEach( q => {
+                [false, true].forEach( r => {
+                    [false, true].forEach( s => {
+                        var combination = {};
+                        combination[ order[0] ] = p;
+                        combination[ order[1] ] = q;
+                        combination[ order[2] ] = r;
+                        combination[ order[3] ] = s;
+                        verbFormClasses.push(combination);
+                    });
+                });
+            });
+         });
 
-      function redrawTable(verbForms) {
-        var verbFormContainer = document.getElementById("verb-form-container");
-
-        var numberOfColumns = verbForms.length < 4 ? 1 : 2;
-        var numberOfColumns = verbForms.length < 44 ? 1 : 2;
         var table = document.createElement('table');
 
-        // add header
-        var row = document.createElement('tr');
-        for (var i = 0; i < numberOfColumns; i++) {
-          operators.forEach( operator => {
-            var cell = document.createElement('th');
-            cell.innerText = operator.name;
-            row.appendChild(cell);
-          })
-        }
-        table.appendChild(row);
+        // header
+        var rowElement = document.createElement('tr');
+         rowElement.innerHTML =
+         "<th>Subjekt</th>" +
+         "<th>Indikativ I</th>" +
+         "<th>Konjunktiv I</th>" +
+         "<th>Konjunktiv II</th>" +
+         "<th>Indikativ II</th>" +
+         "<th>Objekt</th>" +
+         "<th>Oberfeld</th>" +
+         "<th>Vollverb</th>" +
+         "<th>Passiv</th>" +
+         "<th>Modal</th>" +
+         "<th>Perfekt</th>" +
+         "<th>Epistemisch</th>";
+        table.appendChild(rowElement);
 
-        // add rows
-        for (var i = 0; i < verbForms.length / numberOfColumns; i++) {
-          var row = document.createElement('tr');
-          if (numberOfColumns < 2) {
-            addVerbFormToRow(verbForms[i], row)
-          } else {
-            for (var rowIndex of [i, i + verbForms.length / numberOfColumns]) {
-              addVerbFormToRow(verbForms[rowIndex], row)
+        verbFormClasses.forEach( row => {
+          var tdSubjekt = document.createElement('td');
+          var tdP1 = document.createElement('td');
+          var tdP2 = document.createElement('td');
+          var tdK1 = document.createElement('td');
+          var tdK2 = document.createElement('td');
+          var tdObjekt = document.createElement('td');
+          var tdOberfeld = document.createElement('td');
+          var tdVollverb = document.createElement('td');
+          var tdRKlammerPass = document.createElement('td');
+          var tdRKlammerObj = document.createElement('td');
+          var tdRKlammerPf = document.createElement('td');
+          var tdRKlammerSubj = document.createElement('td');
+            //---
+
+            tdSubjekt.innerText = subjekt.aktiv;
+            tdObjekt.innerText = objekt.aktiv;
+
+            // set vollverb
+            if (row.pass) {
+                tdSubjekt.innerText = subjekt.passiv;
+                tdObjekt.innerText = objekt.passiv;
+
+                tdVollverb.innerText = verbs.waschen.ptc;
+                tdVollverb.setAttribute("class", "ptc");
+            } else if (row.obj) {
+                tdVollverb.innerText = verbs.waschen.inf;
+                tdVollverb.setAttribute("class", "inf");
+            } else if (row.pf) {
+                tdVollverb.innerText = verbs.waschen.ptc;
+                tdVollverb.setAttribute("class", "ptc");
+            } else if (row.subj) {
+                tdVollverb.innerText = verbs.waschen.inf;
+                tdVollverb.setAttribute("class", "inf");
+            } else {
+                tdVollverb.innerText = "";
+                tdVollverb.setAttribute("class", "fin");
+
+                tdP1.innerText = verbs.waschen.p1;
+                tdK1.innerText = verbs.waschen.k1;
+                tdK2.innerText = verbs.waschen.k2;
+                tdP2.innerText = verbs.waschen.p2;
             }
-          }
-          table.appendChild(row);
-        }
 
-        verbFormContainer.innerHTML = table.outerHTML;
-      }
+            // set passive
+            if (row.pass) {
+                if (row.obj) {
+                    tdRKlammerPass.innerText = verbs.werden.inf + "/" + verbs.sein.inf;
+                    tdRKlammerPass.setAttribute("class", "inf");
+                } else if (row.pf) {
+                    tdRKlammerPass.innerText = verbs.werden.ptc + "/" + verbs.sein.ptc;
+                    tdRKlammerPass.setAttribute("class", "ptc");
+                } else if (row.subj) {
+                    tdRKlammerPass.innerText = verbs.werden.inf + "/" + verbs.sein.inf;
+                    tdRKlammerPass.setAttribute("class", "inf");
+                } else {
+                    tdP1.innerText = verbs.werden.p1 + "/" + verbs.sein.p1;
+                    tdK1.innerText = verbs.werden.k1 + "/" + verbs.sein.k1;
+                    tdK2.innerText = verbs.werden.k2 + "/" + verbs.sein.k2;
+                    tdP2.innerText = verbs.werden.p2 + "/" + verbs.sein.p2;
+                    tdRKlammerPass.setAttribute("class", "fin");
+                }
+            }
 
-      redrawTable(verbForms);
+            // set objective modal
+            if (row.obj) {
+                if (row.pf) {
+                    tdRKlammerObj.innerText = verbs.koennen.inf;
+                    tdRKlammerObj.setAttribute("class", "ipp");
+                } else if (row.subj) {
+                    tdRKlammerObj.innerText = verbs.koennen.inf;
+                    tdRKlammerObj.setAttribute("class", "inf");
+                } else {
+                    tdP1.innerText = verbs.koennen.p1;
+                    tdK1.innerText = verbs.koennen.k1;
+                    tdK2.innerText = verbs.koennen.k2;
+                    tdP2.innerText = verbs.koennen.p2;
+                    tdRKlammerObj.setAttribute("class", "fin");
+                }
+            }
 
+            // set perfect
+            if (row.pf) {
+                if (row.obj) {
+                    tdRKlammerPf.innerHTML = '&lArr;';
+                    tdOberfeld.setAttribute("class", "oberfeld");
+                }
+
+                if (row.subj) {
+                    if (row.obj) {
+                        tdOberfeld.innerText = verbs.haben.inf;
+                    } else if (row.pass) {
+                        tdRKlammerPf.innerText = verbs.sein.inf;
+                    } else {
+                        tdRKlammerPf.innerText = verbs.haben.inf + " (" + verbs.sein.inf + ")";
+                    }
+                    tdRKlammerPf.setAttribute("class", "inf");
+                } else {
+                    if (row.obj) {
+                        tdP1.innerText = verbs.haben.p1;
+                        tdK1.innerText = verbs.haben.k1;
+                        tdK2.innerText = verbs.haben.k2;
+                        tdP2.innerText = verbs.haben.p2;
+                    } else if (row.pass) {
+                        tdP1.innerText = verbs.sein.p1;
+                        tdK1.innerText = verbs.sein.k1;
+                        tdK2.innerText = verbs.sein.k2;
+                        tdP2.innerText = verbs.sein.p2;
+                    } else {
+                        tdP1.innerText = verbs.haben.p1 + " (" + verbs.sein.p1 + ")";
+                        tdK1.innerText = verbs.haben.k1 + " (" + verbs.sein.k1 + ")";
+                        tdK2.innerText = verbs.haben.k2 + " (" + verbs.sein.k2 + ")";
+                        tdP2.innerText = verbs.haben.p2 + " (" + verbs.sein.p2 + ")";
+                    }
+                    tdRKlammerPf.setAttribute("class", "fin");
+                }
+            }
+
+            // set epistemic modal
+            if (row.subj) {
+                tdP1.innerText = verbs.werden.p1 + "/" + verbs.muessen.p1;
+                tdK1.innerText = verbs.werden.k1 + "/" + verbs.muessen.k1;
+                tdK2.innerText = verbs.werden.k2 + "/" + verbs.muessen.k2;
+                tdP2.innerText = verbs.werden.p2 + "/" + verbs.muessen.p2;
+                tdRKlammerSubj.setAttribute("class", "fin");
+
+                if (row.obj && row.pf) {
+                    tdRKlammerSubj.innerHTML = '&lArr;';
+                } else if (row.obj) {
+                    tdRKlammerSubj.innerHTML = '(&lArr;)';
+                    tdOberfeld.setAttribute("class", "oberfeldOptional");
+                }
+            }
+
+            // set tense meaning
+            if (row.subj) {
+                tdP2.innerText = "*" + tdP2.innerText;
+            } else if (row.pf) {
+                tdP2.setAttribute("class", "praetp");
+            } else {
+                tdP2.setAttribute("class", "praet");
+            }
+
+            if (row.pf) {
+                tdK2.setAttribute("class", "praesp");
+                if (row.subj) {
+                    tdK2.innerText = "??" + tdK2.innerText;
+                }
+            } else {
+                tdK2.setAttribute("class", "praes");
+            }
+
+            if (row.pf) {
+                if (row.subj) {
+                    tdP1.setAttribute("class", "futp");
+                    tdK1.setAttribute("class", "futp");
+                } else {
+                    tdP1.setAttribute("class", "praesp");
+                    tdK1.setAttribute("class", "praesp");
+                }
+            } else {
+                if (row.subj) {
+                    tdP1.setAttribute("class", "fut");
+                    tdK1.setAttribute("class", "fut");
+                } else {
+                    tdP1.setAttribute("class", "praes");
+                    tdK1.setAttribute("class", "praes");
+                }
+            }
+
+            // set id
+            var id = [row.pass, row.obj, row.pf, row.subj].reduce(
+                (acc, i) => { return acc + (i ? "1" : "0") },
+                ""
+            );
+
+            tdP1.setAttribute("onclick", "openModal('" + id + "', 'p1')" );
+            tdK1.setAttribute("onclick", "openModal('" + id + "', 'k1')" );
+            tdK2.setAttribute("onclick", "openModal('" + id + "', 'k2')" );
+            tdP2.setAttribute("onclick", "openModal('" + id + "', 'p2')" );
+            //---
+          var rowElement = document.createElement('tr');
+
+          rowElement.appendChild(tdSubjekt);
+          rowElement.appendChild(tdP1);
+          rowElement.appendChild(tdK1);
+          rowElement.appendChild(tdK2);
+          rowElement.appendChild(tdP2);
+          rowElement.appendChild(tdObjekt);
+          rowElement.appendChild(tdOberfeld);
+          rowElement.appendChild(tdVollverb);
+          rowElement.appendChild(tdRKlammerPass);
+          rowElement.appendChild(tdRKlammerObj);
+          rowElement.appendChild(tdRKlammerPf);
+          rowElement.appendChild(tdRKlammerSubj);
+
+            //---
+          table.appendChild(rowElement);
+        });
+        container.innerHTML = table.outerHTML;
+     }
     </script>
-  </body>
+</body>
 </html>
-
-
