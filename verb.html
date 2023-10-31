@@ -13,6 +13,10 @@
         padding: 5px;
       }
 
+      table {
+        margin: 20px;
+      }
+
 
       .fin { background-color: #FFFF80; }
       .ptc { background-color: #80FFBF; }
@@ -57,7 +61,6 @@
     </style>
   </head>
   <body>
-    <p>
     <table>
       <tr>
         <td class=praes >Präsens (KI)</td>
@@ -70,9 +73,7 @@
         <td class=futp colspan=2>Futur II</td>
       </tr>
     </table>
-    </p>
 
-    <p>
     <table>
       <tr>
         <th colspan=7>Drag and drop to change order:</th>
@@ -86,11 +87,8 @@
         <td id="pf"    style="border-style: dashed" draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondragend="dragEnd(event)">Perfekt</td>
       </tr>
     </table>
-    </p>
 
-    <p>
     <div id="verb-form-container"></div>
-    </p>
 
     <script>
       var selected;
