@@ -13,6 +13,10 @@ table, th, td {
   padding: 5px;
 }
 
+borderleft {
+  border-left: 1px solid black;
+}
+
 .nobordertop {
   border-top: none;
 }
@@ -298,6 +302,7 @@ section {
             <tr><td>je</td></tr>
             <tr><td>(wider)</td></tr>
             <tr><td>entlang</td><td>mellett/mentében</td></tr>
+            <tr><td>über</td><td>keresztül</td></tr>
           </table>
         </td>
         <td style="vertical-align:top">
@@ -305,7 +310,7 @@ section {
             <tr><td>an</td></tr>
             <tr><td>auf</td></tr>
             <tr><td>in</td></tr>
-            <tr><td>über</td></tr>
+            <tr><td>über (fölött/fölé)</td></tr>
             <tr><td>unter</td></tr>
             <tr><td>vor</td></tr>
             <tr><td>hinter</td></tr>
@@ -434,6 +439,108 @@ section {
       </tr>
       <tr>
         <td colspan=3>zur Bank fahren (Institution) und danach in die Bank gehen (Gebäude)</td>
+      </tr>
+    </table>
+
+    <h3>Präposition + Artikel</h3>
+    <table>
+      <tr>
+        <th></th>
+        <th>DAS</th>
+        <th>DEM</th>
+        <th>DEN</th>
+        <th>DER</th>
+      </tr>
+      <tr>
+        <th>ZU</th>
+        <td></td>
+        <td><b>zum</b></td>
+        <td></td>
+        <td><b>zur</b></td>
+      </tr>
+      <tr>
+        <th>BEI</th>
+        <td></td>
+        <td><b>beim</b></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>VON</th>
+        <td></td>
+        <td><b>vom</b></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>AN</th>
+        <td><b>ans</b></td>
+        <td><b>am</b></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>IN</th>
+        <td><b>ins</b></td>
+        <td><b>im</b></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>AUF</th>
+        <td>aufs</td>
+        <td>aufm</td>
+        <td>aufn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ÜBER</th>
+        <td>übers</td>
+        <td>überm</td>
+        <td>übern</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>UNTER</th>
+        <td>unters</td>
+        <td>unterm</td>
+        <td>untern</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>HINTER</th>
+        <td>hinters</td>
+        <td>hinterm</td>
+        <td>hintern</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>VOR</th>
+        <td>vors</td>
+        <td>vorm</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>FÜR</th>
+        <td>fürs</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>UM</th>
+        <td>ums</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>DURCH</th>
+        <td>durchs</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
     </section>
@@ -667,7 +774,8 @@ section {
           sein,
           ihr,
           unser,
-          euer
+          euer,
+          jemand
         </td>
       </tr>
     </table>
@@ -715,7 +823,7 @@ section {
           all,
           etwas,
           ein wenig,
-          ein bisschen,</br>
+          ein bisschen, jemand</br>
           wessen<sup>Gen.</sup>,
           dessen<sup>Gen.</sup> (=sein),
           deren<sup>Gen.</sup> (=ihr),
@@ -921,48 +1029,43 @@ section {
 
     <table>
       <tr>
-        <th></th>
-        <th>masculinum</th>
-        <th>neutrum</th>
-        <th>femininum</th>
-        <th>Pluralis</th>
+        <th rowspan=2></th>
+        <th colspan=3>Sg.</th>
+        <th rowspan=2>Pl.</th>
+      </tr>
+      <tr>
+        <th>masc.</th>
+        <th>neutr.</th>
+        <th>fem.</th>
       </tr>
       <tr>
         <th>Nom.</th>
         <td class="er">
           <table class=aligner>
-            <tr><td class="er">der</td><td class="ie">Letzte</td></tr>
-            <tr><td class="no">ihr</td><td class="er">Letzter</td></tr>
-            <tr><td class="er">ø</td><td class="er">Letzter</td></tr>
-            <!-- <tr><td class="er" colspan=2 style="text-align: center">er</td></tr> -->
-            <tr><td class="er">der |</td><td class="er" style="text-align: right">er</td></tr>
+            <tr><td class="er">der</td>  <td class="er" style="border-left:1px solid black">der</td><td class="ie">Beste</td> </tr>
+            <tr><td class="er">ihrer</td><td class="no" style="border-left:1px solid black">ihr</td><td class="er">Bester</td></tr>
+            <tr><td class="er">er</td>   <td class="er" style="border-left:1px solid black"></td>   <td class="er">Bester</td></tr>
           </table>
         </td>
         <td class="es" rowspan=2>
           <table class=aligner>
-            <tr><td class="as">das</td><td class="ie">Letzte</td></tr>
-            <tr><td class="no">ihr</td><td class="es">Letztes</td></tr>
-            <tr><td class="es">ø</td><td class="es">Letztes</td></tr>
-            <!-- <tr><td class="es" colspan=2 style="text-align: center">es</td></tr> -->
-            <tr><td class="as">das |</td><td class="es" style="text-align: right">es</td></tr>
+            <tr><td class="as">das</td>  <td class="as" style="border-left:1px solid black">das</td><td class="ie">Beste</td> </tr>
+            <tr><td class="es">ihres</td><td class="no" style="border-left:1px solid black">ihr</td><td class="es">Bestes</td></tr>
+            <tr><td class="es">es</td>   <td class="es" style="border-left:1px solid black"></td>   <td class="es">Bestes</td></tr>
           </table>
         </td>
         <td class="ie" rowspan=2>
           <table class=aligner>
-            <tr><td class="ie">die</td><td class="ie">Letzte</td></tr>
-            <tr><td class="ie">ihre</td><td class="ie">Letzte</td></tr>
-            <tr><td class="ie">ø</td><td class="ie">Letzte</td></tr>
-            <!-- <tr><td class="ie" colspan=2 style="text-align: center">sie</td></tr> -->
-            <tr><td class="ie">die |</td><td class="ie" style="text-align: right">sie</td></tr>
+            <tr><td class="ie">die</td> <td class="ie" style="border-left:1px solid black">die</td> <td class="ie">Beste</td></tr>
+            <tr><td class="ie">ihre</td><td class="ie" style="border-left:1px solid black">ihre</td><td class="ie">Beste</td></tr>
+            <tr><td class="ie">sie</td> <td class="ie" style="border-left:1px solid black"></td>    <td class="ie">Beste</td></tr>
           </table>
         </td>
         <td class="ie" rowspan=2>
           <table class=aligner>
-            <tr><td class="ie">die</td><td class="en">Letzten</td></tr>
-            <tr><td class="ie">ihre</td><td class="en">Letzten</td></tr>
-            <tr><td class="ie">ø</td><td class="ie">Letzte</td></tr>
-            <!-- <tr><td class="ie" colspan=2 style="text-align: center">sie</td></tr> -->
-            <tr><td class="ie">die |</td><td class="ie" style="text-align: right">sie</td></tr>
+            <tr><td class="ie">die</td> <td class="ie" style="border-left:1px solid black">die</td> <td class="en">Besten</td></tr>
+            <tr><td class="ie">ihre</td><td class="ie" style="border-left:1px solid black">ihre</td><td class="en">Besten</td></tr>
+            <tr><td class="ie">sie</td> <td class="ie" style="border-left:1px solid black"></td>    <td class="ie">Beste</td> </tr>
           </table>
         </td>
       </tr>
@@ -970,11 +1073,9 @@ section {
         <th>Acc.</th>
         <td class="en">
           <table class=aligner>
-            <tr><td class="en">den</td><td class="en">Letzten</td></tr>
-            <tr><td class="en">ihren</td><td class="en">Letzten</td></tr>
-            <tr><td class="en">ø</td><td class="en">Letzten</td></tr>
-            <!-- <tr><td class="en" colspan=2 style="text-align: center">ihn</td></tr> -->
-            <tr><td class="en">den |</td><td class="en" style="text-align: right">ihn</td></tr>
+            <tr><td class="en">den</td>  <td class="en" style="border-left:1px solid black">den</td>  <td class="en">Besten</td></tr>
+            <tr><td class="en">ihren</td><td class="en" style="border-left:1px solid black">ihren</td><td class="en">Besten</td></tr>
+            <tr><td class="en">ihn</td>  <td class="en" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
           </table>
         </td>
       </tr>
@@ -982,29 +1083,23 @@ section {
         <th>Dat.</th>
         <td class="em" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="em">dem</td><td class="en">Letzten</td></tr>
-            <tr><td class="em">ihrem</td><td class="en">Letzten</td></tr>
-            <tr><td class="em">ø</td><td class="em">Letztem</td></tr>
-            <!-- <tr><td class="em" colspan=2 style="text-align: center">ihm</td></tr> -->
-            <tr><td class="em">dem |</td><td class="em" style="text-align: right">ihm</td></tr>
+            <tr><td class="em">dem</td>  <td class="em" style="border-left:1px solid black">dem</td>  <td class="en">Besten</td></tr>
+            <tr><td class="em">ihrem</td><td class="em" style="border-left:1px solid black">ihrem</td><td class="en">Besten</td></tr>
+            <tr><td class="em">ihm</td>  <td class="em" style="border-left:1px solid black"></td>     <td class="em">Bestem</td></tr>
           </table>
         </td>
         <td class="er">
           <table class=aligner>
-            <tr><td class="er">der</td><td class="en">Letzten</td></tr>
-            <tr><td class="er">ihrer</td><td class="en">Letzten</td></tr>
-            <tr><td class="er">ø</td><td class="er">Letzter</td></tr>
-            <!-- <tr><td class="er" colspan=2 style="text-align: center">ihr</td></tr> -->
-            <tr><td class="er">der |</td><td class="er" style="text-align: right">ihr</td></tr>
+            <tr><td class="er">der</td>  <td class="er" style="border-left:1px solid black">der</td>  <td class="en">Besten</td></tr>
+            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black">ihrer</td><td class="en">Besten</td></tr>
+            <tr><td class="er">ihr</td>  <td class="er" style="border-left:1px solid black"></td>     <td class="er">Bester</td></tr>
           </table>
         </td>
         <td class="en">
           <table class=aligner>
-            <tr><td class="en">den</td><td class="en">Letzten</td></tr>
-            <tr><td class="en">ihren</td><td class="en">Letzten</td></tr>
-            <tr><td class="en">ø</td><td class="en">Letzten</td></tr>
-            <!-- <tr><td class="en" colspan=2 style="text-align: center">ihnen</td></tr> -->
-            <tr><td class="en">denen |</td><td class="en" style="text-align: right">ihnen</td></tr>
+            <tr><td class="en">denen</td><td class="en" style="border-left:1px solid black">den</td>  <td class="en">Besten</td></tr>
+            <tr><td class="en">ihren</td><td class="en" style="border-left:1px solid black">ihren</td><td class="en">Besten</td></tr>
+            <tr><td class="en">ihnen</td><td class="en" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
           </table>
         </td>
       </tr>
@@ -1012,23 +1107,18 @@ section {
         <th>Gen.</th>
         <td class="es" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="es">des</td><td class="en">Letzten</td></tr>
-            <tr><td class="es">ihres</td><td class="en">Letzten</td></tr>
-            <tr><td class="es">ø</td><td class="en">Letzten</td></tr>
-            <!-- <tr><td class="er" colspan=2 style="text-align: center">seiner</td></tr> -->
-            <tr><td class="es">dess<span class="en">en</span> |</td><td class="er" style="text-align: right">seiner</td></tr>
+            <tr><td class="es">dess<span class="en">en</span></td><td class="es" style="border-left:1px solid black">des</td>  <td class="en">Besten</td></tr>
+            <tr><td class="es">ihres</td>                         <td class="es" style="border-left:1px solid black">ihres</td><td class="en">Besten</td></tr>
+            <tr><td class="er">seiner</td>                        <td class="es" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
           </table>
         </td>
         <td class="er" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="er">der</td><td class="en">Letzten</td></tr>
-            <tr><td class="er">ihrer</td><td class="en">Letzten</td></tr>
-            <tr><td class="er">ø</td><td class="er">Letzter</td></tr>
-            <!-- <tr><td class="er" colspan=2 style="text-align: center">ihrer</td></tr> -->
             <tr><td class="er">
-                der<span class="er">er</span><sub>(Dem.)</sub> |</br>
-                der<span class="en">en</span><sub>(Rel.)</sub> |</td>
-              <td class="er" style="text-align: right">ihrer</td></tr>
+                der<span class="en">en</span><sub>Rel.</sub>/der<span class="er">er</span><sub>Dem.</sub>
+              </td>                      <td class="er" style="border-left:1px solid black">der</td>  <td class="en">Besten</td></tr>
+            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black">ihrer</td><td class="en">Besten</td></tr>
+            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black"></td>     <td class="er">Bester</td></tr>
           </table>
         </td>
       </tr>
@@ -1516,7 +1606,7 @@ section {
           Park, Vati, Kaffe, Tee, Scheck, Paprika, Chef
         </td>
         <td>
-          Café, Hotel, Baby, Taxi, Handy, Internet, Restaurant, Sofa
+          Café, Hotel, Baby, Taxi, Handy, Etui, Internet, Restaurant, Sofa
           <table class=aligner>
             <tr><th>&#8209;o:</th><td>Auto, Radio, Büro, Kino (die Metro, der Euro)</td></tr>
             <tr><th>&#8209;eau:</th><td>Plateau</td></tr>
@@ -1578,6 +1668,7 @@ section {
             <tr><th>alkoholische&nbsp;Getränke:</th><td> Sekt(e), Wein(e), Wodka(s) (das Bier(e))</td></tr>
             <tr><th>&forall;&nbsp;Himmelsrichtungen:</th><td>Norden(-), Süden(-), Ost(e), West(e)</td></tr>
             <tr><th>&forall;&nbsp;Jahreszeiten:</th><td>Frühling(e), Lenz(e), Sommer(-), Herbst(e), Winter(-)</td></tr>
+            <tr><th>??? -an:</th><td>Kran, Plan, Divan, Balkan, Elan, Clan, Dekan, Fasan, Koran, Ozean, Orkan, Titan, Waran, Enzian, Leguan, Pavian, Vulkan, Turban, Roman (das Organ, das Methan)</td></tr>
           </table>
         </td>
         <td>
@@ -3192,7 +3283,7 @@ section {
           <td>to come</td>
         </tr>
         <tr class="s-e-i-aa-e">
-          <td class="l-e">essen</td>
+          <td class="l-e"><b>essen</b></td>
           <td class="l-i">isst</td>
           <td class="l-aa">aß</td>
           <td class="l-e">hat gegessen</td>
@@ -3438,7 +3529,7 @@ section {
           <td class="l-a">trank</td>
           <td class="l-u">hat getrunken</td>
           <td>to drink</td>
-          <td>der Trank, das Getränk</td>
+          <td>der Trank, das Getränk, der Trunk</td>
         </tr>
         <tr class="s-i-i-u-u">
           <td class="l-i">schinden</td>
@@ -4731,7 +4822,7 @@ section {
     <table>
       <tr>
         <th colspan=2>
-          <a href='>https://de.wiktionary.org/wiki/Pr%C3%A4fixverb'>Präfixverb</a></br>
+          <a href='https://de.wiktionary.org/wiki/Pr%C3%A4fixverb'>Präfixverb</a></br>
           Derivative
         </th>
         <th colspan=2>
@@ -4768,9 +4859,11 @@ section {
         <th>N/Adj/V | V:</th>
         <td>
           rad|<u>fahr</u>en<br/>
+          Auto <u>fahr</u>en???<br/>
           Schlittschuh <u>lauf</u>en????<br/>
           krank|<u>schreib</u>en<br/>
           schön|<u>red</u>en<br/>
+          groß|<u>schreib</u>en<br/>
           kennen|<u>lern</u>en<br/>
           spazieren|<u>geh</u>en<br/>
           sitzen|<u>bleib</u>en<br/>
@@ -4820,6 +4913,17 @@ section {
     </p>
 
     <p>the car: der Wagen, die Karre, das Auto</p>
+
+    <p><a href="https://www.reddit.com/r/German/comments/18rf391/comment/kf0tdgi/">adverbiale Ortsangabe zwischen Verb und Präfix/Adverb:</a></p>
+    <ul>
+      <li>Willst du mit in die Mensa kommen? -- Willst du in die Mensa mitkommen?</li>
+      <li>Wir reisen zurück in die Zukunft -- Wir reisen in die Zukunft zurück</li>
+      <li>Wir werden wieder hierher( )kommen -- Wir werden hierher wiederkommen</li>
+      <li>Ich fahre heim zu meinen Eltern -- Ich fahre zu meinen Eltern heim</li>
+      <li>Ich steige hoch aufs Dach -- Ich steige aufs Dach hoch</li>
+    </ul>
+
+    <p>old, known, contextual information goes early; new or emphasized information goes late</p>
 
     <p>
     <a href="https://szotar.magyarnemet.hu/">szotar.magyarnemet.hu</a></br>
