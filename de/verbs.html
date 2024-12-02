@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      table { margin: 20px; }
+
+      .fin { background-color: LightSteelBlue; }
+      .ptc { background-color: DarkSeaGreen; }
+      .inf { background-color: PaleVioletRed; }
+      .ipp { background-color: Coral; }
+
+    </style>
+
+  </head>
+  <body>
+    <div id="verb-form-container"></div>
+    <script src="verbs.js"></script>
+    <script>
+      let table = document.getElementById('verb-form-container');
+      table.innerHTML = analyticVerbTable();
+    </script>
+  </body>
+</html>
+

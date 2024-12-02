@@ -378,7 +378,8 @@
     <b>Mehrere Modalen: </b>Sie müssen uns sehen können. -- ?? Wir müssen gesehen werden können. ?? <br>
     ich musste einen Arzt rufen lassen (ich habe einen Arzt rufen lassen müssen)<br>
     ?? házat épít/építtet -- a ház megépül/megépíttetik ?? er lässt ein neues Haus bauen<br>
-    Politiker müssen gut reden können. Politiker müssen Probleme schon im voraus kommen sehen können.
+    Politiker müssen gut reden können. Politiker müssen Probleme schon im voraus kommen sehen können.<br>
+    ..., dass man ihn hier liegen bleiben lassen können wird. (<a href="https://uol.de/f/3/inst/germanistik/fach/sprachwissenschaft/Aufsaetze_Eisenberg/Eisenberg_Smith_Teuber_2002_Ersatzinfinitiv-und-Oberfeld-Ein-grosses-Raetsel-der-deutschen-Syntax.pdf">Eisenberg 2001: Ersatzinfinitiv und Oberfeld, (2)</a>)
     <h3>Passiv</h3>
     <dl>
         <dt>normales Passiv (Acc. obj. -&gt; Subj.)</dt>
@@ -1265,7 +1266,7 @@
          }
 
          var objekt = {
-             "aktiv": "Das Auto",
+             "aktiv": "das Auto",
              "passiv": "",
          }
 
@@ -1290,17 +1291,17 @@
         // header
         var rowElement = document.createElement('tr');
          rowElement.innerHTML =
-         "<th>Subjekt</th>" +
-         "<th>Indikativ I</th>" +
-         "<th>Konjunktiv I</th>" +
-         "<th>Konjunktiv II</th>" +
-         "<th>Indikativ II</th>" +
-         "<th>Objekt</th>" +
+         "<th>Vorfeld</th>" +
+         "<th>PI</th>" +
+         "<th>KI</th>" +
+         "<th>KII</th>" +
+         "<th>PII</th>" +
+         "<th>Mittelfeld</th>" +
          "<th>Oberfeld</th>" +
          "<th>Vollverb</th>" +
          "<th>Passiv</th>" +
          "<th>Modal</th>" +
-         "<th>Perfekt</th>" +
+         "<th>Retrospektiv</th>" +
          "<th>Epistemisch</th>";
         table.appendChild(rowElement);
 
@@ -1351,19 +1352,19 @@
             // set passive
             if (row.pass) {
                 if (row.obj) {
-                    tdRKlammerPass.innerText = verbs.werden.inf + "/" + verbs.sein.inf;
+                    tdRKlammerPass.innerText = verbs.werden.inf; // + "/" + verbs.sein.inf;
                     tdRKlammerPass.setAttribute("class", "inf");
                 } else if (row.pf) {
-                    tdRKlammerPass.innerText = verbs.werden.ptc + "/" + verbs.sein.ptc;
+                    tdRKlammerPass.innerText = verbs.werden.ptc; // + "/" + verbs.sein.ptc;
                     tdRKlammerPass.setAttribute("class", "ptc");
                 } else if (row.subj) {
-                    tdRKlammerPass.innerText = verbs.werden.inf + "/" + verbs.sein.inf;
+                    tdRKlammerPass.innerText = verbs.werden.inf; // + "/" + verbs.sein.inf;
                     tdRKlammerPass.setAttribute("class", "inf");
                 } else {
-                    tdP1.innerText = verbs.werden.p1 + "/" + verbs.sein.p1;
-                    tdK1.innerText = verbs.werden.k1 + "/" + verbs.sein.k1;
-                    tdK2.innerText = verbs.werden.k2 + "/" + verbs.sein.k2;
-                    tdP2.innerText = verbs.werden.p2 + "/" + verbs.sein.p2;
+                    tdP1.innerText = verbs.werden.p1; // + "/" + verbs.sein.p1;
+                    tdK1.innerText = verbs.werden.k1; // + "/" + verbs.sein.k1;
+                    tdK2.innerText = verbs.werden.k2; // + "/" + verbs.sein.k2;
+                    tdP2.innerText = verbs.werden.p2; // + "/" + verbs.sein.p2;
                     tdRKlammerPass.setAttribute("class", "fin");
                 }
             }

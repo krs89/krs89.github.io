@@ -13,7 +13,7 @@ table, th, td {
   padding: 5px;
 }
 
-borderleft {
+.borderleft {
   border-left: 1px solid black;
 }
 
@@ -31,6 +31,15 @@ borderleft {
 
 .noborderright {
   border-right: none;
+}
+
+.bottom-divider {
+  #border-bottom: 1px solid black !important;
+}
+
+.right-divider {
+  padding-right: 10px !important;
+  border-right: 2px double black !important;
 }
 
 .collapsible + table {
@@ -174,6 +183,7 @@ caption {
 .em {
   background-color: White;
   background-color: Bisque;
+  background-color: PeachPuff;
 }
 
 .es {
@@ -279,6 +289,7 @@ section {
       Wer einmal billig kauft, zahlt doppelt.</br>
       weder hinten noch vorn</br>
       Wer schön sein will, muss leiden.</br>
+      Was hat es damit auf sich? = What does it mean?</br>
 
     <section id="prepositions">
     <h1>Präpositionen</h1>
@@ -860,6 +871,10 @@ section {
         <b>(Dem.) Vorausweisung (cataphora) (derer) (+ Relativsatz) -- plural</b></br>
         Die Autos derer (=von denen/den Leuten), die schnell fahren, sind oft rot. (of those, AZOK(NAK) (akik))</br>
     </p>
+    <p>
+    Heute morgen hat sich Markus mit Thomas unterhalten. <b>Er</b> hatte heute Nacht schlecht geschlafen und … (<b>er</b>: probably Markus, possibly Thomas)</br>
+    Heute morgen hat sich Markus mit Thomas unterhalten. <b>Der</b> hatte heute Nacht schlecht geschlafen und … (<b>der</b>: Thomas, the referent introduced last (the newest one)) <sub><a href='https://www.reddit.com/r/German/comments/13122nu/comment/ji17agu/'>src</a></sub>
+    </p>
     </section>
 
     <section id="pronouns">
@@ -1029,96 +1044,96 @@ section {
 
     <table>
       <tr>
-        <th rowspan=2></th>
+        <th rowspan=2 width=8%></th>
         <th colspan=3>Sg.</th>
-        <th rowspan=2>Pl.</th>
+        <th rowspan=2 width=23%>Pl.<br><span style="font-weight:normal">Getränke(n)</span></th>
       </tr>
       <tr>
-        <th>masc.</th>
-        <th>neutr.</th>
-        <th>fem.</th>
+        <th width=23%>m<br><span style="font-weight:normal">Kaffee(s)</span></th>
+        <th width=23%>n<br><span style="font-weight:normal">Wasser(s)</span></th>
+        <th width=23%>f<br><span style="font-weight:normal">Milch</span></th>
       </tr>
       <tr>
         <th>Nom.</th>
         <td class="er">
           <table class=aligner>
-            <tr><td class="er">der</td>  <td class="er" style="border-left:1px solid black">der</td><td class="ie">Beste</td> </tr>
-            <tr><td class="er">ihrer</td><td class="no" style="border-left:1px solid black">ihr</td><td class="er">Bester</td></tr>
-            <tr><td class="er">er</td>   <td class="er" style="border-left:1px solid black"></td>   <td class="er">Bester</td></tr>
+            <tr class="bottom-divider"><td class="er right-divider">der</td>  <td class="er">der</td><td class="ie">kalte</td> </tr>
+            <tr><td class="er right-divider">ihrer</td><td class="no">ihr</td><td class="er">kalter</td></tr>
+            <tr><td class="er right-divider">er</td>   <td class="no">solch</td><td class="er">kalter</td></tr>
           </table>
         </td>
         <td class="es" rowspan=2>
           <table class=aligner>
-            <tr><td class="as">das</td>  <td class="as" style="border-left:1px solid black">das</td><td class="ie">Beste</td> </tr>
-            <tr><td class="es">ihres</td><td class="no" style="border-left:1px solid black">ihr</td><td class="es">Bestes</td></tr>
-            <tr><td class="es">es</td>   <td class="es" style="border-left:1px solid black"></td>   <td class="es">Bestes</td></tr>
+            <tr class="bottom-divider"><td class="as right-divider">das</td>  <td class="as">das</td><td class="ie">kalte</td> </tr>
+            <tr><td class="es right-divider">ihres</td><td class="no">ihr</td><td class="es">kaltes</td></tr>
+            <tr><td class="es right-divider">es</td>   <td class="no">solch</td><td class="es">kaltes</td></tr>
           </table>
         </td>
         <td class="ie" rowspan=2>
           <table class=aligner>
-            <tr><td class="ie">die</td> <td class="ie" style="border-left:1px solid black">die</td> <td class="ie">Beste</td></tr>
-            <tr><td class="ie">ihre</td><td class="ie" style="border-left:1px solid black">ihre</td><td class="ie">Beste</td></tr>
-            <tr><td class="ie">sie</td> <td class="ie" style="border-left:1px solid black"></td>    <td class="ie">Beste</td></tr>
+            <tr><td class="ie right-divider">die</td> <td class="ie">die</td> <td class="ie">kalte</td></tr>
+            <tr class="bottom-divider"><td class="ie right-divider">ihre</td><td class="ie">ihre</td><td class="ie">kalte</td></tr>
+            <tr><td class="ie right-divider">sie</td> <td class="no">solch</td><td class="ie">kalte</td></tr>
           </table>
         </td>
         <td class="ie" rowspan=2>
           <table class=aligner>
-            <tr><td class="ie">die</td> <td class="ie" style="border-left:1px solid black">die</td> <td class="en">Besten</td></tr>
-            <tr><td class="ie">ihre</td><td class="ie" style="border-left:1px solid black">ihre</td><td class="en">Besten</td></tr>
-            <tr><td class="ie">sie</td> <td class="ie" style="border-left:1px solid black"></td>    <td class="ie">Beste</td> </tr>
+            <tr><td class="ie right-divider">die</td> <td class="ie">die</td> <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="ie right-divider">ihre</td><td class="ie">ihre</td><td class="en">kalten</td></tr>
+            <tr><td class="ie right-divider">sie</td> <td class="no">solch</td>    <td class="ie">kalte</td> </tr>
           </table>
         </td>
       </tr>
       <tr>
-        <th>Acc.</th>
+        <th>Acc.<br><span style="font-weight:normal">ohne</span></th>
         <td class="en">
           <table class=aligner>
-            <tr><td class="en">den</td>  <td class="en" style="border-left:1px solid black">den</td>  <td class="en">Besten</td></tr>
-            <tr><td class="en">ihren</td><td class="en" style="border-left:1px solid black">ihren</td><td class="en">Besten</td></tr>
-            <tr><td class="en">ihn</td>  <td class="en" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
+            <tr><td class="en right-divider">den</td>  <td class="en">den</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="en right-divider">ihren</td><td class="en">ihren</td><td class="en">kalten</td></tr>
+            <tr><td class="en right-divider">ihn</td>  <td class="no">solch</td><td class="en">kalten</td></tr>
           </table>
         </td>
       </tr>
       <tr>
-        <th>Dat.</th>
+        <th>Dat.<br><span style="font-weight:normal">mit</span></th>
         <td class="em" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="em">dem</td>  <td class="em" style="border-left:1px solid black">dem</td>  <td class="en">Besten</td></tr>
-            <tr><td class="em">ihrem</td><td class="em" style="border-left:1px solid black">ihrem</td><td class="en">Besten</td></tr>
-            <tr><td class="em">ihm</td>  <td class="em" style="border-left:1px solid black"></td>     <td class="em">Bestem</td></tr>
+            <tr><td class="em right-divider">dem</td>  <td class="em">dem</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="em right-divider">ihrem</td><td class="em">ihrem</td><td class="en">kalten</td></tr>
+            <tr><td class="em right-divider">ihm</td>  <td class="no">solch</td>     <td class="em">kaltem</td></tr>
           </table>
         </td>
         <td class="er">
           <table class=aligner>
-            <tr><td class="er">der</td>  <td class="er" style="border-left:1px solid black">der</td>  <td class="en">Besten</td></tr>
-            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black">ihrer</td><td class="en">Besten</td></tr>
-            <tr><td class="er">ihr</td>  <td class="er" style="border-left:1px solid black"></td>     <td class="er">Bester</td></tr>
+            <tr><td class="er right-divider">der</td>  <td class="er">der</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="er right-divider">ihrer</td><td class="er">ihrer</td><td class="en">kalten</td></tr>
+            <tr><td class="er right-divider">ihr</td>  <td class="no">solch</td>     <td class="er">kalter</td></tr>
           </table>
         </td>
         <td class="en">
           <table class=aligner>
-            <tr><td class="en">denen</td><td class="en" style="border-left:1px solid black">den</td>  <td class="en">Besten</td></tr>
-            <tr><td class="en">ihren</td><td class="en" style="border-left:1px solid black">ihren</td><td class="en">Besten</td></tr>
-            <tr><td class="en">ihnen</td><td class="en" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
+            <tr><td class="en right-divider">denen</td><td class="en">den</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="en right-divider">ihren</td><td class="en">ihren</td><td class="en">kalten</td></tr>
+            <tr><td class="en right-divider">ihnen</td><td class="no">solch</td><td class="en">kalten</td></tr>
           </table>
         </td>
       </tr>
       <tr>
-        <th>Gen.</th>
+        <th>Gen.<br><span style="font-weight:normal">statt</span></th>
         <td class="es" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="es">dess<span class="en">en</span></td><td class="es" style="border-left:1px solid black">des</td>  <td class="en">Besten</td></tr>
-            <tr><td class="es">ihres</td>                         <td class="es" style="border-left:1px solid black">ihres</td><td class="en">Besten</td></tr>
-            <tr><td class="er">seiner</td>                        <td class="es" style="border-left:1px solid black"></td>     <td class="en">Besten</td></tr>
+            <tr><td class="es right-divider">dess<span class="en">en</span></td><td class="es">des</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="es right-divider">ihres</td><td class="es">ihres</td><td class="en">kalten</td></tr>
+            <tr><td class="er right-divider">seiner</td><td class="no">solch</td><td class="en">kalten</td></tr>
           </table>
         </td>
         <td class="er" colspan=2>
           <table class=aligner style="margin: auto">
-            <tr><td class="er">
+            <tr><td class="er right-divider">
                 der<span class="en">en</span><sub>Rel.</sub>/der<span class="er">er</span><sub>Dem.</sub>
-              </td>                      <td class="er" style="border-left:1px solid black">der</td>  <td class="en">Besten</td></tr>
-            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black">ihrer</td><td class="en">Besten</td></tr>
-            <tr><td class="er">ihrer</td><td class="er" style="border-left:1px solid black"></td>     <td class="er">Bester</td></tr>
+              </td>                      <td class="er">der</td>  <td class="en">kalten</td></tr>
+            <tr class="bottom-divider"><td class="er right-divider">ihrer</td><td class="er">ihrer</td><td class="en">kalten</td></tr>
+            <tr><td class="er right-divider">ihrer</td><td class="no">solch</td>     <td class="er">kalter</td></tr>
           </table>
         </td>
       </tr>
@@ -1436,7 +1451,7 @@ section {
                 Graphiker, Mathematiker,
               </td></tr>
             <tr><th>&#8209;er:</th><td>
-                Teller, Kiefer (állkapocs), Anker
+                Teller, Anker, Kiefer (állkapocs), Käfer (bogár),
                 (die Butter)
               </td></tr>
             <tr><th>&#8209;el:</th><td>Schlüssel, Löffel, Zettel, Artikel, Teufel, Sockel, Himmel, Hagel</td></tr>
@@ -3350,7 +3365,7 @@ section {
         </tr>
         <tr class="s-ee-ee-aa-ee">
           <td class="l-ee">geschehen</td>
-          <td class="l-ee">gescheht</td>
+          <td class="l-ii">geschieht</td>
           <td class="l-aa">geschah</td>
           <td class="l-ee"><span class="ist">ist</span> geschehen</td>
           <td>to happen</td>
@@ -4813,6 +4828,10 @@ section {
         <td class="l-u">gesund</td>
       </tr>
     </table>
+
+    <p>
+      erstes - első, letztes - utolsó, ersteres - előbbi, letzteres - utóbbi
+    </p>
     </section>
 
     <p>
@@ -4855,6 +4874,7 @@ section {
           lang<u>weil</u>en<br/>
           froh<u>lock</u>en<br/>
           weh<u>klag</u>en<br/>
+          staub<u>saug</u>en<br/>
         </td>
         <th>N/Adj/V | V:</th>
         <td>
@@ -4870,6 +4890,8 @@ section {
         </td>
       </tr>
     </table>
+    amtshandeln: er amtshandelt, er hat amtsgehandelt (inseparable but gets '-ge-' <i>after</i> the prefix)</br>
+    wehklagen: er wehklagt, er hat gewehklagt (inseparable but gets 'ge-' <i>before</i> the prefix)
 
     <table style="margin-top:20px">
       <tr>
@@ -4914,6 +4936,8 @@ section {
 
     <p>the car: der Wagen, die Karre, das Auto</p>
 
+    <p>zu [unser aller<sub>(gen.)</sub>] Nutzen<sub>(dat.)</sub> -- for the benefit of [us all] -- personal pronoun in genitive</p>
+
     <p><a href="https://www.reddit.com/r/German/comments/18rf391/comment/kf0tdgi/">adverbiale Ortsangabe zwischen Verb und Präfix/Adverb:</a></p>
     <ul>
       <li>Willst du mit in die Mensa kommen? -- Willst du in die Mensa mitkommen?</li>
@@ -4924,6 +4948,11 @@ section {
     </ul>
 
     <p>old, known, contextual information goes early; new or emphasized information goes late</p>
+
+    <ul>
+      <li>beides ist X (mindkettő X) (alles ist X, vieles ist X)</li>
+      <li>beide sind X (mindketten X-ek) (alle sind X, viele sind X)</li>
+    </ul>
 
     <p>
     <a href="https://szotar.magyarnemet.hu/">szotar.magyarnemet.hu</a></br>
